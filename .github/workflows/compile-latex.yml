@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -30,6 +30,14 @@ jobs:
           root_file: roadmap.tex
           compiler: pdflatex
           args: "-interaction=nonstopmode -halt-on-error"
+
+      - name: Commit PDF to repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f roadmap.pdf
+          git diff --staged --quiet && echo "No changes to commit" || git commit -m "build: update roadmap.pdf [skip ci]"
+          git push
 
       - name: Prepare deployment directory
         run: |

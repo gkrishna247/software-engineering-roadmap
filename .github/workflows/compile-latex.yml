@@ -28,8 +28,6 @@ jobs:
         uses: xu-cheng/latex-action@v4
         with:
           root_file: roadmap.tex
-          compiler: pdflatex
-          args: "-interaction=nonstopmode -halt-on-error"
 
       - name: Commit PDF to repository
         run: |

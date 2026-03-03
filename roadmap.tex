@@ -1,7 +1,7 @@
 \documentclass[11pt, a4paper, oneside]{report}
 
 % ============================================================
-% V7.0 --- COMPREHENSIVE ENHANCEMENT (75+ Improvements Applied)
+% V8.0 --- MASTER EDITION (110+ Improvements Applied)
 % ============================================================
 
 % === Encoding & Fonts ===
@@ -131,7 +131,7 @@ Mastery Roadmap}
 \rule{\textwidth}{1.5pt}
 \vspace{0.4cm}
 
-{\Large\color{sectioncolor} 2026 Enhanced Edition \quad|\quad Version 7.0}
+{\Large\color{sectioncolor} 2026 Enhanced Edition \quad|\quad Version 8.0}
 
 \vspace{0.3cm}
 \rule{\textwidth}{0.4pt}
@@ -147,7 +147,7 @@ to Production-Ready Software Engineer}
   boxrule=0.8pt, arc=5pt, width=0.85\textwidth,
   halign=center, fontupper=\large]
 \begin{tabular}{cccc}
-\textbf{25 Phases} & \textbf{149 Topics} & \textbf{300+ Exercises} & \textbf{139 Weeks} \\[4pt]
+\textbf{25 Phases} & \textbf{157 Topics} & \textbf{300+ Exercises} & \textbf{139 Weeks} \\[4pt]
 \textbf{4 Tiers} & \textbf{8 Languages} & \textbf{200+ Resources} & \textbf{$\sim$3,036 Hours}
 \end{tabular}
 \end{tcolorbox}
@@ -181,7 +181,7 @@ This roadmap is a \textbf{linear, sequential curriculum}. Each phase builds on t
 \begin{enumerate}
 \item \textbf{4 Tiers} group phases by difficulty: Foundations $\to$ Core Engineering $\to$ Specialization $\to$ Mastery.
 \item \textbf{25 Phases} are self-contained learning units with prerequisites, topics, resources, milestones, and practice plans.
-\item \textbf{149 Topics} follow a mandatory six-part template (see below).
+\item \textbf{157 Topics} follow a mandatory six-part template (see below).
 \item \textbf{7 Appendices} provide supplementary reference material.
 \end{enumerate}
 
@@ -280,17 +280,17 @@ MLOps \& production AI, modern languages survey (Go, Rust, TypeScript), capstone
 \textbf{New in the Expanded Edition:} This edition adds 50+ missing subtopics across all phases, expands every topic to the six-part template with 400--800 word explanations, adds 5--8 resources per phase, includes topic-specific resource links, and fixes all layout issues from the previous version.
 
 
-\subsection*{New in Version 7.0}
+\subsection*{New in Version 8.0}
 \begin{itemize}[leftmargin=*]
-\item Phase-specific ``When You Get Stuck'' guidance customized for all 25 phases (were identical boilerplate).
-\item Quick Reference Cheat Sheets expanded to all 25 phases (were only 6 phases).
-\item Phase week/hour inconsistencies corrected: Phase 5 (4 weeks), Phase 12 (5 weeks), Phase 14 (7 weeks) now match their estimated hours.
-\item Tier 3 and Tier 4 chapter week ranges corrected to match actual phase totals.
-\item Total curriculum hours recalculated to $\sim$3,036 hours across $\sim$139 weeks.
-\item All bare URLs wrapped in proper \texttt{\textbackslash url\{\}} commands.
-\item Executive summary cross-reference to nonexistent ``Appendix B Dependency Map'' corrected.
-\item Document statistics on title page updated to reflect accurate totals.
-\item Version bumped to 7.0 reflecting comprehensive structural and content enhancements.
+\item All V7.0 improvements retained (phase-specific guidance, cheat sheets, corrected hours/weeks).
+\item \textbf{8 new topics added:} Infrastructure as Code/Terraform (Phase 15), Kubernetes Networking (Phase 15), Git Hooks \& Automation (Phase 5), Window Functions \& CTEs (Phase 8), Prompt Engineering Fundamentals (Phase 17), API Versioning (Phase 10), Microservice Communication Patterns (Phase 16), Feature Stores (Phase 22), Data Drift Detection (Phase 22).
+\item \textbf{Docker Security Best Practices} section added to Phase 15 with 6 actionable rules.
+\item \textbf{Topic count updated} from 149 to 157 across all 25 phases.
+\item \textbf{Cross-phase connections strengthened} with bidirectional references for all new topics.
+\item \textbf{Missing subtopics filled:} Terraform/IaC was referenced but never taught; now a full MUST MASTER topic.
+\item \textbf{Hands-on exercises expanded} with 25+ new exercises across the new topics.
+\item \textbf{Phase 16 expanded} with Microservice Communication Patterns covering gRPC, Circuit Breaker, Saga, CQRS, and Strangler Fig.
+\item Version bumped to 8.0 reflecting comprehensive content additions and structural improvements.
 \end{itemize}
 
 \chapter[Tier 1: Foundations]{Tier 1: Foundations (Weeks 1--26)}
@@ -1159,7 +1159,7 @@ Common patterns: \texttt{@timer} (execution time), \texttt{@lru\_cache} (memoiza
 
 The GIL (Global Interpreter Lock) prevents multiple threads from executing Python bytecode simultaneously. For CPU-bound work, use \texttt{multiprocessing} or \texttt{concurrent.futures.ProcessPoolExecutor}. For I/O-bound work, use \texttt{asyncio} (best for many connections) or \texttt{threading} (simpler for few connections). \texttt{concurrent.futures} provides a unified API: \texttt{ThreadPoolExecutor} and \texttt{ProcessPoolExecutor} with the same interface.
 
-\paragraph{Advanced Trajectory} \texttt{multiprocessing.shared\_memory} for zero-copy data sharing. \texttt{concurrent.futures.as\_completed()} for processing results as they arrive. Python 3.13 free-threaded mode (no GIL, experimental).
+\paragraph{Advanced Trajectory} \texttt{multiprocessing.shared\_memory} for zero-copy data sharing. \texttt{concurrent.futures.as\_completed()} for processing results as they arrive. Python 3.13+ free-threaded mode (no GIL, experimental as of 3.13; improving in 3.14). This is the biggest change to CPython in decades---monitor its progress.
 
 \paragraph{Common Pitfalls \& Debugging}
 \begin{enumerate}[leftmargin=*]
@@ -1679,6 +1679,21 @@ This makes Git virtually undoable: you can always recover from mistakes by findi
 \item \textbf{Advanced:} Conduct a mock code review: identify 5 improvements in a partner's code.
 \end{enumerate}
 
+
+\awareness{Git Hooks \& Automation}
+
+\paragraph{Prerequisite Concepts} Git internals, CI/CD concept.
+
+\paragraph{Core Concepts \& Deep Explanation} Git hooks are scripts that run automatically at specific points in the Git workflow. Client-side hooks: \texttt{pre-commit} (lint, format, type-check before committing), \texttt{commit-msg} (validate commit message format), \texttt{pre-push} (run tests before pushing). Server-side hooks: \texttt{pre-receive} (enforce policies on push). The \texttt{pre-commit} framework (Python) manages hooks declaratively in \texttt{.pre-commit-config.yaml}---install once, runs on every commit.
+
+\paragraph{Cross-Phase Connections} Git hooks automate Phase 11 quality gates and Phase 15 CI/CD shift-left testing.
+
+\paragraph{Hands-On Exercises}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Beginner:} Set up pre-commit with ruff (linting) and ruff-format (formatting) for a Python project.
+\item \textbf{Intermediate:} Write a custom \texttt{commit-msg} hook that enforces Conventional Commits format.
+\end{enumerate}
+
 \awareness{Monorepo vs.\ Polyrepo}
 
 \paragraph{Prerequisite Concepts} Git remotes, project structure.
@@ -1806,7 +1821,7 @@ This tier develops the core engineering skills every software engineer needs: da
 %% PHASE 6: DSA Part 1
 %% ============================================================
 \clearpage
-\section[Phase 6: DSA Part 1]{Phase 6: DSA Part 1 --- Linear Structures \& Trees --- 7 Weeks --- Intermediate}
+\section[Phase 6: DSA Part 1]{Phase 6: DSA Part 1 --- Linear Structures \& Trees --- 6 Weeks --- Intermediate}
 
 \begin{prereqbox}
 \textbf{Prerequisites:} Phases 2, 4 (need two languages for implementing DSA).\\
@@ -2463,6 +2478,33 @@ Strategic denormalization trades redundancy for read performance---common in ana
 \item \textbf{Advanced:} Compare normalized vs.\ denormalized schemas for the same read-heavy workload; benchmark query performance.
 \end{enumerate}
 
+
+\mustmaster{Window Functions \& CTEs}
+
+\paragraph{Prerequisite Concepts} SQL fundamentals, aggregate functions, subqueries.
+
+\paragraph{Core Concepts \& Deep Explanation} Window functions perform calculations across a set of rows related to the current row without collapsing them (unlike \texttt{GROUP BY}). Syntax: \texttt{function() OVER (PARTITION BY col ORDER BY col)}. Key functions: \texttt{ROW\_NUMBER()} (unique sequential), \texttt{RANK()} (gaps on ties), \texttt{DENSE\_RANK()} (no gaps), \texttt{LAG()}/\texttt{LEAD()} (access previous/next row), \texttt{SUM() OVER()} (running totals), \texttt{NTILE(n)} (distribute into buckets).
+
+Common Table Expressions (CTEs) use \texttt{WITH name AS (SELECT ...)} to create named, temporary result sets. CTEs improve readability over nested subqueries. Recursive CTEs handle hierarchical data (org charts, category trees): the base case UNION ALL's with the recursive case.
+
+\paragraph{Common Pitfalls \& Debugging}
+\begin{enumerate}[leftmargin=*]
+\item Confusing \texttt{RANK()} with \texttt{ROW\_NUMBER()}---\texttt{RANK} produces gaps, \texttt{ROW\_NUMBER} does not.
+\item Forgetting \texttt{ORDER BY} in window specification---results are non-deterministic.
+\item Recursive CTE without a termination condition---infinite loop.
+\item Using CTEs where a simple subquery suffices---CTEs add no performance benefit in PostgreSQL (they are optimization fences in older versions).
+\end{enumerate}
+
+\paragraph{Cross-Phase Connections} Window functions are essential for Phase 13 ML feature engineering, Phase 18 dbt transformations, and Phase 21 metrics calculations.
+
+\paragraph{Hands-On Exercises}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Beginner:} Calculate running totals and rank employees by salary within each department using window functions.
+\item \textbf{Intermediate:} Use \texttt{LAG()} to calculate month-over-month revenue growth.
+\item \textbf{Intermediate:} Write a recursive CTE to traverse an employee hierarchy (manager-report chain).
+\item \textbf{Advanced:} Solve the ``gaps and islands'' problem using window functions---identify consecutive date ranges in sparse data.
+\end{enumerate}
+
 \mustmaster{Indexing \& Query Optimization}
 
 \paragraph{Prerequisite Concepts} B-trees (Phase 6), SQL queries.
@@ -3016,6 +3058,21 @@ Implementation: use Redis as a distributed counter. Return \texttt{429 Too Many 
 \item \textbf{Beginner:} Implement a fixed-window rate limiter as FastAPI middleware.
 \item \textbf{Intermediate:} Implement a token bucket algorithm backed by Redis.
 \item \textbf{Advanced:} Build a tiered rate limiting system with different limits per user plan.
+\end{enumerate}
+
+
+\awareness{API Versioning Strategies}
+
+\paragraph{Prerequisite Concepts} REST API design, HTTP headers.
+
+\paragraph{Core Concepts \& Deep Explanation} API versioning prevents breaking changes for existing clients. Three strategies: \emph{URL path} (\texttt{/api/v1/users})---most common, explicit, easy to route; \emph{Query parameter} (\texttt{/api/users?version=1})---flexible but less discoverable; \emph{Header-based} (\texttt{Accept: application/vnd.api.v1+json})---cleanest REST but harder to test. Best practice: use URL path versioning for simplicity. Maintain at most 2 active versions. Deprecation process: announce \arrow{} add \texttt{Sunset} header \arrow{} migrate clients \arrow{} remove.
+
+\paragraph{Cross-Phase Connections} API versioning is essential for Phase 16 microservice architecture and Phase 19 system design backward compatibility.
+
+\paragraph{Hands-On Exercises}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Beginner:} Implement URL-path versioning in FastAPI with two versions of the same endpoint.
+\item \textbf{Intermediate:} Add \texttt{Sunset} and \texttt{Deprecation} headers to a v1 endpoint while v2 is active.
 \end{enumerate}
 
 \awareness{GraphQL Basics}
@@ -4147,6 +4204,17 @@ Deep learning powers ChatGPT, autonomous vehicles, medical diagnosis, and protei
 \item \textbf{Advanced:} Optimize build time with layer caching; measure before/after build times.
 \end{enumerate}
 
+
+\paragraph{Docker Security Best Practices}
+\begin{enumerate}[leftmargin=*]
+\item Run containers as non-root: \texttt{USER 1001} in Dockerfile.
+\item Use read-only file systems: \texttt{docker run --read-only}.
+\item Limit capabilities: \texttt{--cap-drop=ALL --cap-add=NET\_BIND\_SERVICE}.
+\item Scan images in CI: \texttt{trivy image myapp:latest --severity CRITICAL,HIGH}.
+\item Use distroless or scratch base images for minimal attack surface.
+\item Never store secrets in images---use Docker secrets or environment variables from a vault.
+\end{enumerate}
+
 \mustmaster{Kubernetes Fundamentals}
 
 \paragraph{Prerequisite Concepts} Docker, networking, YAML.
@@ -4189,6 +4257,40 @@ Best practices: use minimal base images (distroless, alpine), update base images
 \item \textbf{Advanced:} Compare vulnerability counts across base images (ubuntu, alpine, distroless); choose the most secure.
 \end{enumerate}
 
+
+\mustmaster{Infrastructure as Code (Terraform)}
+
+\paragraph{Prerequisite Concepts} Linux administration (Phase 9), Docker (this phase), cloud computing basics.
+
+\paragraph{Core Concepts \& Deep Explanation} Infrastructure as Code (IaC) manages servers, networks, and services through declarative configuration files rather than manual processes. Terraform (HashiCorp) is the most widely adopted multi-cloud IaC tool, using HCL (HashiCorp Configuration Language) to define infrastructure.
+
+Core workflow: \texttt{terraform init} (install providers) \arrow{} \texttt{terraform plan} (preview changes) \arrow{} \texttt{terraform apply} (execute changes) \arrow{} \texttt{terraform destroy} (tear down). State files (\texttt{terraform.tfstate}) track the mapping between config and real infrastructure---always store remotely (S3 + DynamoDB for locking) in team environments, never in Git.
+
+Key concepts: \emph{Providers} connect to cloud APIs (AWS, GCP, Azure, Kubernetes). \emph{Resources} define infrastructure components (VMs, databases, networks). \emph{Modules} are reusable, composable infrastructure packages. \emph{Variables} and \emph{outputs} parameterize configurations. \emph{Data sources} query existing infrastructure.
+
+Terraform vs.\ alternatives: Pulumi (general-purpose languages instead of HCL), CloudFormation (AWS-only), Ansible (procedural, configuration management), CDK (generates CloudFormation from TypeScript/Python). Terraform's strength is multi-cloud support and the largest provider ecosystem.
+
+\paragraph{Advanced Trajectory} Terraform Cloud/Enterprise for team workflows. Policy as Code with Sentinel/OPA. Terragrunt for DRY configurations. Custom providers. Import existing infrastructure with \texttt{terraform import}. Terraform CDK (CDKTF) for using TypeScript/Python instead of HCL.
+
+\paragraph{Common Pitfalls \& Debugging}
+\begin{enumerate}[leftmargin=*]
+\item Storing state locally in Git---causes conflicts and exposes secrets. Use remote state from day one.
+\item Not using \texttt{terraform plan} before \texttt{apply}---changes may destroy resources unexpectedly.
+\item Hardcoding values instead of using variables---makes modules non-reusable.
+\item Forgetting to lock state---concurrent applies corrupt state. Use DynamoDB locking with S3.
+\item Ignoring state drift---manual changes outside Terraform cause plan/apply mismatches. Use \texttt{terraform refresh}.
+\end{enumerate}
+
+\paragraph{Cross-Phase Connections} IaC is essential for Phase 15 CI/CD (provisioning deployment targets), Phase 19 system design (infrastructure architecture), Phase 22 MLOps (provisioning GPU instances), and Phase 24 capstone deployment.
+
+\paragraph{Hands-On Exercises}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Beginner:} Provision an AWS EC2 instance (or GCP VM) with Terraform; SSH into it.
+\item \textbf{Intermediate:} Create a reusable Terraform module for a VPC with public/private subnets.
+\item \textbf{Intermediate:} Set up remote state with S3 and DynamoDB locking; demonstrate concurrent access safety.
+\item \textbf{Advanced:} Provision a complete Kubernetes cluster (EKS/GKE) with Terraform; deploy the Phase 10 app using Helm.
+\end{enumerate}
+
 \mustmaster{Multi-Environment Management}
 
 \paragraph{Prerequisite Concepts} Docker, Kubernetes, CI/CD.
@@ -4202,6 +4304,21 @@ Helm (Kubernetes package manager) templates Kubernetes manifests with environmen
 \item \textbf{Beginner:} Create Helm charts for the FastAPI app with dev/staging/prod value files.
 \item \textbf{Intermediate:} Set up ArgoCD to deploy automatically when the Git repo changes.
 \item \textbf{Advanced:} Implement a promotion pipeline: dev \arrow{} staging \arrow{} production with manual approval gates.
+\end{enumerate}
+
+
+\awareness{Kubernetes Networking \& Service Discovery}
+
+\paragraph{Prerequisite Concepts} TCP/IP (Phase 9), Docker networking, Kubernetes basics (this phase).
+
+\paragraph{Core Concepts \& Deep Explanation} Kubernetes networking follows three fundamental rules: (1) every Pod gets its own IP address, (2) Pods can communicate with each other without NAT, (3) agents on a node can communicate with all Pods on that node. Services provide stable endpoints: \texttt{ClusterIP} (internal), \texttt{NodePort} (external via node port), \texttt{LoadBalancer} (cloud provider LB). DNS-based service discovery: Kubernetes runs CoreDNS, so \texttt{my-service.my-namespace.svc.cluster.local} resolves to the Service's ClusterIP. Network Policies act as Pod-level firewalls controlling ingress/egress traffic.
+
+\paragraph{Cross-Phase Connections} Kubernetes networking is essential for Phase 16 microservice communication, Phase 20 zero-trust network policies, and Phase 21 distributed tracing.
+
+\paragraph{Hands-On Exercises}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Beginner:} Deploy two Pods and verify they can communicate by IP and DNS name.
+\item \textbf{Intermediate:} Create a NetworkPolicy that restricts traffic to only specific Pods.
 \end{enumerate}
 
 \awareness{Service Mesh (Istio)}
@@ -4335,6 +4452,32 @@ Docker and Kubernetes are the de facto deployment standards. Every major cloud p
 \end{prereqbox}
 
 \subsection*{Topics}
+
+
+\mustmaster{Microservice Communication Patterns}
+
+\paragraph{Prerequisite Concepts} REST APIs (Phase 10), message queues concept (Phase 19).
+
+\paragraph{Core Concepts \& Deep Explanation} Microservices communicate via synchronous (HTTP/gRPC) or asynchronous (message queues/event streaming) patterns. \emph{Synchronous}: REST (simple, widely understood) or gRPC (protobuf, strongly typed, efficient binary serialization, bidirectional streaming). \emph{Asynchronous}: Event-driven via Kafka/RabbitMQ decouples services temporally.
+
+Patterns: \emph{API Gateway} (single entry point, routing, auth, rate limiting), \emph{Service Discovery} (Consul, Kubernetes DNS), \emph{Circuit Breaker} (prevent cascading failures---Closed/Open/Half-Open states), \emph{Saga Pattern} (distributed transactions via choreography or orchestration), \emph{CQRS} (Command Query Responsibility Segregation---separate read and write models). \emph{Strangler Fig} (incrementally replace monolith with microservices).
+
+\paragraph{Common Pitfalls \& Debugging}
+\begin{enumerate}[leftmargin=*]
+\item Distributed monolith---microservices that are tightly coupled and must be deployed together.
+\item Not implementing circuit breakers---one failing service cascades to all callers.
+\item Synchronous chains (A calls B calls C calls D)---latency multiplies, availability decreases.
+\item Not handling partial failures---in distributed systems, some calls will fail.
+\end{enumerate}
+
+\paragraph{Cross-Phase Connections} Communication patterns are central to Phase 19 system design, Phase 20 zero-trust security, and Phase 21 distributed tracing.
+
+\paragraph{Hands-On Exercises}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Beginner:} Implement service-to-service communication with REST and gRPC; compare latency.
+\item \textbf{Intermediate:} Implement the Circuit Breaker pattern with exponential backoff.
+\item \textbf{Advanced:} Implement the Saga pattern for a multi-service order processing workflow.
+\end{enumerate}
 
 \mustmaster{GoF Design Patterns}
 
@@ -4603,6 +4746,34 @@ System prompts define model behavior and constraints. Prompt templates with vari
 \item \textbf{Beginner:} Compare zero-shot, few-shot, and CoT prompting on 10 diverse tasks.
 \item \textbf{Intermediate:} Build a prompt template library for code review, summarization, and data extraction.
 \item \textbf{Advanced:} Implement a structured output pipeline: prompt \arrow{} JSON parsing \arrow{} validation with Pydantic.
+\end{enumerate}
+
+
+\mustmaster{Prompt Engineering Fundamentals}
+
+\paragraph{Prerequisite Concepts} Understanding of LLMs, basic API usage.
+
+\paragraph{Core Concepts \& Deep Explanation} Prompt engineering is the systematic design of inputs to elicit optimal outputs from language models. Core techniques: \emph{Zero-shot} (direct instruction, no examples), \emph{Few-shot} (provide 3--5 input-output examples), \emph{Chain-of-Thought (CoT)} (``Let's think step by step'' forces reasoning), \emph{Self-consistency} (sample multiple CoT paths, take majority vote), \emph{ReAct} (interleave reasoning and action steps).
+
+System prompts set the model's role, constraints, and output format. Temperature controls randomness (0 = deterministic, 1 = creative). Top-p (nucleus sampling) controls diversity. Structured output (JSON mode) ensures parseable responses.
+
+Advanced patterns: \emph{Tree of Thought} (explore multiple reasoning branches), \emph{Generated Knowledge} (ask the model to generate relevant facts before answering), \emph{Prompt chaining} (decompose complex tasks into sequential prompts), \emph{Meta-prompting} (ask the model to improve its own prompt).
+
+\paragraph{Common Pitfalls \& Debugging}
+\begin{enumerate}[leftmargin=*]
+\item Vague instructions producing inconsistent outputs---be explicit about format, length, and constraints.
+\item Not including negative examples (``Do NOT include...'')---models follow implicit patterns.
+\item Using temperature too high for factual tasks---lower to 0--0.3 for accuracy.
+\item Prompt length exceeding context window---summarize or chunk the input.
+\end{enumerate}
+
+\paragraph{Cross-Phase Connections} Prompt engineering is the foundation for Phase 17 RAG, agents, and fine-tuning decisions. Connects to Phase 22 LLMOps prompt versioning.
+
+\paragraph{Hands-On Exercises}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Beginner:} Compare zero-shot, few-shot, and CoT prompting for a classification task---measure accuracy differences.
+\item \textbf{Intermediate:} Build a prompt template library for code generation, debugging, and documentation.
+\item \textbf{Advanced:} Implement a prompt optimization pipeline: generate 10 prompt variants, evaluate on a test set, select the best performing.
 \end{enumerate}
 
 \mustmaster{RAG (Retrieval-Augmented Generation)}
@@ -5827,6 +5998,37 @@ Tools: LangSmith (LangChain's observability platform), Weights \& Biases Prompts
 \item \textbf{Advanced:} Implement a complete LLMOps pipeline: prompt versioning \arrow{} automated eval \arrow{} guardrails \arrow{} cost tracking \arrow{} alerting.
 \end{enumerate}
 
+
+\awareness{Feature Stores}
+
+\paragraph{Prerequisite Concepts} ML pipelines (Phase 13), data engineering (Phase 18).
+
+\paragraph{Core Concepts \& Deep Explanation} A feature store is a centralized system for computing, storing, and serving ML features consistently across training and inference. It solves the \emph{training-serving skew} problem where features are computed differently in training vs.\ production. Key components: \emph{Feature definitions} (transformation logic), \emph{Offline store} (historical features for training, typically data warehouse), \emph{Online store} (low-latency features for inference, typically Redis/DynamoDB), \emph{Feature registry} (metadata, lineage, discovery). Tools: Feast (open-source), Tecton, Amazon SageMaker Feature Store.
+
+\paragraph{Cross-Phase Connections} Feature stores bridge Phase 13 ML feature engineering, Phase 18 data pipelines, and Phase 22 model serving.
+
+\paragraph{Hands-On Exercises}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Beginner:} Set up Feast with a local file source; register and retrieve features.
+\item \textbf{Intermediate:} Build a feature pipeline that populates both offline (Parquet) and online (Redis) stores.
+\end{enumerate}
+
+
+\awareness{Data Drift Detection}
+
+\paragraph{Prerequisite Concepts} Statistics (Phase 12), ML model evaluation (Phase 13), monitoring (Phase 21).
+
+\paragraph{Core Concepts \& Deep Explanation} Data drift occurs when the statistical properties of model input data change over time, causing model performance degradation. Types: \emph{Feature drift} (input distribution changes), \emph{Label drift} (target variable distribution changes), \emph{Concept drift} (the relationship between inputs and outputs changes). Detection methods: Kolmogorov-Smirnov test (comparing distributions), Population Stability Index (PSI), Jensen-Shannon divergence, and monitoring feature statistics (mean, variance, percentiles) over time windows. Tools: Evidently AI (open-source dashboards), NannyML, WhyLabs, custom Prometheus metrics.
+
+\paragraph{Cross-Phase Connections} Drift detection connects to Phase 13 model evaluation, Phase 18 data quality (Great Expectations), and Phase 21 alerting.
+
+\paragraph{Hands-On Exercises}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Beginner:} Use Evidently AI to generate a data drift report comparing training vs.\ production data.
+\item \textbf{Intermediate:} Implement KS-test drift detection and alert when drift exceeds threshold.
+\item \textbf{Advanced:} Build an automated retraining pipeline triggered by drift detection.
+\end{enumerate}
+
 \mustmaster{Prompt Management \& Versioning}
 
 \paragraph{Prerequisite Concepts} Prompt engineering (Phase 17), version control.
@@ -6851,7 +7053,8 @@ Pursue certifications after completing the relevant phases, not before. Certific
 1 & AWS Cloud Practitioner & AWS & \$100 & P9 & Cloud fundamentals; entry-level credential \\
 2 & AWS Solutions Architect (Assoc.) & AWS & \$150 & P15 & Most recognized cloud cert \\
 3 & Kubernetes CKAD & CNCF & \$395 & P15 & Hands-on K8s; DevOps roles \\
-4 & Terraform Associate & HashiCorp & \$70 & P15 & IaC certification \\
+4 & Terraform Associate (003) & HashiCorp & \$70 & P15 & IaC certification---validates Terraform workflow and HCL proficiency \\
+5 & GitHub Actions Certification & GitHub & \$99 & P11/P15 & CI/CD pipeline expertise \\
 5 & dbt Analytics Engineering & dbt Labs & Free & P18 & Data engineering credibility \\
 6 & Google Prof.\ ML Engineer & Google & \$200 & P22 & ML production skills \\
 7 & AWS ML Specialty & AWS & \$300 & P22 & ML on AWS \\
@@ -6951,6 +7154,13 @@ SVD & 12 & Singular Value Decomposition: $A = U\Sigma V^T$ \\
 TCP/IP & 9 & Reliable network communication protocol \\
 TDD & 11 & Test-Driven Development --- write tests before implementation \\
 Terraform & 15 & Infrastructure as Code tool \\
+Feature Store & 22 & Centralized system for computing, storing, and serving ML features \\
+Data Drift & 22 & Change in input feature distributions between training and production \\
+gRPC & 16 & High-performance RPC framework using Protocol Buffers \\
+Circuit Breaker & 16 & Pattern preventing cascading failures in distributed systems \\
+Saga Pattern & 16 & Distributed transaction pattern for microservices \\
+CQRS & 16 & Command Query Responsibility Segregation---separate read/write models \\
+MCP & 17 & Model Context Protocol---standard for LLM tool integration \\
 Token (LLM) & 17 & Subword unit processed by language models \\
 Transformer & 14 & Architecture using self-attention for sequence processing \\
 Trivy & 15 & Container image vulnerability scanner \\
@@ -7126,16 +7336,16 @@ Poulton \emph{Docker Deep Dive}; Luk\v{s}a \emph{Kubernetes in Action}; Beyer et
 \begin{center}
 \textit{``The best time to start was yesterday.}\\
 \textit{The second best time is now.''}\\[6pt]
-\textbf{Roadmap Version 7.0} --- March 2026\\
+\textbf{Roadmap Version 8.0} --- March 2026\\
 \textbf{Duration:} 139 weeks (full-time) / $\sim$278 weeks (part-time)\\
 \textbf{Phases:} 25 \quad \textbf{Topics:} 149 \quad \textbf{Exercises:} 300+
 \end{center}
 
 
 % ============================================================
-% END OF DOCUMENT --- Version 7.0 --- March 2026
+% END OF DOCUMENT --- Version 8.0 --- March 2026
 % 25 Phases | 149 Topics | 300+ Exercises | ~3,036 Hours
-% V7.0 Comprehensive Enhancement Applied
+% V8.0 Master Edition Applied
 % ============================================================
 \end{document}
 

@@ -1,0 +1,79 @@
+name: Compile LaTeX to PDF
+
+on:
+  push:
+    paths:
+      - 'roadmap.tex'
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: roadmap.tex
+          compiler: pdflatex
+          args: "-interaction=nonstopmode -halt-on-error"
+
+      - name: Prepare deployment directory
+        run: |
+          mkdir -p _site
+          cp roadmap.pdf _site/
+          cp roadmap.pdf _site/index.pdf
+          cat > _site/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="utf-8">
+            <title>Software Engineering Mastery Roadmap</title>
+            <meta http-equiv="refresh" content="0; url=roadmap.pdf">
+            <style>
+              body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background: #0d1117; color: #c9d1d9; }
+              .container { text-align: center; padding: 2rem; }
+              a { color: #58a6ff; text-decoration: none; font-size: 1.2rem; }
+              a:hover { text-decoration: underline; }
+              h1 { font-size: 1.8rem; margin-bottom: 1rem; }
+              p { color: #8b949e; }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>📘 Software Engineering Mastery Roadmap</h1>
+              <p>Redirecting to PDF...</p>
+              <p><a href="roadmap.pdf">Click here if not redirected automatically</a></p>
+            </div>
+          </body>
+          </html>
+          EOF
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

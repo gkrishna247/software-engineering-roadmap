@@ -1,7 +1,7 @@
 \documentclass[11pt, a4paper, oneside]{report}
 
 % ============================================================
-% V6.0 --- FULLY UPGRADED PREAMBLE (52 Fixes Applied)
+% V7.0 --- COMPREHENSIVE ENHANCEMENT (75+ Improvements Applied)
 % ============================================================
 
 % === Encoding & Fonts ===
@@ -131,7 +131,7 @@ Mastery Roadmap}
 \rule{\textwidth}{1.5pt}
 \vspace{0.4cm}
 
-{\Large\color{sectioncolor} 2026 Expanded Edition \quad|\quad Version 6.0}
+{\Large\color{sectioncolor} 2026 Enhanced Edition \quad|\quad Version 7.0}
 
 \vspace{0.3cm}
 \rule{\textwidth}{0.4pt}
@@ -147,8 +147,8 @@ to Production-Ready Software Engineer}
   boxrule=0.8pt, arc=5pt, width=0.85\textwidth,
   halign=center, fontupper=\large]
 \begin{tabular}{cccc}
-\textbf{25 Phases} & \textbf{149 Topics} & \textbf{300+ Exercises} & \textbf{130--140 Weeks} \\[4pt]
-\textbf{4 Tiers} & \textbf{8 Languages} & \textbf{200+ Resources} & \textbf{$\sim$2,860 Hours}
+\textbf{25 Phases} & \textbf{149 Topics} & \textbf{300+ Exercises} & \textbf{139 Weeks} \\[4pt]
+\textbf{4 Tiers} & \textbf{8 Languages} & \textbf{200+ Resources} & \textbf{$\sim$3,036 Hours}
 \end{tabular}
 \end{tcolorbox}
 
@@ -217,8 +217,8 @@ Every topic follows this structure:
 \subsection*{Time Commitment}
 \begin{itemize}
 \item \textbf{Recommended pace:} 4 hours/day, 5.5 days/week ($\sim$22 hours/week).
-\item \textbf{Total duration:} $\sim$130 weeks (30 months).
-\item \textbf{Total hours:} $\sim$2,860 hours.
+\item \textbf{Total duration:} $\sim$139 weeks ($\sim$32 months).
+\item \textbf{Total hours:} $\sim$3,036 hours.
 \end{itemize}
 
 
@@ -260,9 +260,9 @@ Mathematics for AI, machine learning foundations, deep learning, DevOps/Docker/K
 MLOps \& production AI, modern languages survey (Go, Rust, TypeScript), capstone portfolio projects, and career/interview preparation. \textbf{4 phases, 16 topics, $\sim$440 hours.}
 \end{tieroverviewbox}
 
-\textbf{Time commitment:} 4 hours per day, 5.5 days per week ($\sim$22 hours/week), yielding approximately 130 weeks ($\sim$30 months).
+\textbf{Time commitment:} 4 hours per day, 5.5 days per week ($\sim$22 hours/week), yielding approximately 139 weeks ($\sim$32 months).
 
-\textbf{How to use this document:} Read sequentially. Each phase specifies prerequisites, topics with expanded six-part explanations, curated resources with additional topic-specific resources, a concrete milestone, and a daily practice plan. Do not skip phases---each builds on the previous ones as shown in the Prerequisite Dependency Map (Appendix B). Every topic follows a mandatory six-part template: Prerequisite Concepts, Core Concepts \& Deep Explanation, Advanced Trajectory, Common Pitfalls \& Debugging, Cross-Phase Connections, and Hands-On Exercises.
+\textbf{How to use this document:} Read sequentially. Each phase specifies prerequisites, topics with expanded six-part explanations, curated resources with additional topic-specific resources, a concrete milestone, and a daily practice plan. Do not skip phases---each builds on the previous ones as shown in the phase prerequisite chains listed in the Phase boxes. Every topic follows a mandatory six-part template: Prerequisite Concepts, Core Concepts \& Deep Explanation, Advanced Trajectory, Common Pitfalls \& Debugging, Cross-Phase Connections, and Hands-On Exercises.
 
 \begin{tcolorbox}[colback=green!3, colframe=green!50!black, title={\textbf{What ``Done'' Looks Like --- Portfolio Outcomes}}, fonttitle=\bfseries\small, boxrule=0.5pt, arc=3pt, breakable, enhanced jigsaw]
 \begin{itemize}[leftmargin=*]
@@ -280,22 +280,17 @@ MLOps \& production AI, modern languages survey (Go, Rust, TypeScript), capstone
 \textbf{New in the Expanded Edition:} This edition adds 50+ missing subtopics across all phases, expands every topic to the six-part template with 400--800 word explanations, adds 5--8 resources per phase, includes topic-specific resource links, and fixes all layout issues from the previous version.
 
 
-\subsection*{New in Version 6.0}
+\subsection*{New in Version 7.0}
 \begin{itemize}[leftmargin=*]
-\item All sections use short-form optional arguments for page headers (prevents header overflow).
-\item Appendices promoted to individual \texttt{\textbackslash chapter} structure (7 appendix chapters).
-\item Decorative chapter formatting with \texttt{titlerule} separators.
-\item Alternating row shading (\texttt{gray!5}) on all resource tables for readability.
-\item Enhanced title page with complete document statistics box.
-\item ``What Done Looks Like'' portfolio outcomes in a highlighted box.
-\item Geometry package updated with explicit \texttt{headheight=20pt}.
-\item All longtable instances verified with proper column width sums.
-\item \textbf{V6.0:} Quick Reference Cheat Sheets added to 7 key phases (1, 6, 8, 14, 15, 17).
-\item \textbf{V6.0:} All 25 Key Takeaway boxes customized with phase-specific insights (were generic boilerplate).
-\item \textbf{V6.0:} 20 appendix section headers given short-form arguments for proper page headers.
-\item \textbf{V6.0:} Version inconsistency at end-of-document corrected (was 2.0, now 6.0).
-\item \textbf{V6.0:} Duplicate end-of-document comment blocks cleaned up.
-\item Version bumped to 6.0 reflecting comprehensive content and structural enhancements.
+\item Phase-specific ``When You Get Stuck'' guidance customized for all 25 phases (were identical boilerplate).
+\item Quick Reference Cheat Sheets expanded to all 25 phases (were only 6 phases).
+\item Phase week/hour inconsistencies corrected: Phase 5 (4 weeks), Phase 12 (5 weeks), Phase 14 (7 weeks) now match their estimated hours.
+\item Tier 3 and Tier 4 chapter week ranges corrected to match actual phase totals.
+\item Total curriculum hours recalculated to $\sim$3,036 hours across $\sim$139 weeks.
+\item All bare URLs wrapped in proper \texttt{\textbackslash url\{\}} commands.
+\item Executive summary cross-reference to nonexistent ``Appendix B Dependency Map'' corrected.
+\item Document statistics on title page updated to reflect accurate totals.
+\item Version bumped to 7.0 reflecting comprehensive structural and content enhancements.
 \end{itemize}
 
 \chapter[Tier 1: Foundations]{Tier 1: Foundations (Weeks 1--26)}
@@ -654,10 +649,10 @@ C is the language of operating systems (Linux, Windows kernel), embedded systems
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Pointers confusing?} Draw memory diagrams on paper. Physically trace each pointer assignment with boxes and arrows. Use Python Tutor's C mode to visualize.
+\item \textbf{Segfault crashing your program?} Run with GDB: \texttt{gdb ./program}, then \texttt{run}. The backtrace shows exactly where it crashed. Check for NULL pointers and array bounds.
+\item \textbf{Valgrind output overwhelming?} Focus only on ``definitely lost'' and ``Invalid read/write'' messages. Ignore ``possibly lost'' until the definite leaks are fixed.
+\item \textbf{C syntax feels alien after no prior coding?} This is normal---C is harder than most first languages. If stuck for 30+ minutes, look at a solution, understand it, close it, then reimplement from memory.
 \end{itemize}
 \end{stuckbox}
 
@@ -954,6 +949,19 @@ You can now write idiomatic Python with classes, comprehensions, context manager
 \end{microcheckpoint}
 
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item \texttt{python -m venv .venv \&\& source .venv/bin/activate} --- Create and activate virtual environment
+\item \texttt{uv pip install package} --- Fast package installation with uv
+\item \texttt{[x**2 for x in range(10) if x \% 2 == 0]} --- List comprehension pattern
+\item \texttt{with open('f.txt', encoding='utf-8') as f:} --- Context manager for files
+\item \texttt{re.findall(r'\textbackslash d+', text)} --- Find all digit sequences with regex
+\item \texttt{logging.getLogger(\_\_name\_\_)} --- Per-module logger setup
+\item \texttt{breakpoint()} --- Drop into debugger (Python 3.7+)
+\item \texttt{pytest -v --tb=short} --- Run tests with verbose output
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -1009,10 +1017,10 @@ Python powers Instagram (Django), Spotify (data pipelines), Netflix (ML), and ne
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{OOP concepts not clicking?} Think of classes as cookie cutters and objects as cookies. Draw class diagrams showing attributes and methods. Build 3 tiny classes before attempting anything complex.
+\item \textbf{Confused by Python's dynamic typing after C?} Use \texttt{type()} liberally to inspect objects. Python's flexibility is a feature---embrace it after C's strictness.
+\item \textbf{Regex patterns look like gibberish?} Use \url{https://regex101.com/} to build patterns interactively with real-time explanations. Start with simple patterns and compose them.
+\item \textbf{Test failures you don't understand?} Read the assertion error message carefully---pytest shows expected vs.\ actual values. Add \texttt{print()} statements inside the test to inspect intermediate values.
 \end{itemize}
 \end{stuckbox}
 
@@ -1239,6 +1247,19 @@ The GIL (Global Interpreter Lock) prevents multiple threads from executing Pytho
 You can now write production-quality Python with generators, decorators, type hints, async I/O, concurrency, profiling, and NumPy/Pandas data analysis pipelines.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item \texttt{@functools.lru\_cache(maxsize=128)} --- Memoize function results
+\item \texttt{yield} turns a function into a generator; \texttt{yield from} delegates to sub-generator
+\item \texttt{async def f(): await ...} --- Coroutine pattern; run with \texttt{asyncio.run(f())}
+\item \texttt{np.array([1,2,3]).reshape(3,1)} --- NumPy reshape; \texttt{-1} infers dimension
+\item \texttt{df.groupby('col').agg(\{'val': ['mean', 'sum']\})} --- Pandas aggregation
+\item \texttt{plt.subplots(2, 2, figsize=(10, 8))} --- Matplotlib multi-plot figure
+\item \texttt{from typing import Optional, List, Dict} --- Type hints for static analysis
+\item \texttt{def decorator(func): @wraps(func) def wrapper(*a, **kw): ...} --- Decorator template
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -1291,10 +1312,10 @@ NumPy/Pandas/Matplotlib power data analysis at every major tech company. Async p
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Decorators wrapping your brain?} Start with the simplest decorator: one that just prints before/after a function call. Then add arguments. The \texttt{@} syntax is just syntactic sugar for \texttt{func = decorator(func)}.
+\item \textbf{Async/await confusing?} Think of \texttt{await} as ``pause here and let others run.'' Draw a timeline showing when each coroutine runs vs.\ waits.
+\item \textbf{NumPy broadcasting errors?} Print \texttt{.shape} of every array before operations. Broadcasting rules: dimensions must be equal or one of them must be 1.
+\item \textbf{Pandas giving unexpected results?} Always check \texttt{df.dtypes} and \texttt{df.shape} after every operation. Use \texttt{.head()} constantly.
 \end{itemize}
 \end{stuckbox}
 
@@ -1466,6 +1487,19 @@ Modern Java features: Records (Java 16+) auto-generate constructors, getters, \t
 You can now write production-quality Java with generics, streams, lambdas, concurrency, records, sealed classes, virtual threads, and comprehensive JUnit testing. You have basic Spring awareness.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item \texttt{javac Main.java \&\& java Main} --- Compile and run
+\item \texttt{List<String> list = new ArrayList<>()} --- Generic collection
+\item \texttt{stream().filter(x -> x > 5).map(x -> x * 2).collect(Collectors.toList())} --- Stream pipeline
+\item \texttt{Optional.ofNullable(val).orElse(default)} --- Null-safe access
+\item \texttt{try (var conn = getConn()) \{ ... \}} --- Try-with-resources (auto-close)
+\item \texttt{ExecutorService exec = Executors.newFixedThreadPool(4)} --- Thread pool
+\item Access modifiers: \texttt{private} < default < \texttt{protected} < \texttt{public}
+\item \texttt{mvn clean package -DskipTests} --- Maven build skipping tests
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -1514,10 +1548,10 @@ Java powers Android, enterprise backends (Spring Boot at Netflix, Amazon), big d
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Java's verbosity frustrating after Python?} This is by design---Java's explicitness prevents bugs at scale. Use IDE auto-complete (IntelliJ) to reduce typing overhead.
+\item \textbf{Generics syntax confusing?} Start with \texttt{List<String>} and \texttt{Map<String, Integer>}. Think of \texttt{<T>} as a placeholder type that gets filled in when you use the class.
+\item \textbf{Concurrency bugs (race conditions)?} Add \texttt{synchronized} to shared data access first, then optimize later. Use \texttt{java.util.concurrent} classes over raw threads.
+\item \textbf{Maven/Gradle build errors?} Read the error from bottom to top---the root cause is usually at the end. Run \texttt{mvn clean install -X} for verbose output.
 \end{itemize}
 \end{stuckbox}
 
@@ -1565,7 +1599,7 @@ Java powers Android, enterprise backends (Spring Boot at Netflix, Amazon), big d
 \textbf{Goal:} Master Git internals, branching strategies, recovery, collaborative workflows, and code review practices.
 
 
-\textbf{Estimated Hours:} $\sim$66 hours (22 hrs/week $\times$ 3 weeks)
+\textbf{Estimated Hours:} $\sim$88 hours (22 hrs/week $\times$ 4 weeks)
 \end{prereqbox}
 
 \subsection*{Topics}
@@ -1663,6 +1697,19 @@ This makes Git virtually undoable: you can always recover from mistakes by findi
 You can now use interactive rebase, resolve merge conflicts, recover lost commits with reflog, find bug-introducing commits with bisect, write conventional commits, and conduct constructive code reviews.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item \texttt{git log --oneline --graph --all} --- Visualize branch history
+\item \texttt{git rebase -i HEAD\textasciitilde{}5} --- Interactive rebase last 5 commits
+\item \texttt{git reflog} --- Show all HEAD movements (recovery lifeline)
+\item \texttt{git stash push -m "msg"} / \texttt{git stash pop} --- Save/restore WIP changes
+\item \texttt{git bisect start; git bisect bad; git bisect good <hash>} --- Binary search for bugs
+\item \texttt{git cherry-pick <hash>} --- Apply specific commit to current branch
+\item \texttt{git reset --soft HEAD\textasciitilde{}1} --- Undo commit, keep changes staged
+\item Conventional Commits: \texttt{feat(scope): description} / \texttt{fix(scope): description}
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -1707,10 +1754,10 @@ Git is used by 95\%+ of professional developers. GitHub hosts 330+ million repos
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Merge conflicts intimidating?} They are just text markers. Open the file, read both versions between \texttt{<<<<<<<} and \texttt{>>>>>>>}, decide which to keep, remove the markers.
+\item \textbf{Lost commits after a bad rebase?} Don't panic. Run \texttt{git reflog}---every commit is still there. Find the hash before the rebase and \texttt{git reset --hard <hash>}.
+\item \textbf{Git history looks messy?} Use \texttt{git log --oneline --graph} to visualize. Practice interactive rebase (\texttt{git rebase -i}) on throwaway branches first.
+\item \textbf{Not sure when to commit?} Commit when one logical change is complete and tests pass. Too small is better than too large. You can always squash later.
 \end{itemize}
 \end{stuckbox}
 
@@ -2047,10 +2094,10 @@ DSA is the foundation of every technical interview. Netflix's recommendations, G
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Can't figure out which data structure to use?} Ask: Do I need order? (list/array) Fast lookup? (hash map) FIFO? (queue) LIFO? (stack) Sorted? (BST/heap). Draw a decision tree.
+\item \textbf{Recursion not making sense?} Trace through with n=1, n=2, n=3 on paper. Every recursion needs: (1) a base case that stops, (2) a recursive case that shrinks the problem.
+\item \textbf{LeetCode problems feel impossible?} Do Blind 75 in order. For each problem: read for 5 min, attempt for 20 min, then study the solution if stuck. Understand the \emph{pattern}, not just the answer.
+\item \textbf{Big-O analysis confusing?} Count the loops: one loop = O(n), nested loops = O(n\textsuperscript{2}). For recursion, draw the call tree and count nodes.
 \end{itemize}
 \end{stuckbox}
 
@@ -2251,6 +2298,19 @@ Common heuristics: Manhattan distance for grid pathfinding, Euclidean distance f
 You can now solve graph traversal, shortest path, DP, greedy, and backtracking problems. You have 200+ LeetCode solutions spanning all major patterns and can recognize which pattern applies to a given problem.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item BFS: queue-based, finds shortest path in unweighted graphs, O(V+E)
+\item DFS: stack/recursion-based, cycle detection, topological sort, O(V+E)
+\item Dijkstra: min-heap priority queue, non-negative weights, O((V+E) log V)
+\item Bellman-Ford: handles negative weights, detects negative cycles, O(VE)
+\item Union-Find: \texttt{find(x)} with path compression, \texttt{union(x,y)} with rank, near O(1)
+\item DP template: (1) define state, (2) recurrence relation, (3) base case, (4) iteration order
+\item Topological sort: DFS post-order reversed, or Kahn's algorithm (BFS with in-degree)
+\item Common DP patterns: 0/1 knapsack, LCS, LIS, coin change, matrix chain
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -2296,10 +2356,10 @@ Graph algorithms power Google Maps, social recommendations, and network routing.
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Graph problems overwhelming?} Every graph problem starts with BFS or DFS. If shortest path: BFS (unweighted) or Dijkstra (weighted). If ordering: topological sort. Learn these three patterns first.
+\item \textbf{Dynamic programming feels like magic?} DP = recursion + memoization. Start with the brute-force recursive solution, identify overlapping subproblems, add a cache. That's it.
+\item \textbf{Can't identify the DP pattern?} Classify the problem: is it 0/1 knapsack, unbounded knapsack, LCS, LIS, or matrix chain? Most DP problems are variants of 5--6 patterns.
+\item \textbf{Advanced algorithms (A*, Bellman-Ford) confusing?} Implement BFS/DFS/Dijkstra from scratch first. Advanced algorithms are extensions---A* = Dijkstra + heuristic, Bellman-Ford = relaxation over all edges.
 \end{itemize}
 \end{stuckbox}
 
@@ -2581,10 +2641,10 @@ PostgreSQL is used by Apple, Instagram, Spotify. SQL is universal---databases, d
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{SQL query not returning expected results?} Remember the execution order: FROM \(\to\) WHERE \(\to\) GROUP BY \(\to\) HAVING \(\to\) SELECT \(\to\) ORDER BY. Your WHERE runs before GROUP BY.
+\item \textbf{JOIN producing too many/few rows?} Check for NULL values and duplicate keys. Use \texttt{SELECT COUNT(*)} on each table first. A LEFT JOIN with no match gives NULLs, not zero rows.
+\item \textbf{Index not improving performance?} Run \texttt{EXPLAIN ANALYZE} on your query. Check if the index covers the WHERE clause columns. Composite indexes must match the leftmost columns.
+\item \textbf{Database normalization confusing?} 1NF: no repeating groups. 2NF: no partial dependencies. 3NF: no transitive dependencies. Start with 3NF then denormalize for performance if needed.
 \end{itemize}
 \end{stuckbox}
 
@@ -2752,6 +2812,19 @@ Bash scripting: variables, loops, conditionals, functions, exit codes, \texttt{s
 You can troubleshoot network issues using TCP/IP knowledge, analyze packets with Wireshark/tcpdump, resolve DNS problems, administer Linux servers, and write production-quality bash scripts.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item OSI layers: Physical, Data Link, Network, Transport, Session, Presentation, Application
+\item TCP 3-way handshake: SYN $\to$ SYN-ACK $\to$ ACK; teardown: FIN $\to$ ACK
+\item \texttt{ss -tlnp} --- Show listening TCP ports with process names
+\item \texttt{tcpdump -i eth0 port 80 -w capture.pcap} --- Capture network traffic
+\item \texttt{systemctl status/start/stop/enable service} --- Manage systemd services
+\item \texttt{chmod 755 file} --- Owner: rwx, Group: r-x, Others: r-x
+\item \texttt{grep -rn "pattern" /path} --- Recursive search with line numbers
+\item DNS resolution: Browser cache $\to$ OS cache $\to$ Resolver $\to$ Root $\to$ TLD $\to$ Authoritative
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -2797,10 +2870,10 @@ Linux powers 96\% of cloud servers and 100\% of the top 500 supercomputers. Unde
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Networking protocols feel abstract?} Use Wireshark to capture real traffic. Seeing actual TCP handshakes and HTTP headers makes protocols concrete. Filter by \texttt{tcp.port == 80}.
+\item \textbf{Linux commands overwhelming?} Focus on 10 commands first: \texttt{ls}, \texttt{cd}, \texttt{cat}, \texttt{grep}, \texttt{find}, \texttt{chmod}, \texttt{ps}, \texttt{kill}, \texttt{ssh}, \texttt{sudo}. Chain them with pipes.
+\item \textbf{SSH/firewall configuration not working?} Check in order: (1) Is the service running? (2) Is the port open? (\texttt{ss -tlnp}) (3) Is the firewall allowing it? (\texttt{ufw status}) (4) Can you reach the port? (\texttt{telnet host port}).
+\item \textbf{DNS/TCP concepts blurring together?} Draw the network stack as layers. DNS resolves names to IPs (application layer), TCP ensures reliable delivery (transport layer). They solve different problems.
 \end{itemize}
 \end{stuckbox}
 
@@ -2978,6 +3051,19 @@ Caching: HTTP caching headers (\texttt{Cache-Control}, \texttt{ETag}). Applicati
 You can now build full-stack applications with React frontend and FastAPI backend, implement REST and WebSocket APIs, manage authentication, apply rate limiting, and use caching for performance.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item HTTP methods: GET (read), POST (create), PUT (replace), PATCH (update), DELETE (remove)
+\item Status codes: 2xx success, 3xx redirect, 4xx client error, 5xx server error
+\item \texttt{@app.get("/items/\{id\}")} --- FastAPI path parameter
+\item \texttt{fetch('/api/data').then(r => r.json())} --- JavaScript fetch pattern
+\item REST: stateless, resource-based URLs, standard methods, HATEOAS
+\item JWT: Header.Payload.Signature (base64); store in httpOnly cookie, not localStorage
+\item CORS: \texttt{Access-Control-Allow-Origin} header controls cross-origin requests
+\item Rate limiting: Token bucket or sliding window; return 429 Too Many Requests
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -3023,10 +3109,10 @@ Web APIs are the connective tissue of modern software. FastAPI is used by Micros
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{API returning unexpected status codes?} Check the request method, URL, headers, and body. Use \texttt{curl -v} or Postman to test outside your code. Read the API error response body carefully.
+\item \textbf{Frontend-backend not connecting?} Check CORS settings, URL paths, and port numbers. Open browser DevTools Network tab to see the actual request being sent.
+\item \textbf{Authentication flow confusing?} Draw the JWT flow: (1) client sends credentials, (2) server returns token, (3) client sends token in Authorization header, (4) server validates. Implement one step at a time.
+\item \textbf{React state management overwhelming?} Start with \texttt{useState} for local state. Only add context/Redux when you need to share state across 3+ unrelated components.
 \end{itemize}
 \end{stuckbox}
 
@@ -3189,6 +3275,19 @@ Test types: \emph{load test} (expected traffic), \emph{stress test} (beyond capa
 You can now build comprehensive test suites across the testing pyramid, set up CI/CD pipelines with quality gates, perform load testing, and ensure API contracts are maintained.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item Test pyramid: many unit tests, fewer integration, fewest E2E
+\item \texttt{pytest -v --cov=src --cov-report=html} --- Run with coverage report
+\item \texttt{@pytest.fixture} for setup/teardown; \texttt{@pytest.mark.parametrize} for data-driven tests
+\item \texttt{unittest.mock.patch('module.Class')} --- Mock external dependencies
+\item CI pipeline: lint $\to$ test $\to$ build $\to$ security scan $\to$ deploy
+\item Property-based testing: \texttt{@given(st.integers())} with Hypothesis
+\item Flaky test: add retry, fix race condition, or mock time-dependent behavior
+\item Coverage goal: 80\%+ on critical paths, don't chase 100\%
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -3234,10 +3333,10 @@ CI/CD is the backbone of modern delivery. Google deploys thousands of times dail
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Not sure what to test?} Test the contract: given these inputs, what outputs/side effects should occur? Focus on: happy path, edge cases, error cases, boundary values.
+\item \textbf{Mocking feels wrong?} Mock external dependencies (APIs, databases, time), not your own code. If you need too many mocks, your code is too coupled---refactor first.
+\item \textbf{CI pipeline keeps failing?} Read the logs from the failing step. Most CI failures are: missing dependencies, environment variables, or test flakiness. Run the same commands locally first.
+\item \textbf{100\% coverage but still finding bugs?} Coverage measures lines executed, not correctness. Focus on meaningful assertions and edge cases, not coverage numbers.
 \end{itemize}
 \end{stuckbox}
 
@@ -3274,7 +3373,7 @@ CI/CD is the backbone of modern delivery. Google deploys thousands of times dail
 \end{practicebox}
 
 
-\chapter[Tier 3: Specialization]{Tier 3: Specialization (Weeks 66--108)}
+\chapter[Tier 3: Specialization]{Tier 3: Specialization (Weeks 66--116)}
 
 \begin{tieroverviewbox}[title={\textbf{Tier Overview}}]
 This tier covers specialized engineering skills: AI/ML, DevOps, software architecture, LLM engineering, data engineering, system design, security, and observability.
@@ -3295,7 +3394,7 @@ This tier covers specialized engineering skills: AI/ML, DevOps, software archite
 \textbf{Goal:} Build the mathematical foundations for ML/DL: linear algebra, calculus, probability, statistics, optimization, information theory, and discrete math awareness.
 
 
-\textbf{Estimated Hours:} $\sim$88 hours (22 hrs/week $\times$ 4 weeks)
+\textbf{Estimated Hours:} $\sim$110 hours (22 hrs/week $\times$ 5 weeks)
 \end{prereqbox}
 
 \subsection*{Topics}
@@ -3437,6 +3536,19 @@ Boolean algebra and logic gates underpin circuit design and database query optim
 You can now derive and implement gradient descent, perform PCA with eigendecomposition, apply Bayes' theorem, compute information-theoretic quantities, and understand the mathematical foundations underlying every ML algorithm.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item Matrix multiply: $(m \times n) \cdot (n \times p) = (m \times p)$; inner dimensions must match
+\item Eigenvalues: $A\mathbf{v} = \lambda\mathbf{v}$; directions unchanged by transformation
+\item Gradient: $\nabla f$ points in direction of steepest ascent; descent uses $-\nabla f$
+\item Chain rule: $\frac{d}{dx}f(g(x)) = f'(g(x)) \cdot g'(x)$ --- backbone of backpropagation
+\item Bayes' theorem: $P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$
+\item Normal distribution: 68\% within $1\sigma$, 95\% within $2\sigma$, 99.7\% within $3\sigma$
+\item \texttt{np.linalg.eig(A)} --- Eigenvalues; \texttt{np.linalg.inv(A)} --- Matrix inverse
+\item SVD: $A = U\Sigma V^T$ --- dimensionality reduction, PCA foundation
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -3484,10 +3596,10 @@ Every ML algorithm is a mathematical function optimized by calculus. Understandi
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Linear algebra formulas overwhelming?} Implement each operation in NumPy: matrix multiply, transpose, inverse, eigenvalues. Seeing numbers makes abstract formulas concrete.
+\item \textbf{Can't see why math matters for ML?} Linear regression IS matrix multiplication. Neural networks ARE composed matrix operations. Gradient descent IS calculus. The connection becomes clear in Phase 13.
+\item \textbf{Probability distributions confusing?} Plot each distribution with Matplotlib. Change parameters and observe how the shape changes. \texttt{scipy.stats} makes this easy.
+\item \textbf{Proofs and formal notation intimidating?} Focus on intuition first, notation second. Watch 3Blue1Brown's \emph{Essence of Linear Algebra} series---it builds visual intuition.
 \end{itemize}
 \end{stuckbox}
 
@@ -3667,6 +3779,19 @@ Key concepts: stationarity (constant mean/variance over time), autocorrelation, 
 You can now train, evaluate, and explain ML models across supervised and unsupervised paradigms. You understand the complete ML pipeline from raw data to model deployment.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item ML workflow: Data $\to$ Clean $\to$ Features $\to$ Split $\to$ Train $\to$ Evaluate $\to$ Tune $\to$ Deploy
+\item \texttt{model.fit(X\_train, y\_train); model.predict(X\_test)} --- Scikit-learn pattern
+\item Bias-variance tradeoff: high bias = underfitting, high variance = overfitting
+\item Cross-validation: \texttt{cross\_val\_score(model, X, y, cv=5)} --- Robust evaluation
+\item Feature scaling: StandardScaler (zero mean, unit var) or MinMaxScaler (0--1 range)
+\item Classification metrics: accuracy, precision, recall, F1, AUC-ROC
+\item Regression metrics: MSE, RMSE, MAE, $R^2$
+\item \texttt{GridSearchCV(model, param\_grid, cv=5, scoring='f1')} --- Hyperparameter tuning
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -3712,10 +3837,10 @@ ML transforms every industry. scikit-learn is used at Spotify, Airbnb, and thous
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Overfitting your model?} Check the gap between train and validation scores. Try: more data, regularization (L1/L2), reduce model complexity, dropout, early stopping.
+\item \textbf{Feature engineering feels like guessing?} Start with domain knowledge. Then try: log transforms for skewed data, one-hot encoding for categories, polynomial features for nonlinear relationships.
+\item \textbf{Scikit-learn pipeline confusing?} Think of it as a recipe: each step transforms data for the next. \texttt{Pipeline([('scaler', StandardScaler()), ('model', LogisticRegression())])} chains steps.
+\item \textbf{Not sure which algorithm to use?} Start with logistic regression (classification) or linear regression (regression). If that's not good enough, try Random Forest. Then gradient boosting. Complexity increases with each step.
 \end{itemize}
 \end{stuckbox}
 
@@ -3762,7 +3887,7 @@ ML transforms every industry. scikit-learn is used at Spotify, Airbnb, and thous
 \textbf{Goal:} Master neural network fundamentals, CNNs, RNNs/Transformers, transfer learning, model compression, generative models, diffusion models, and PyTorch proficiency.
 
 
-\textbf{Estimated Hours:} $\sim$132 hours (22 hrs/week $\times$ 6 weeks)
+\textbf{Estimated Hours:} $\sim$154 hours (22 hrs/week $\times$ 7 weeks)
 \end{prereqbox}
 
 \subsection*{Topics}
@@ -3939,10 +4064,10 @@ Deep learning powers ChatGPT, autonomous vehicles, medical diagnosis, and protei
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Tensor shapes not matching?} Print \texttt{tensor.shape} after every operation. Most shape errors come from forgetting batch dimensions or mismatched matrix sizes.
+\item \textbf{Loss not decreasing during training?} Check: (1) Is learning rate too high/low? (2) Is data normalized? (3) Are labels correct? (4) Is the model complex enough? Try training on 1 batch first to verify it can overfit.
+\item \textbf{Backpropagation math confusing?} Use PyTorch's autograd and inspect \texttt{.grad} on tensors. The chain rule is doing what \texttt{loss.backward()} computes automatically.
+\item \textbf{GPU out of memory?} Reduce batch size first. Then try: gradient accumulation, mixed precision (\texttt{torch.cuda.amp}), gradient checkpointing, or model parallelism.
 \end{itemize}
 \end{stuckbox}
 
@@ -4155,10 +4280,10 @@ Docker and Kubernetes are the de facto deployment standards. Every major cloud p
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Docker container won't start?} Check \texttt{docker logs <container>} for the error. Common issues: missing environment variables, port conflicts, wrong base image, missing dependencies in Dockerfile.
+\item \textbf{Kubernetes YAML overwhelming?} Start with just Deployment + Service. Use \texttt{kubectl explain deployment.spec} to understand fields. Build up gradually---don't try to learn everything at once.
+\item \textbf{CI/CD pipeline not triggering?} Check: (1) trigger conditions (branch name, path filters), (2) YAML syntax (use a linter), (3) permissions and secrets, (4) runner availability.
+\item \textbf{Terraform state issues?} Never edit state manually. Use \texttt{terraform import} for existing resources. Use remote state (S3 + DynamoDB) from day one.
 \end{itemize}
 \end{stuckbox}
 
@@ -4337,6 +4462,19 @@ Circuit Breaker pattern prevents cascade failures: if a downstream service fails
 You can now design systems using GoF patterns, SOLID principles, DDD bounded contexts, gRPC for internal communication, API gateways, and event-driven microservice architecture.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item SOLID: Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, Dependency Inversion
+\item Creational: Factory, Builder, Singleton, Prototype
+\item Structural: Adapter, Decorator, Facade, Proxy, Composite
+\item Behavioral: Strategy, Observer, Command, State, Template Method
+\item Clean Architecture layers: Entities $\to$ Use Cases $\to$ Adapters $\to$ Frameworks
+\item DDD: Bounded Context, Aggregate Root, Value Object, Repository, Domain Event
+\item ADR template: Title, Status, Context, Decision, Consequences
+\item Rule of three: don't abstract until you've seen the pattern three times
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -4382,10 +4520,10 @@ Software architecture determines scalability. Netflix's microservices handle 250
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Design patterns all look the same?} Focus on the \emph{problem} each pattern solves, not the structure. Strategy: swap algorithms. Observer: notify dependents. Factory: create without specifying exact class.
+\item \textbf{SOLID principles feel dogmatic?} They are guidelines, not laws. Start with Single Responsibility and Dependency Inversion---these give the most practical benefit.
+\item \textbf{Microservices vs.\ monolith confusion?} Start with a modular monolith. Extract services only when you have a specific scaling or team boundary reason. Most projects never need microservices.
+\item \textbf{Architecture decisions feel paralyzing?} Document the tradeoff with an ADR (Architecture Decision Record). There is rarely a ``right'' answer---only tradeoffs. Choose and iterate.
 \end{itemize}
 \end{stuckbox}
 
@@ -4641,10 +4779,10 @@ LLMs are the most transformative technology since the internet. GitHub Copilot g
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Prompt not giving good results?} Use the CRAFT framework: Context, Role, Action, Format, Tone. Be specific about what you want. Show examples of desired output (few-shot prompting).
+\item \textbf{RAG pipeline retrieving irrelevant documents?} Check your chunking strategy (too large = diluted, too small = missing context). Try hybrid search (semantic + keyword). Evaluate retrieval before generation.
+\item \textbf{LLM hallucinating facts?} Add retrieval grounding (RAG). Use structured output (JSON mode). Add verification steps. Lower temperature for factual tasks.
+\item \textbf{Fine-tuning not improving performance?} Check data quality first---garbage in, garbage out. Ensure training data matches your task format. Start with few-shot prompting before fine-tuning.
 \end{itemize}
 \end{stuckbox}
 
@@ -4843,6 +4981,19 @@ Kafka Connect integrates with external systems (databases, S3, Elasticsearch) wi
 You can now design and build production data pipelines with Airflow/dbt, process large-scale data with Spark, ensure data quality with Great Expectations, handle real-time streaming with Kafka, and understand lakehouse architectures.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item ETL: Extract (sources) $\to$ Transform (clean, enrich) $\to$ Load (warehouse)
+\item ELT: Load raw data first, transform in warehouse (modern approach with dbt)
+\item \texttt{spark.read.parquet("path").filter(col("x") > 5).groupBy("y").count()} --- Spark pattern
+\item Partitioning: divide data by date/region for query performance
+\item Idempotency: running a pipeline twice produces the same result
+\item Data formats: Parquet (columnar, analytics), Avro (row, streaming), JSON (flexible, verbose)
+\item dbt: SQL-based transformations with testing and documentation
+\item Airflow DAG: define task dependencies, schedule runs, handle retries
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -4888,10 +5039,10 @@ Data engineering is the unsung hero of AI. Spotify processes 600GB+ daily. Kafka
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{ETL pipeline failing silently?} Add data quality checks at every stage: row counts, null rates, schema validation. Log extensively. Use idempotent operations so reruns are safe.
+\item \textbf{Spark job running too slowly?} Check for data skew (\texttt{spark.sql.adaptive.enabled = true}), unnecessary shuffles (avoid \texttt{groupByKey}), and partition sizes (aim for 128MB per partition).
+\item \textbf{Schema evolution breaking downstream?} Use schema registries (Avro + Confluent). Define backward/forward compatibility rules. Never remove required fields without deprecation.
+\item \textbf{Not sure when to use batch vs.\ stream?} Batch for historical analysis and reports. Stream for real-time dashboards, alerts, and sub-minute latency requirements. Most systems need both.
 \end{itemize}
 \end{stuckbox}
 
@@ -5037,6 +5188,19 @@ Experiment types: kill a pod, introduce network latency, simulate disk full, inj
 You can now design scalable distributed systems from requirements to architecture, reason about CAP/consistency trade-offs, define SLOs with error budgets, and approach system design interviews with a structured methodology.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item Design framework: Requirements $\to$ Estimation $\to$ API $\to$ Data Model $\to$ Architecture $\to$ Deep Dive
+\item Key numbers: 1 day = 86,400s $\approx$ 100K s; 1 QPS = 2.6M requests/month
+\item CAP theorem: Consistency, Availability, Partition tolerance --- pick two
+\item Load balancing: Round-robin, least connections, consistent hashing
+\item Caching: Cache-aside, write-through, write-behind; invalidation is the hard part
+\item Database scaling: Read replicas $\to$ Sharding $\to$ CQRS
+\item Message queues: Kafka (log-based, ordered), RabbitMQ (traditional, routing), SQS (managed)
+\item CDN for static assets, rate limiting for API protection, circuit breaker for fault tolerance
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -5081,10 +5245,10 @@ System design is the senior engineer's core competency. Design interviews are th
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{System design interviews feel impossible?} Follow a framework: (1) Requirements, (2) Estimation, (3) API design, (4) Data model, (5) High-level design, (6) Deep dive, (7) Tradeoffs. Practice each step.
+\item \textbf{Can't estimate capacity?} Memorize key numbers: 1 server handles $\sim$1K--10K RPS, 1TB = $10^{12}$ bytes, 100ms latency budget for user-facing APIs. Work from these anchors.
+\item \textbf{Tradeoffs all seem equal?} State the tradeoff explicitly: ``We choose X because of Y, accepting Z as a consequence.'' CAP theorem is a starting point: consistency vs.\ availability.
+\item \textbf{Scaling concepts abstract?} Draw the architecture at 100 users, 10K users, and 1M users. At each scale, identify the bottleneck and add the next scaling technique.
 \end{itemize}
 \end{stuckbox}
 
@@ -5251,6 +5415,19 @@ TLS 1.3 secures web traffic: handshake establishes shared secret using asymmetri
 You can now identify and mitigate OWASP Top 10 vulnerabilities, implement Zero Trust architecture, integrate SAST/DAST into CI/CD, manage supply chain security, and apply cryptographic primitives correctly.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item OWASP Top 10: Injection, Broken Auth, Sensitive Data, XXE, Broken Access Control, Misconfig, XSS, Insecure Deserialization, Known Vulns, Insufficient Logging
+\item \texttt{bcrypt.hashpw(password, bcrypt.gensalt())} --- Password hashing (never SHA/MD5)
+\item JWT validation: verify signature, check expiry, validate issuer and audience
+\item SQL injection prevention: parameterized queries, never string concatenation
+\item XSS prevention: escape output, Content-Security-Policy header, httpOnly cookies
+\item HTTPS everywhere; HSTS header; TLS 1.3 minimum
+\item Principle of least privilege: grant minimum necessary permissions
+\item Secret management: HashiCorp Vault, AWS Secrets Manager --- never hardcode secrets
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -5294,10 +5471,10 @@ Security breaches cost \$4.45M average per incident (IBM 2023). Every line of co
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Security feels like an endless checklist?} Focus on OWASP Top 10 first. 90\% of real-world vulnerabilities come from: injection, broken auth, misconfig, and sensitive data exposure.
+\item \textbf{Cryptography math overwhelming?} You don't need to implement crypto---use established libraries (\texttt{bcrypt}, \texttt{cryptography}). Understand \emph{when} to use what: hashing for passwords, AES for data, RSA/ECDSA for signatures.
+\item \textbf{Not sure if your app is secure?} Run automated scans: \texttt{npm audit}, Snyk, Bandit (Python), OWASP ZAP. These catch the low-hanging fruit. Then do manual code review for auth and input handling.
+\item \textbf{Threat modeling feels like guessing?} Use STRIDE: Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege. Apply to each component systematically.
 \end{itemize}
 \end{stuckbox}
 
@@ -5455,6 +5632,19 @@ Key practices: tag all cloud resources with team/project for cost allocation, se
 You can now instrument distributed systems with metrics, logs, and traces using OpenTelemetry, build effective dashboards and SLO-based alerts, implement structured logging with correlation IDs, and understand cost optimization practices.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item Three pillars: Metrics (numbers), Logs (events), Traces (request flows)
+\item RED method (services): Rate, Errors, Duration
+\item USE method (resources): Utilization, Saturation, Errors
+\item Four golden signals: Latency, Traffic, Errors, Saturation
+\item \texttt{histogram\_observe(duration)} --- Prometheus histogram for latency
+\item SLI/SLO/SLA: Indicator (metric) $\to$ Objective (target) $\to$ Agreement (contract)
+\item Error budget: 99.9\% SLO = 43 min downtime/month = your budget for risky changes
+\item Alert on symptoms (errors, latency), not causes (CPU, memory)
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -5498,10 +5688,10 @@ Observability is how you understand production systems. Google's SRE book establ
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Too many metrics, don't know what to monitor?} Start with the RED method for services (Rate, Errors, Duration) and USE method for infrastructure (Utilization, Saturation, Errors). Add custom metrics as needed.
+\item \textbf{Alert fatigue from too many notifications?} Set alerts on symptoms (user-facing errors), not causes (CPU usage). Use severity levels. Page only for customer-impacting issues.
+\item \textbf{Can't find the root cause of an incident?} Follow the breadcrumbs: (1) What changed? (recent deploys, config changes), (2) What's the blast radius? (3) Correlate metrics, logs, and traces around the incident start time.
+\item \textbf{Distributed tracing confusing?} Think of a trace as a timeline of one request across services. Each service adds a span. The trace ID ties them together. Start with Jaeger or Zipkin on 2 services.
 \end{itemize}
 \end{stuckbox}
 
@@ -5538,7 +5728,7 @@ Observability is how you understand production systems. Google's SRE book establ
 \end{practicebox}
 
 
-\chapter[Tier 4: Mastery]{Tier 4: Mastery \& Career (Weeks 117--140)}
+\chapter[Tier 4: Mastery]{Tier 4: Mastery \& Career (Weeks 117--139)}
 
 \begin{tieroverviewbox}[title={\textbf{Tier Overview}}]
 The final tier consolidates everything: MLOps for production AI, modern languages for polyglot proficiency, capstone projects for portfolio, and career preparation.
@@ -5664,6 +5854,19 @@ Best practices: store prompts in a dedicated repository or config system (not ha
 You can now manage the complete ML/LLM lifecycle in production: experiment tracking, model serving with drift monitoring, LLMOps with prompt versioning, and automated evaluation pipelines.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item MLOps lifecycle: Data $\to$ Train $\to$ Evaluate $\to$ Register $\to$ Deploy $\to$ Monitor $\to$ Retrain
+\item \texttt{mlflow.log\_metric("accuracy", 0.95)} --- Experiment tracking
+\item Model registry: staging $\to$ production promotion with approval gates
+\item Feature store: offline (batch training) + online (real-time serving) consistency
+\item Data drift detection: KL divergence, PSI, KS test on feature distributions
+\item A/B testing: canary deployment with traffic splitting (10\% new, 90\% old)
+\item \texttt{docker build -t model-server . \&\& docker run -p 8080:8080 model-server} --- Containerized serving
+\item LLMOps additions: prompt versioning, evaluation harnesses, guardrails, cost tracking
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -5708,10 +5911,10 @@ Chip Huyen ML Systems & Book & \$40 & Reference & Production ML system design & 
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Model serving infrastructure confusing?} Start with FastAPI + Docker for serving. Add model registries (MLflow) for versioning. Scale with Kubernetes only when needed.
+\item \textbf{Data/model drift detection overwhelming?} Monitor input distributions with simple statistics (mean, std, KL divergence). Set thresholds. Retrain when drift exceeds thresholds. Start simple.
+\item \textbf{Feature store seems overengineered?} A feature store is just a shared database of computed features. Start with a simple database table. Migrate to Feast or Tecton when you have 10+ models sharing features.
+\item \textbf{CI/CD for ML different from regular CI/CD?} Add: data validation, model training, evaluation metrics check (gate on accuracy), model registry push, canary deployment. The pipeline is longer but each step is familiar.
 \end{itemize}
 \end{stuckbox}
 
@@ -5895,6 +6098,19 @@ Polyglot engineering: use the right language for each component. Python for ML t
 You can now write production-quality code in Go, Rust, and TypeScript alongside Python and Java. You understand when to choose each language and can build polyglot systems.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item Go: \texttt{go run main.go}; \texttt{go build}; \texttt{go test ./...}
+\item Go concurrency: \texttt{go func()\{...\}()}; channels: \texttt{ch := make(chan int)}
+\item Rust: \texttt{cargo run}; \texttt{cargo test}; \texttt{cargo build --release}
+\item Rust ownership: each value has one owner; borrowing via \texttt{\&} (immutable) or \texttt{\&mut} (mutable)
+\item TypeScript: \texttt{npx tsc --init}; \texttt{interface User \{ name: string; age: number \}}
+\item TS utility types: \texttt{Partial<T>}, \texttt{Required<T>}, \texttt{Pick<T, K>}, \texttt{Omit<T, K>}
+\item Error handling: Go (multiple returns), Rust (\texttt{Result<T, E>}), TS (try/catch + types)
+\item All three compile to native/efficient output: Go (binary), Rust (binary), TS (JavaScript)
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -5940,10 +6156,10 @@ Go powers Docker, Kubernetes, Terraform. Rust is adopted by Linux kernel, Androi
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Learning a new language feels like starting over?} You already know programming concepts---you're just learning new syntax. Focus on what makes each language unique: Go's goroutines, Rust's ownership, TypeScript's types.
+\item \textbf{Rust's borrow checker rejecting everything?} The borrow checker is your friend---it prevents bugs C would let through. Start with owned values (\texttt{String}, \texttt{Vec}). Clone freely at first, then optimize.
+\item \textbf{Go feels too simple after Python/Java?} That's the point. Go's simplicity is a feature for team codebases. Embrace it: goroutines + channels for concurrency, interfaces for abstraction, that's nearly the whole language.
+\item \textbf{TypeScript types getting complex?} Start with basic types (\texttt{string}, \texttt{number}, interfaces). Add generics and utility types only when you need them. The compiler is your guide.
 \end{itemize}
 \end{stuckbox}
 
@@ -6079,6 +6295,19 @@ You have built 2--3 portfolio-grade projects demonstrating mastery across the fu
 \end{microcheckpoint}
 
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item MVP scope: 3 core features maximum for first release
+\item Architecture: Draw system diagram before writing code; define API contracts first
+\item Docker Compose for local multi-service development and testing
+\item CI/CD: GitHub Actions $\to$ Test $\to$ Build $\to$ Push Image $\to$ Deploy to staging $\to$ Production
+\item README template: Problem, Solution, Architecture, Setup, Usage, Screenshots, Contributing
+\item Demo preparation: 2-minute pitch, live demo, architecture walkthrough, lessons learned
+\item Testing strategy: unit tests for logic, integration tests for APIs, E2E for critical paths
+\item Deploy early, deploy often --- a live broken app teaches more than a perfect local one
+\end{itemize}
+\end{cheatsheetbox}
+
 \begin{realworldbox}
 Your capstone projects are what employers evaluate. A production-deployed AI app demonstrates more than any certification. These become your strongest interview talking points.
 \end{realworldbox}
@@ -6086,10 +6315,10 @@ Your capstone projects are what employers evaluate. A production-deployed AI app
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Capstone scope too ambitious?} Cut scope ruthlessly. A working MVP with 3 features beats a broken app with 30 features. Ship the core value proposition first, then iterate.
+\item \textbf{Integration between components failing?} Define interfaces (API contracts) first, build components independently, then integrate. Use Docker Compose for local multi-service testing.
+\item \textbf{Deployment to production scary?} Use staging environments that mirror production. Deploy with feature flags so you can roll back instantly. Monitor closely after each deploy.
+\item \textbf{Portfolio not looking professional?} Focus on: clear README with screenshots/demo video, clean code with tests, deployed live demo, and a write-up explaining your architecture decisions.
 \end{itemize}
 \end{stuckbox}
 
@@ -6243,6 +6472,19 @@ Build a T-shaped skill profile: broad knowledge across many areas (the top of th
 You are interview-ready with a strong portfolio, practiced coding and system design skills, a professional network, and a continuous learning framework for lifelong growth.
 \end{microcheckpoint}
 
+\begin{cheatsheetbox}
+\begin{itemize}[leftmargin=*]
+\item Resume formula: \textbf{Action verb + What + Impact} (``Built REST API serving 10K RPM with 99.9\% uptime'')
+\item STAR format: Situation, Task, Action, Result --- prepare 8--10 stories
+\item Coding interview: (1) clarify, (2) examples, (3) brute force, (4) optimize, (5) code, (6) test
+\item System design interview: (1) requirements, (2) estimation, (3) API, (4) schema, (5) architecture, (6) deep dive
+\item Salary negotiation: research market rate, negotiate total comp (base + equity + bonus + benefits)
+\item Portfolio: GitHub profile README, deployed projects with live demos, technical blog
+\item Networking: contribute to open source, attend meetups, write technical content
+\item 90-day plan: Learn team norms (week 1--2), ship small wins (week 3--6), own a feature (week 7--12)
+\end{itemize}
+\end{cheatsheetbox}
+
 \subsection*{Resources}
 
 \setlength{\LTpre}{6pt}
@@ -6288,10 +6530,10 @@ The job search is an engineering problem. Referrals account for 30--50\% of hire
 
 \begin{stuckbox}
 \begin{itemize}[leftmargin=*]
-\item \textbf{Concept not clicking?} Use the CRAFT prompt framework (Appendix~A) to ask an AI for alternative explanations with analogies.
-\item \textbf{Stuck on an exercise?} Solve a simpler version first. Break the problem into smaller steps. Pseudocode before code.
-\item \textbf{Stuck for 30+ minutes?} Look at a solution, understand it, close it, then reimplement from memory. This is learning, not cheating.
-\item \textbf{Feeling overwhelmed?} Focus on Must Master topics first. Awareness topics can wait until you encounter them in practice.
+\item \textbf{Resume not getting callbacks?} Lead with impact: ``Built X that improved Y by Z\%.'' Quantify everything. Tailor to each job description. Use action verbs. Keep to 1 page.
+\item \textbf{System design interviews overwhelming?} Practice the framework from Phase 19 on 10 common problems (URL shortener, Twitter, chat system). The framework matters more than memorizing solutions.
+\item \textbf{Behavioral interviews feel unprepared?} Use STAR format: Situation, Task, Action, Result. Prepare 8--10 stories covering: conflict, failure, leadership, ambiguity, tight deadline. Practice aloud.
+\item \textbf{Imposter syndrome during job search?} You completed a 3,000-hour curriculum. You have real projects and skills. Everyone feels this way. Focus on what you \emph{can} do, not what you can't.
 \end{itemize}
 \end{stuckbox}
 
@@ -6495,11 +6737,11 @@ Git GUI & GitHub Desktop & All & \url{https://desktop.github.com/} \\
 \bottomrule
 \endlastfoot
 C & GCC & \texttt{sudo apt install build-essential} (Linux/WSL); \texttt{xcode-select --install} (macOS) \\
-Python & Python 3.12 + uv & \texttt{curl -LsSf https://astral.sh/uv/install.sh | sh} --- uv replaces pip/venv/pyenv \\
+Python & Python 3.12 + uv & \texttt{curl -LsSf \url{https://astral.sh/uv/install.sh} | sh} --- uv replaces pip/venv/pyenv \\
 Java & JDK 21 (Temurin) & \url{https://adoptium.net/}; verify: \texttt{java --version} \\
 Java Build & Maven & \texttt{sudo apt install maven} / \texttt{brew install maven} \\
 Go & Go 1.22+ & \url{https://go.dev/dl/}; add to PATH \\
-Rust & rustup & \texttt{curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh} \\
+Rust & rustup & \texttt{curl --proto '=https' --tlsv1.2 -sSf \url{https://sh.rustup.rs} | sh} \\
 TypeScript & Node.js 20 LTS + pnpm & \texttt{fnm install 20}; \texttt{npm install -g pnpm} \\
 SQL & PostgreSQL 16 & \texttt{sudo apt install postgresql} / \texttt{brew install postgresql@16} \\
 \end{longtable}
@@ -6884,16 +7126,16 @@ Poulton \emph{Docker Deep Dive}; Luk\v{s}a \emph{Kubernetes in Action}; Beyer et
 \begin{center}
 \textit{``The best time to start was yesterday.}\\
 \textit{The second best time is now.''}\\[6pt]
-\textbf{Roadmap Version 6.0} --- March 2026\\
-\textbf{Duration:} 130--140 weeks (full-time) / 260--280 weeks (part-time)\\
-\textbf{Phases:} 25 \quad \textbf{Topics:} 150+ \quad \textbf{Exercises:} 300+
+\textbf{Roadmap Version 7.0} --- March 2026\\
+\textbf{Duration:} 139 weeks (full-time) / $\sim$278 weeks (part-time)\\
+\textbf{Phases:} 25 \quad \textbf{Topics:} 149 \quad \textbf{Exercises:} 300+
 \end{center}
 
 
 % ============================================================
-% END OF DOCUMENT --- Version 6.0 --- March 2026
-% 25 Phases | 149 Topics | 300+ Exercises | ~2,860 Hours
-% V6.0 Comprehensive Enhancement Applied
+% END OF DOCUMENT --- Version 7.0 --- March 2026
+% 25 Phases | 149 Topics | 300+ Exercises | ~3,036 Hours
+% V7.0 Comprehensive Enhancement Applied
 % ============================================================
 \end{document}
 

@@ -84,7 +84,7 @@ git clone https://github.com/gkrishna247/software-engineering-roadmap.git
 cd software-engineering-roadmap
 pdflatex roadmap.tex
 ```
-See the [How to Compile Locally](#-how-to-compile-locally) section for prerequisites.
+See the [How to Compile Locally](#how-to-compile-locally) section for prerequisites.
 
 ---
 

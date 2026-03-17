@@ -319,6 +319,10 @@ MLOps \& production AI, modern languages survey (Go, Rust, TypeScript), capstone
 \item \textbf{12 new glossary terms} added: RLVR, MCP, Mixture of Experts, State-Space Model, vLLM, OpenTofu, Passkey/WebAuthn, DuckDB, Apache Iceberg, htmx, LLMOps, Vector Database.
 \item \textbf{Updated appendices:} AI Collaboration Guide refreshed with 2026 tool landscape; What's Next appendix updated with emerging technology trends.
 \item \textbf{30+ new resources} added across all updated phases with cost, format, and usage guidance.
+\item \textbf{ML pipeline diagram} added to Phase 13 showing the end-to-end workflow from data collection through deployment and monitoring.
+\item \textbf{Neural network architecture diagram} added to Phase 14 illustrating feedforward network structure with input, hidden, and output layers.
+\item \textbf{Cross-phase connections strengthened:} Phase 6 DSA now links to Phase 25 interview preparation; Phase 9 networking expands container networking preview for Phase 15; Phase 11 adds AI-assisted testing tools coverage.
+\item \textbf{4 TikZ diagrams} total: roadmap overview flowchart, CI/CD pipeline (Phase 15), ML pipeline (Phase 13), and neural network architecture (Phase 14).
 \item \textbf{Topic count increased} from 157 to 163 across all 25 phases (6 new topics added).
 \item Version bumped to 9.0 reflecting comprehensive 2025--2026 technology landscape updates.
 \end{itemize}
@@ -2046,7 +2050,7 @@ Logarithmic time $O(\log n)$ typically arises from halving the search space (bin
 \item Assuming hash table operations are always $O(1)$---worst case is $O(n)$ with bad hash functions.
 \end{enumerate}
 
-\paragraph{Cross-Phase Connections} Complexity analysis is used in every subsequent phase. Phase 7 DP adds recurrence analysis. Phase 8 database query optimization uses similar cost modeling. Phase 19 system design uses Big-O for capacity estimation.
+\paragraph{Cross-Phase Connections} Complexity analysis is used in every subsequent phase. Phase 7 DP adds recurrence analysis. Phase 8 database query optimization uses similar cost modeling. Phase 19 system design uses Big-O for capacity estimation. DSA fluency is also central to Phase 25 coding interviews---LeetCode-style problems test exactly these skills, so treat every problem solved here as direct interview preparation.
 
 \paragraph{Hands-On Exercises}
 \begin{enumerate}[leftmargin=*]
@@ -2297,7 +2301,7 @@ Exercism DSA & Interactive & Free & Practice & Mentored algorithm exercises & Fe
 
 
 \begin{realworldbox}
-DSA is the foundation of every technical interview. Netflix's recommendations, Google's search indexing, and every database optimizer rely on these fundamentals.
+DSA is the foundation of every technical interview. Netflix's recommendations, Google's search indexing, and every database optimizer rely on these fundamentals. LeetCode-style problem solving is the primary format for FAANG and startup technical interviews---the patterns you build here (sliding window, two pointers, BFS/DFS, dynamic programming) are directly tested in Phase 25 (Career \& Interviews). Start a consistent LeetCode practice schedule now; spaced repetition of solved problems is more effective than grinding new ones.
 \end{realworldbox}
 
 
@@ -2996,7 +3000,7 @@ IP addressing: IPv4 uses 32-bit addresses (e.g., 192.168.1.1). Subnet masks part
 \item Mixing up private (10.x, 172.16-31.x, 192.168.x) and public IP ranges.
 \end{enumerate}
 
-\paragraph{Cross-Phase Connections} Networking underpins Phase 10 web development, Phase 15 container networking, Phase 16 microservice communication, and Phase 19 system design (load balancing, CDNs).
+\paragraph{Cross-Phase Connections} Networking underpins Phase 10 web development, Phase 15 container networking (Docker bridge/overlay networks and Kubernetes pod networking rely directly on TCP/IP, DNS, and subnetting concepts from this phase), Phase 16 microservice communication, and Phase 19 system design (load balancing, CDNs).
 
 \paragraph{Hands-On Exercises}
 \begin{enumerate}[leftmargin=*]
@@ -3079,7 +3083,7 @@ Bash scripting: variables, loops, conditionals, functions, exit codes, \texttt{s
 
 \paragraph{Core Concepts \& Deep Explanation} Docker creates virtual networks for container communication. Bridge networks (default) allow containers on the same host to communicate. Overlay networks span multiple hosts for Swarm/Kubernetes. Port mapping (\texttt{-p 8080:80}) exposes container ports to the host. DNS-based service discovery resolves container names to IPs within Docker networks.
 
-\paragraph{Cross-Phase Connections} Directly prepares for Phase 15 Docker deep dive and Kubernetes networking.
+\paragraph{Cross-Phase Connections} Directly prepares for Phase 15 Docker deep dive and Kubernetes networking. Understanding bridge networks, overlay networks, and DNS-based service discovery here makes the transition to Kubernetes pod networking, Services, and Ingress (Phase 15) significantly smoother. Container networking is the bridge between traditional networking concepts and modern cloud-native infrastructure.
 
 \paragraph{Hands-On Exercises}
 \begin{enumerate}[leftmargin=*]
@@ -3502,7 +3506,7 @@ Unit tests mock external dependencies using \texttt{unittest.mock} (Python) or M
 
 Test doubles: \emph{Stubs} return canned responses. \emph{Mocks} verify interactions (assert that a method was called). \emph{Fakes} are working implementations with shortcuts (in-memory database). \emph{Spies} record calls for later assertion.
 
-\paragraph{Advanced Trajectory} Mutation testing (PIT for Java, mutmut for Python). Chaos testing. A/B testing infrastructure. Feature flag testing.
+\paragraph{Advanced Trajectory} Mutation testing (PIT for Java, mutmut for Python). Chaos testing. A/B testing infrastructure. Feature flag testing. AI-assisted testing tools are rapidly maturing: LLM-powered test generation (e.g., Codium/Qodo, Diffblue Cover for Java) can automatically generate meaningful unit tests from source code, while AI-driven visual regression testing tools detect UI changes that traditional pixel-diff approaches miss. These tools augment---but do not replace---thoughtful test design.
 
 
 \paragraph{Foundational Research} Software testing theory is grounded in Dijkstra's observation that ``testing shows the presence, not the absence of bugs'' (1970). The testing pyramid concept was introduced by Cohn (2009), \emph{Succeeding with Agile} (Addison-Wesley). Test-driven development (TDD) was empirically evaluated by Rafique \& Mi\v{s}i\'c (2013), ``The Effects of Test-Driven Development on External Quality and Productivity: A Meta-Analysis,'' \emph{IEEE Transactions on Software Engineering}, finding moderate quality improvements. Mutation testing as a measure of test suite quality was introduced by DeMillo et al.\ (1978), ``Hints on Test Data Selection.'' The definitive academic testing textbook is Ammann \& Offutt, \emph{Introduction to Software Testing} (2nd Ed., Cambridge UP, 2016).
@@ -3595,6 +3599,8 @@ Test types: \emph{load test} (expected traffic), \emph{stress test} (beyond capa
 \paragraph{Prerequisite Concepts} Linting (Phase 3 ruff), CI/CD.
 
 \paragraph{Core Concepts \& Deep Explanation} Automate quality gates: linters (ruff, ESLint), formatters (ruff format, Prettier), type checkers (mypy, TypeScript), security scanners (Bandit, Dependabot), and coverage thresholds. Pre-commit hooks catch issues before pushing. SonarQube provides comprehensive code quality dashboards.
+
+\textbf{AI-Assisted Testing} is an emerging practice: tools like GitHub Copilot, Codium AI, and Diffblue Cover can generate unit tests from code, suggest edge cases, and auto-create regression tests for pull requests. While AI-generated tests should always be reviewed for correctness and meaningful assertions, they significantly accelerate test writing---especially for boilerplate-heavy integration tests.
 
 \paragraph{Hands-On Exercises}
 \begin{enumerate}[leftmargin=*]
@@ -3986,6 +3992,35 @@ Every ML algorithm is a mathematical function optimized by calculus. Understandi
 \textbf{Estimated Hours:} $\sim$132 hours (22 hrs/week $\times$ 6 weeks)
 \end{prereqbox}
 
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+  node distance=0.9cm,
+  stage/.style={
+    rectangle, rounded corners=4pt, minimum width=1.7cm, minimum height=0.9cm,
+    draw=#1!60, fill=#1!10, font=\scriptsize\bfseries, text=#1!80!black, align=center
+  },
+  arr/.style={-{Stealth[length=2.5mm]}, thick, gray!60!black}
+]
+\node[stage=teal] (collect) {Data\\Collection};
+\node[stage=cyan, right=of collect] (preprocess) {Data\\Preprocessing};
+\node[stage=blue, right=of preprocess] (feature) {Feature\\Engineering};
+\node[stage=violet, right=of feature] (train) {Model\\Training};
+\node[stage=purple, right=of train] (eval) {Evaluation};
+\node[stage=red!70!black, right=of eval] (deploy) {Deployment};
+\node[stage=orange, right=of deploy] (monitor) {Monitoring};
+
+\draw[arr] (collect) -- (preprocess);
+\draw[arr] (preprocess) -- (feature);
+\draw[arr] (feature) -- (train);
+\draw[arr] (train) -- (eval);
+\draw[arr] (eval) -- (deploy);
+\draw[arr] (deploy) -- (monitor);
+\draw[arr, dashed, bend left=30] (monitor) to node[font=\scriptsize, above, midway, text=gray!70!black] {retrain} (train);
+\end{tikzpicture}
+\caption{ML Pipeline: the end-to-end machine learning workflow from data collection through deployment and monitoring, with a feedback loop for model retraining.}
+\end{figure}
+
 \subsection*{Topics}
 
 \mustmaster{Supervised Learning Foundations}
@@ -4236,6 +4271,45 @@ ML transforms every industry. scikit-learn is used at Spotify, Airbnb, and thous
 
 \textbf{Estimated Hours:} $\sim$154 hours (22 hrs/week $\times$ 7 weeks)
 \end{prereqbox}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+  neuron/.style={circle, draw=black!70, fill=#1!20, minimum size=0.7cm, inner sep=0pt},
+  conn/.style={-, gray!50, thin},
+  lbl/.style={font=\small\bfseries, text=gray!70!black}
+]
+% Input layer
+\foreach \i in {1,2,3} {
+  \node[neuron=teal] (I\i) at (0, -\i*1.2 + 2.4) {};
+}
+% Hidden layer
+\foreach \j in {1,2,3,4} {
+  \node[neuron=blue] (H\j) at (2.8, -\j*1.2 + 3.0) {};
+}
+% Output layer
+\foreach \k in {1,2} {
+  \node[neuron=red!70!black] (O\k) at (5.6, -\k*1.2 + 1.8) {};
+}
+% Connections: Input to Hidden
+\foreach \i in {1,2,3} {
+  \foreach \j in {1,2,3,4} {
+    \draw[conn] (I\i) -- (H\j);
+  }
+}
+% Connections: Hidden to Output
+\foreach \j in {1,2,3,4} {
+  \foreach \k in {1,2} {
+    \draw[conn] (H\j) -- (O\k);
+  }
+}
+% Labels
+\node[lbl, above=0.3cm of I1] {Input Layer};
+\node[lbl, above=0.3cm of H1] {Hidden Layer};
+\node[lbl, above=0.3cm of O1] {Output Layer};
+\end{tikzpicture}
+\caption{Feedforward Neural Network: input features propagate through weighted connections to hidden layers (with nonlinear activations) and produce output predictions.}
+\end{figure}
 
 \subsection*{Topics}
 

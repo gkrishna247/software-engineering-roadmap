@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/gkrishna247/software-engineering-roadmap)](https://github.com/gkrishna247/software-engineering-roadmap/commits/main)
 
-**A comprehensive 25-phase, 108-week software engineering mastery roadmap — from fundamentals to industry-ready expertise.**
+**A comprehensive 25-phase, 139-week software engineering mastery roadmap — Version 9.0 (2026 Enhanced Edition) — from fundamentals to industry-ready expertise.**
 
 [📄 View PDF Roadmap](https://gkrishna247.github.io/software-engineering-roadmap/roadmap.pdf) · [🐛 Report an Issue](https://github.com/gkrishna247/software-engineering-roadmap/issues) · [💡 Suggest a Topic](https://github.com/gkrishna247/software-engineering-roadmap/issues/new)
 
@@ -17,55 +17,74 @@
 
 ## 📖 Overview
 
-This repository contains a structured, project-based software engineering learning roadmap designed to take you from the absolute basics all the way to professional mastery. Spanning **25 phases** and **108 weeks**, it provides a clear, week-by-week curriculum covering every major area of modern software engineering — including systems programming, algorithms, full-stack web development, AI/ML, DevOps, cloud architecture, and career preparation.
+This repository contains a structured, project-based software engineering learning roadmap (V9.0) designed to take you from the absolute basics all the way to professional mastery. Spanning **25 phases**, **163 topics**, and **139 weeks**, it provides a clear, week-by-week curriculum covering every major area of modern software engineering — including systems programming, algorithms, full-stack web development, AI/ML/LLMs, DevOps, cloud architecture, and career preparation. Updated for 2025–2026 with the latest technology landscape.
 
 The roadmap is aimed at **self-taught developers** who want a structured path without a formal degree, **CS students** looking to complement their coursework with practical industry skills, and **career switchers** who need a comprehensive guide to break into software engineering. Each phase builds on the previous one, ensuring a solid foundation before advancing to more complex topics.
 
-The learning philosophy is **project-based and consistent**: dedicate approximately **4 hours per day** to hands-on coding and conceptual study. Rather than passive reading, every phase emphasizes building real projects to reinforce concepts. The roadmap progresses through four tiers — Foundation, Core Programming, Professional Skills, and Specialization + Career — each tier unlocking the next level of expertise.
+The learning philosophy is **project-based and consistent**: dedicate approximately **4 hours per day** to hands-on coding and conceptual study. Rather than passive reading, every phase emphasizes building real projects to reinforce concepts. The roadmap progresses through four tiers — Foundations, Core Engineering, Specialization, and Mastery — each tier unlocking the next level of expertise.
+
+---
+
+## 🆕 Version 9.0 Highlights
+
+V9.0 is a major update reflecting the 2025–2026 technology landscape:
+
+- **TikZ visual roadmap** — full-page tier-progression flowchart showing all 25 phases across 4 tiers
+- **Phase 17 (Gen AI & LLMs) massively expanded** — AI agents, MCP, RLVR, DeepSeek R1, updated model references (Claude 4, GPT-5, Gemini 2.5)
+- **6 new topics added** (163 total) — AI-Assisted Dev Workflows, Vector Databases, Modern Frameworks (htmx/Bun/Next.js 15), State-Space Models & MoE, AI Agents & Agentic Workflows, LLMOps
+- **Python 3.13/3.14** — free-threaded mode, JIT compiler, template strings
+- **Java 24/25** — virtual threads at scale, structured concurrency
+- **TypeScript 7.0** — Go-based compiler (10× faster), Rust 2025 edition, Bun runtime
+- **Kubernetes v1.35, OpenTofu, edge K8s** — CI/CD pipeline diagram
+- **AI security** — prompt injection, model poisoning, passkeys/WebAuthn
+- **Apache Airflow 3.x, DuckDB, Apache Iceberg** — modern data stack
+- **vLLM, TGI, LLMOps** — high-throughput LLM serving
+- **2026 hiring landscape** — AI-era career strategies
+- **12 new glossary terms, 30+ new resources, updated appendices**
 
 ---
 
 ## 🏗️ Roadmap Structure
 
-The roadmap is organized into **4 tiers** containing **25 phases** across **108 weeks**:
+The roadmap is organized into **4 tiers** containing **25 phases** across **139 weeks**:
 
 | Tier | Phases | Weeks | Focus Areas |
 |------|--------|-------|-------------|
-| **Tier 0 — Foundation** | 1–3 | 1–12 | C Programming, Linux & Shell scripting, Computer Science fundamentals |
-| **Tier 1 — Core Programming** | 4–10 | 13–40 | Python, Java, Data Structures & Algorithms, Databases (SQL & NoSQL), Networking, Mathematics for AI |
-| **Tier 2 — Professional Skills** | 11–18 | 41–72 | Web Development (HTML/CSS/JS, React, Node.js), Testing & CI/CD, Software Architecture, DevOps & Cloud, Security, Observability & Monitoring |
-| **Tier 3 — Specialization + Career** | 19–25 | 73–108 | Machine Learning, Deep Learning, Generative AI & LLMs, Data Engineering, MLOps, Modern Languages (Rust, Go, TypeScript), System Design & Career Preparation |
+| **Tier 1 — Foundations** | 1–5 | 1–26 | C Programming, Python (Fundamentals & Advanced), Java, Git & Collaboration |
+| **Tier 2 — Core Engineering** | 6–11 | 27–65 | Data Structures & Algorithms, Databases & SQL, Networking & Linux, Web & API Engineering, Testing & CI/CD |
+| **Tier 3 — Specialization** | 12–23 | 66–116 | Math for AI, Machine Learning, Deep Learning, DevOps & K8s, Architecture, Gen AI & LLMs, Data Engineering, System Design, Security, Observability, MLOps & LLMOps, Go/Rust/TypeScript |
+| **Tier 4 — Mastery** | 24–25 | 117–139 | Capstone Projects, Career & Interview Preparation |
 
 <details>
 <summary><b>📋 Full Phase Breakdown</b></summary>
 
 | Phase | Weeks | Topic |
 |-------|-------|-------|
-| Phase 1 | 1–4 | C Programming fundamentals |
-| Phase 2 | 5–8 | Advanced C & memory management |
-| Phase 3 | 9–12 | Linux, shell scripting & CS fundamentals |
-| Phase 4 | 13–16 | Python programming |
-| Phase 5 | 17–20 | Advanced Python & scripting |
-| Phase 6 | 21–24 | Java & object-oriented design |
-| Phase 7 | 25–28 | Data Structures & Algorithms (Part 1) |
-| Phase 8 | 29–32 | Data Structures & Algorithms (Part 2) |
-| Phase 9 | 33–36 | Databases (SQL & NoSQL) |
-| Phase 10 | 37–40 | Networking & Mathematics for AI |
-| Phase 11 | 41–44 | Web Development fundamentals |
-| Phase 12 | 45–48 | Frontend: React & modern JavaScript |
-| Phase 13 | 49–52 | Backend: Node.js & REST APIs |
-| Phase 14 | 53–56 | Testing strategies & CI/CD pipelines |
-| Phase 15 | 57–60 | Software architecture & design patterns |
-| Phase 16 | 61–64 | DevOps, Docker, Kubernetes & Cloud |
-| Phase 17 | 65–68 | Security engineering |
-| Phase 18 | 69–72 | Observability, monitoring & SRE practices |
-| Phase 19 | 73–76 | Machine Learning fundamentals |
-| Phase 20 | 77–80 | Deep Learning & neural networks |
-| Phase 21 | 81–84 | Generative AI & Large Language Models |
-| Phase 22 | 85–88 | Data Engineering & pipelines |
-| Phase 23 | 89–92 | MLOps & model deployment |
-| Phase 24 | 93–96 | Modern languages: Rust, Go & TypeScript |
-| Phase 25 | 97–108 | System Design & Career Preparation |
+| Phase 1 | 1–5 | Computational Thinking & C Programming |
+| Phase 2 | 6–11 | Python — Fundamentals Through Intermediate |
+| Phase 3 | 12–17 | Python — Advanced & Scientific Stack |
+| Phase 4 | 18–24 | Java — Fundamentals Through Advanced |
+| Phase 5 | 25–28 | Git, Code Review & Collaboration |
+| Phase 6 | 29–34 | DSA Part 1 — Linear Structures & Trees |
+| Phase 7 | 35–40 | DSA Part 2 — Graphs, DP & Advanced Patterns |
+| Phase 8 | 41–46 | Databases & SQL Mastery |
+| Phase 9 | 47–51 | Networking & Linux Administration |
+| Phase 10 | 52–58 | Full-Stack Web & API Engineering |
+| Phase 11 | 59–63 | Testing, CI/CD & Quality Engineering |
+| Phase 12 | 64–68 | Mathematics for AI |
+| Phase 13 | 69–74 | Machine Learning |
+| Phase 14 | 75–81 | Deep Learning |
+| Phase 15 | 82–87 | DevOps, Docker & Kubernetes |
+| Phase 16 | 88–92 | Design Patterns & Architecture |
+| Phase 17 | 93–98 | Generative AI, LLMs & Prompt Engineering |
+| Phase 18 | 99–103 | Data Engineering |
+| Phase 19 | 104–108 | System Design |
+| Phase 20 | 109–113 | Security Engineering |
+| Phase 21 | 114–117 | Observability & Monitoring |
+| Phase 22 | 118–122 | MLOps & LLMOps |
+| Phase 23 | 123–128 | Modern Languages — Go, Rust & TypeScript |
+| Phase 24 | 129–134 | Capstone Projects |
+| Phase 25 | 135–139 | Career, Interview Preparation & Beyond |
 
 </details>
 

@@ -1,7 +1,7 @@
 \documentclass[11pt, a4paper, oneside]{report}
 
 % ============================================================
-% V8.0 --- MASTER EDITION (110+ Improvements Applied)
+% V9.0 --- MASTER EDITION (V8.0 + 2025-2026 Updates, TikZ Diagrams)
 % ============================================================
 
 % === Encoding & Fonts ===
@@ -104,6 +104,10 @@
 % === Programming ===
 \usepackage{etoolbox}
 
+% === TikZ Diagrams ===
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, fit, backgrounds}
+
 % === Links (LAST standard package) ===
 \usepackage[breaklinks=true, colorlinks=true, linkcolor=blue!70!black, urlcolor=blue!60!black, citecolor=green!50!black, bookmarks=true, bookmarksdepth=3]{hyperref}
 \usepackage{xurl}
@@ -131,7 +135,7 @@ Mastery Roadmap}
 \rule{\textwidth}{1.5pt}
 \vspace{0.4cm}
 
-{\Large\color{sectioncolor} 2026 Enhanced Edition \quad|\quad Version 8.0}
+{\Large\color{sectioncolor} 2026 Enhanced Edition \quad|\quad Version 9.0}
 
 \vspace{0.3cm}
 \rule{\textwidth}{0.4pt}
@@ -147,8 +151,8 @@ to Production-Ready Software Engineer}
   boxrule=0.8pt, arc=5pt, width=0.85\textwidth,
   halign=center, fontupper=\large]
 \begin{tabular}{cccc}
-\textbf{25 Phases} & \textbf{157 Topics} & \textbf{300+ Exercises} & \textbf{139 Weeks} \\[4pt]
-\textbf{4 Tiers} & \textbf{8 Languages} & \textbf{200+ Resources} & \textbf{$\sim$3,036 Hours}
+\textbf{25 Phases} & \textbf{163 Topics} & \textbf{300+ Exercises} & \textbf{139 Weeks} \\[4pt]
+\textbf{4 Tiers} & \textbf{8 Languages} & \textbf{230+ Resources} & \textbf{$\sim$3,036 Hours}
 \end{tabular}
 \end{tcolorbox}
 
@@ -181,7 +185,7 @@ This roadmap is a \textbf{linear, sequential curriculum}. Each phase builds on t
 \begin{enumerate}
 \item \textbf{4 Tiers} group phases by difficulty: Foundations $\to$ Core Engineering $\to$ Specialization $\to$ Mastery.
 \item \textbf{25 Phases} are self-contained learning units with prerequisites, topics, resources, milestones, and practice plans.
-\item \textbf{157 Topics} follow a mandatory six-part template (see below).
+\item \textbf{163 Topics} follow a mandatory six-part template (see below).
 \item \textbf{7 Appendices} provide supplementary reference material.
 \end{enumerate}
 
@@ -294,6 +298,36 @@ MLOps \& production AI, modern languages survey (Go, Rust, TypeScript), capstone
 \end{itemize}
 
 
+\subsection*{New in Version 9.0}
+\begin{itemize}[leftmargin=*]
+\item All V8.0 content retained and enhanced with 2025--2026 technology updates.
+\item \textbf{TikZ visual roadmap} added: a full-page tier-progression flowchart in the Executive Summary showing all 25 phases across 4 tiers.
+\item \textbf{Phase 17 (Gen AI \& LLMs) massively expanded:} DeepSeek R1 and RLVR (Reinforcement Learning with Verifiable Rewards) as a 2025 breakthrough; inference-time scaling; hybrid architectures (Mamba/state-space models, mixture-of-experts); MCP (Model Context Protocol) as the standard for tool/data access; updated agent frameworks (LangGraph, CrewAI, AutoGen, DSPy); new ``AI Agents \& Agentic Workflows'' awareness topic; model references updated to Claude 4 Sonnet/Opus, GPT-5, Gemini 2.5, DeepSeek R1/V3, Qwen3; 5 new resources added.
+\item \textbf{Phase 2--3 (Python) updated:} Python 3.13 free-threaded mode (PEP 703) and JIT compiler (PEP 744); Python 3.14 template strings (t-strings, PEP 750), deferred annotation evaluation (PEP 649), tail-call interpreter (3--5\% faster), improved REPL; safe external debugger interface (sys.remote\_exec, PEP 768).
+\item \textbf{Phase 4 (Java) updated:} Java 24/25 features including stream gatherers, structured concurrency, flexible constructor bodies; virtual threads at scale with production patterns for I/O-bound services.
+\item \textbf{Phase 5 (Git \& Collaboration) expanded:} New ``AI-Assisted Development Workflows'' awareness topic covering GitHub Copilot, Cursor, AI code review, and prompt-to-code workflows.
+\item \textbf{Phase 8 (Databases) expanded:} New ``Vector Databases \& Analytical Engines'' awareness topic covering pgvector, Pinecone, Weaviate, DuckDB, and embeddings for semantic search.
+\item \textbf{Phase 10 (Web \& APIs) expanded:} New ``Modern Frameworks \& Runtimes'' awareness topic covering htmx, Bun, and Next.js 15 with React Server Components.
+\item \textbf{Phase 12 (Math for AI) enhanced:} LLM math connections throughout---attention mechanism linear algebra ($\mathrm{softmax}(QK^T/\sqrt{d_k})V$), positional encodings, RMSNorm, and information-theoretic foundations of transformers.
+\item \textbf{Phase 14 (Deep Learning) expanded:} New ``State-Space Models \& Mixture of Experts'' awareness topic covering Mamba, S4, MoE routing, and vision-language models (VLMs).
+\item \textbf{Phase 15 (DevOps \& K8s) updated:} Kubernetes v1.35 features, OpenTofu as Terraform fork, edge Kubernetes (K3s/KubeEdge), TikZ CI/CD pipeline diagram, 4 new resources.
+\item \textbf{Phase 18 (Data Engineering) updated:} Apache Airflow 3.x with new task execution API and dynamic task mapping; Apache Iceberg as open table format standard; DuckDB for local analytical queries.
+\item \textbf{Phase 20 (Security) expanded:} AI-specific security section covering prompt injection, model poisoning, adversarial ML, OWASP Top 10 for LLM Applications; passkeys and WebAuthn as modern authentication standard.
+\item \textbf{Phase 22 (MLOps \& LLMOps) expanded:} New ``LLMOps'' must-master topic; vLLM and TGI for high-throughput LLM serving with PagedAttention; quantized model deployment; 3 new resources.
+\item \textbf{Phase 23 (Go, Rust \& TypeScript) updated:} TypeScript 7.0 Go-based compiler (10$\times$ faster, announced March 2025); Rust 2025 edition and growing AI tooling ecosystem; Bun as a stable Node.js alternative.
+\item \textbf{Phase 25 (Career) updated:} 2026 hiring landscape analysis; AI skills as essential requirement; AI-assisted interview preparation strategies; remote work normalization.
+\item \textbf{12 new glossary terms} added: RLVR, MCP, Mixture of Experts, State-Space Model, vLLM, OpenTofu, Passkey/WebAuthn, DuckDB, Apache Iceberg, htmx, LLMOps, Vector Database.
+\item \textbf{Updated appendices:} AI Collaboration Guide refreshed with 2026 tool landscape; What's Next appendix updated with emerging technology trends.
+\item \textbf{30+ new resources} added across all updated phases with cost, format, and usage guidance.
+\item \textbf{ML pipeline diagram} added to Phase 13 showing the end-to-end workflow from data collection through deployment and monitoring.
+\item \textbf{Neural network architecture diagram} added to Phase 14 illustrating feedforward network structure with input, hidden, and output layers.
+\item \textbf{Cross-phase connections strengthened:} Phase 6 DSA now links to Phase 25 interview preparation; Phase 9 networking expands container networking preview for Phase 15; Phase 11 adds AI-assisted testing tools coverage.
+\item \textbf{4 TikZ diagrams} total: roadmap overview flowchart, CI/CD pipeline (Phase 15), ML pipeline (Phase 13), and neural network architecture (Phase 14).
+\item \textbf{Topic count increased} from 157 to 163 across all 25 phases (6 new topics added).
+\item Version bumped to 9.0 reflecting comprehensive 2025--2026 technology landscape updates.
+\end{itemize}
+
+
 \subsection*{Curriculum Alignment \& Scholarly Foundations}
 
 This roadmap aligns with established academic curricula and is informed by peer-reviewed CS education research:
@@ -309,6 +343,73 @@ This roadmap aligns with established academic curricula and is informed by peer-
 
 \item \textbf{Threshold Concepts.} CS education research identifies several ``threshold concepts''---transformative ideas that, once grasped, fundamentally change understanding (Meyer \& Land, 2003). This roadmap explicitly addresses known CS threshold concepts including: pointers and memory references (Phase 1), recursion (Phase 6), object-oriented abstraction (Phases 2, 4), concurrency (Phases 3, 4), and the bias-variance tradeoff (Phase 13).
 \end{itemize}
+
+\subsection*{Roadmap Visual Overview}
+
+The following diagram illustrates the complete learning path across all four tiers.
+Each tier builds on the previous one, progressing from fundamentals to professional mastery.
+
+\begin{center}
+\begin{tikzpicture}[
+  tier/.style={rectangle, rounded corners=6pt, minimum width=14cm, text width=13.5cm, align=left, font=\small, inner sep=8pt},
+  tierarrow/.style={-{Stealth[length=5mm, width=3mm]}, line width=1.5pt, gray!70},
+  node distance=0.6cm
+]
+
+% Tier 1
+\node[tier, fill=blue!10, draw=blue!50!black, line width=0.8pt] (t1) {
+  \textbf{\color{blue!50!black}\large Tier 1: Foundations} \hfill \textit{Weeks 1--26}\\[4pt]
+  Phase 1: C \& Computational Thinking \(\to\)
+  Phase 2: Python Fundamentals \(\to\)
+  Phase 3: Python Advanced \(\to\)
+  Phase 4: Java \(\to\)
+  Phase 5: Git \& Collaboration
+};
+
+% Tier 2
+\node[tier, fill=green!10, draw=green!50!black, line width=0.8pt, below=of t1] (t2) {
+  \textbf{\color{green!50!black}\large Tier 2: Core Engineering} \hfill \textit{Weeks 27--65}\\[4pt]
+  Phase 6: DSA Fundamentals \(\to\)
+  Phase 7: DSA Advanced \(\to\)
+  Phase 8: Databases \(\to\)
+  Phase 9: OS \& Networking \(\to\)
+  Phase 10: Web \& APIs \(\to\)
+  Phase 11: Testing \& QA
+};
+
+% Tier 3
+\node[tier, fill=orange!10, draw=orange!50!black, line width=0.8pt, below=of t2] (t3) {
+  \textbf{\color{orange!50!black}\large Tier 3: Specialization} \hfill \textit{Weeks 66--116}\\[4pt]
+  Phase 12: Math for AI \(\to\)
+  Phase 13: Machine Learning \(\to\)
+  Phase 14: Deep Learning \(\to\)
+  Phase 15: DevOps\\
+  Phase 16: Architecture \(\to\)
+  Phase 17: Gen AI \& LLMs \(\to\)
+  Phase 18: Data Engineering\\
+  Phase 19: System Design \(\to\)
+  Phase 20: Security \(\to\)
+  Phase 21: Observability
+};
+
+% Tier 4
+\node[tier, fill=red!10, draw=red!50!black, line width=0.8pt, below=of t3] (t4) {
+  \textbf{\color{red!50!black}\large Tier 4: Mastery \& Career} \hfill \textit{Weeks 117--139}\\[4pt]
+  Phase 22: MLOps \& LLMOps \(\to\)
+  Phase 23: Go, Rust \& TypeScript \(\to\)
+  Phase 24: Capstone Projects \(\to\)
+  Phase 25: Career Preparation
+};
+
+% Arrows between tiers
+\draw[tierarrow] (t1.south) -- (t2.north);
+\draw[tierarrow] (t2.south) -- (t3.north);
+\draw[tierarrow] (t3.south) -- (t4.north);
+
+\end{tikzpicture}
+\end{center}
+
+\clearpage
 
 \chapter[Tier 1: Foundations]{Tier 1: Foundations (Weeks 1--26)}
 
@@ -748,13 +849,13 @@ C is the language of operating systems (Linux, Windows kernel), embedded systems
 
 \paragraph{Prerequisite Concepts} Phase 1 C fundamentals (variables, types, control flow, functions). Understanding that Python handles memory automatically unlike C.
 
-\paragraph{Core Concepts \& Deep Explanation} Python is dynamically typed and interpreted, prioritizing readability and developer productivity. Unlike C, you do not declare types or manage memory. Python 3.12+ is the target version. Virtual environments isolate project dependencies: \texttt{python -m venv .venv} creates one; \texttt{uv} (by Astral, 2024) is a Rust-based replacement that is 10--100$\times$ faster than \texttt{pip} for dependency resolution and installation.
+\paragraph{Core Concepts \& Deep Explanation} Python is dynamically typed and interpreted, prioritizing readability and developer productivity. Unlike C, you do not declare types or manage memory. Python 3.14 is the current release (October 2025); target 3.13+ for production work. Virtual environments isolate project dependencies: \texttt{python -m venv .venv} creates one; \texttt{uv} (by Astral, 2024) is a Rust-based replacement that is 10--100$\times$ faster than \texttt{pip} for dependency resolution and installation.
 
-Core data types: \texttt{int} (arbitrary precision---no overflow!), \texttt{float} (64-bit IEEE 754), \texttt{str} (immutable Unicode sequences), \texttt{bool} (\texttt{True}/\texttt{False}), \texttt{None} (null equivalent). F-strings (Python 3.6+) embed expressions: \texttt{f"Result: \{x * 2\}"}. The REPL (Read-Eval-Print Loop) enables interactive exploration---use it constantly for testing small ideas.
+Core data types: \texttt{int} (arbitrary precision---no overflow!), \texttt{float} (64-bit IEEE 754), \texttt{str} (immutable Unicode sequences), \texttt{bool} (\texttt{True}/\texttt{False}), \texttt{None} (null equivalent). F-strings (Python 3.6+) embed expressions: \texttt{f"Result: \{x * 2\}"}. Python 3.14 introduces \textbf{template strings} (t-strings, PEP 750)---a new string prefix \texttt{t"..."} that returns a \texttt{Template} object instead of a plain string, enabling safe HTML templating, SQL query building, and structured logging without injection risks. The REPL (Read-Eval-Print Loop) enables interactive exploration---Python 3.13+ includes a significantly improved REPL with syntax highlighting, multi-line editing, and history browsing.
 
 Python uses indentation (4 spaces) to define blocks, unlike C's braces. This enforces readable code but requires discipline. The \texttt{range()} function generates sequences for loops: \texttt{range(10)} yields 0--9; \texttt{range(2, 10, 2)} yields even numbers 2--8.
 
-\paragraph{Advanced Trajectory} CPython internals (bytecode, \texttt{dis} module). Python memory model (reference counting + generational GC). \texttt{sys.getsizeof()} for memory profiling. Python Enhancement Proposals (PEPs) as the language evolution mechanism.
+\paragraph{Advanced Trajectory} CPython internals (bytecode, \texttt{dis} module). Python memory model (reference counting + generational GC). \texttt{sys.getsizeof()} for memory profiling. Python Enhancement Proposals (PEPs) as the language evolution mechanism. Key recent PEPs: deferred annotation evaluation (PEP 649, Python 3.14) eliminates the need for \texttt{from \_\_future\_\_ import annotations}; template strings (PEP 750); the experimental JIT compiler (PEP 744, Python 3.13) that compiles hot bytecode to machine code; and the tail-call interpreter in 3.14 that yields a 3--5\% overall performance improvement.
 
 
 \paragraph{Foundational Research} Research on teaching Python to beginners by Luxton-Reilly et al. (2018), ``Introductory Programming: A Systematic Literature Review,'' \emph{ITiCSE Working Group Reports}, found that Python's low-overhead syntax reduces extraneous cognitive load, allowing students to focus on problem-solving rather than syntax management. However, Swidan et al. (2018), ``Programming Misconceptions for School Students,'' identified that Python's dynamic typing creates a distinct misconception pattern: students assume variables ``contain'' values rather than ``refer to'' objects---a critical distinction for understanding mutable default arguments and aliasing.
@@ -1208,7 +1309,7 @@ Common patterns: \texttt{@timer} (execution time), \texttt{@lru\_cache} (memoiza
 
 The GIL (Global Interpreter Lock) prevents multiple threads from executing Python bytecode simultaneously. For CPU-bound work, use \texttt{multiprocessing} or \texttt{concurrent.futures.ProcessPoolExecutor}. For I/O-bound work, use \texttt{asyncio} (best for many connections) or \texttt{threading} (simpler for few connections). \texttt{concurrent.futures} provides a unified API: \texttt{ThreadPoolExecutor} and \texttt{ProcessPoolExecutor} with the same interface.
 
-\paragraph{Advanced Trajectory} \texttt{multiprocessing.shared\_memory} for zero-copy data sharing. \texttt{concurrent.futures.as\_completed()} for processing results as they arrive. Python 3.13+ free-threaded mode (no GIL, experimental as of 3.13; improving in 3.14). This is the biggest change to CPython in decades---monitor its progress.
+\paragraph{Advanced Trajectory} \texttt{multiprocessing.shared\_memory} for zero-copy data sharing. \texttt{concurrent.futures.as\_completed()} for processing results as they arrive. \textbf{Python 3.13+} introduced an experimental \textbf{free-threaded mode} (PEP 703) that removes the GIL entirely, enabling true parallel execution of Python threads on multi-core CPUs. In Python 3.14, the free-threaded mode has improved significantly with only a 5--10\% single-threaded performance penalty. Install the free-threaded build (\texttt{python3.14t}) to experiment. Additionally, Python 3.14 adds a \textbf{safe external debugger interface} (\texttt{sys.remote\_exec}, PEP 768) allowing debuggers to inject code into running Python processes without pre-instrumentation. This is the biggest change to CPython in decades---production adoption is expected by Python 3.15--3.16.
 
 \paragraph{Common Pitfalls \& Debugging}
 \begin{enumerate}[leftmargin=*]
@@ -1472,9 +1573,11 @@ Streams process collections declaratively with lazy evaluation: \texttt{.filter(
 
 \paragraph{Core Concepts \& Deep Explanation} Java's concurrency model is thread-based. \texttt{ExecutorService} manages thread pools; \texttt{CompletableFuture} enables composable async pipelines. \texttt{synchronized}, \texttt{volatile}, \texttt{ReentrantLock} control thread safety. \texttt{ConcurrentHashMap} provides thread-safe map access.
 
-Modern Java features: Records (Java 16+) auto-generate constructors, getters, \texttt{equals}, \texttt{hashCode}. Sealed classes (Java 17+) restrict which classes can extend them. Pattern matching with \texttt{instanceof} (Java 16+) and switch expressions (Java 21+). Virtual threads (Java 21) enable lightweight concurrency---millions of threads with minimal overhead.
+Modern Java features: Records (Java 16+) auto-generate constructors, getters, \texttt{equals}, \texttt{hashCode}. Sealed classes (Java 17+) restrict which classes can extend them. Pattern matching with \texttt{instanceof} (Java 16+) and switch expressions (Java 21+) are now fully stable. Virtual threads (Project Loom, Java 21+) enable lightweight concurrency---millions of threads with minimal overhead---and are now production-ready and widely adopted in frameworks like Spring Boot 3.x and Quarkus.
 
-\paragraph{Advanced Trajectory} Project Loom (virtual threads at scale). Structured concurrency (Java 21+, preview). Java Memory Model (JMM). Lock-free algorithms with \texttt{AtomicReference}.
+\textbf{Latest Java releases:} Java 24 (March 2025) introduced stream gatherers and structured concurrency improvements. Java 25 (September 2025) added flexible constructor bodies. The six-month release cadence means Java evolves rapidly; LTS releases (Java 21, Java 25) are recommended for production. Pattern matching for \texttt{switch} and records is now stable and idiomatic---use it to replace verbose \texttt{if-else} chains and \texttt{instanceof} cascades.
+
+\paragraph{Advanced Trajectory} Virtual threads at scale (production patterns for I/O-bound services). Structured concurrency (finalized in Java 24+) for managing concurrent task lifecycles as a unit. Scoped values for thread-local replacements in virtual thread contexts. Java Memory Model (JMM). Lock-free algorithms with \texttt{AtomicReference}.
 
 \paragraph{Common Pitfalls \& Debugging}
 \begin{enumerate}[leftmargin=*]
@@ -1583,6 +1686,8 @@ Exercism Java Track & Interactive & Free & Practice & 100+ mentored exercises & 
 Baeldung & Web & Free & Reference & Java/Spring guides & Deep dives \\
 JetBrains Academy Java & Interactive & Free/Paid & Supplementary & IDE-integrated learning & Project-based \\
 Java Design Patterns (GitHub) & Code & Free & Reference & Pattern implementations & Study patterns \\
+Dev.java (Oracle) & Web & Free & Reference & Official modern Java tutorials covering Java 21--25 features & Virtual threads \& records \\
+Inside Java (YouTube) & Video & Free & Supplementary & Oracle's Java team explains new features & Stay current with Java 24/25 \\
 \end{longtable}
 
 \paragraph{Books}
@@ -1591,7 +1696,7 @@ Java Design Patterns (GitHub) & Code & Free & Reference & Pattern implementation
 \item \emph{Effective Java} --- Joshua Bloch, 3rd Ed (the Java best-practices bible)
 \item \emph{Java Concurrency in Practice} --- Brian Goetz (definitive concurrency reference)
 \item \emph{Modern Java in Action} --- Urma, Fusco, Mycroft (streams, lambdas, modern features)
-
+\item \emph{Java: The Complete Reference} --- Herbert Schildt, 13th Ed (updated through Java 21+, comprehensive coverage of virtual threads and pattern matching)
 \item \emph{Java: How to Program} --- Paul Deitel \& Harvey Deitel, 11th Ed., Pearson, 2017 (the most widely adopted Java textbook in university curricula; covers Java SE with extensive exercises)
 \end{itemize}
 
@@ -1767,8 +1872,34 @@ This makes Git virtually undoable: you can always recover from mistakes by findi
 \item \textbf{Intermediate:} Compare CI/CD complexity between monorepo and polyrepo approaches.
 \end{enumerate}
 
+\awareness{AI-Assisted Development Workflows}
+
+\paragraph{Prerequisite Concepts} Git basics, CI/CD concept, code review fundamentals.
+
+\paragraph{Core Concepts \& Deep Explanation} AI-assisted development tools have become standard engineering practice by 2026. \textbf{GitHub Copilot} provides real-time code suggestions directly in the editor, trained on public code repositories. \textbf{Cursor} and \textbf{Windsurf} are AI-native IDEs that understand entire codebases and enable codebase-wide refactoring through conversational prompts. \textbf{Claude Code} operates as a terminal-based AI agent that can read, write, and execute code autonomously across projects.
+
+These tools integrate into Git workflows at multiple points: AI-assisted code generation during development, AI code review tools that flag potential bugs and security issues in pull requests, and AI-powered commit message generation. GitHub Actions now supports AI-triggered workflows and Dependabot automates dependency updates and supply chain security scanning. Modern teams use AI review alongside human review---AI catches mechanical issues (unused imports, type mismatches, security anti-patterns) while humans focus on architecture, design, and business logic correctness.
+
+\paragraph{Advanced Trajectory} Custom AI coding agents for project-specific tasks. Integrating LLMs into CI/CD pipelines for automated test generation. Fine-tuning code models on proprietary codebases.
+
+\paragraph{Common Pitfalls \& Debugging}
+\begin{enumerate}[leftmargin=*]
+\item Blindly accepting AI-generated code without review---AI tools produce plausible but incorrect code, especially for edge cases and security-sensitive logic.
+\item Over-reliance on AI for architecture decisions---use AI for implementation assistance, not for high-level design choices that require domain context.
+\item Ignoring licensing concerns---AI-generated code may inadvertently reproduce copyrighted patterns; always review suggestions for originality.
+\end{enumerate}
+
+\paragraph{Cross-Phase Connections} AI-assisted development amplifies every subsequent phase. Phase 11 CI/CD integrates AI checks. Phase 17 LLM engineering provides the foundation for understanding these tools. Phase 22 MLOps applies similar automation to ML pipelines.
+
+\paragraph{Hands-On Exercises}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Beginner:} Set up GitHub Copilot in VS Code; use it to generate a complete Python module with tests.
+\item \textbf{Intermediate:} Configure a GitHub Actions workflow with Dependabot for automated dependency updates and security alerts.
+\item \textbf{Advanced:} Compare the output of 3 AI code review tools on the same pull request; evaluate accuracy and false positive rates.
+\end{enumerate}
+
 \begin{microcheckpoint}
-You can now use interactive rebase, resolve merge conflicts, recover lost commits with reflog, find bug-introducing commits with bisect, write conventional commits, and conduct constructive code reviews.
+You can now use interactive rebase, resolve merge conflicts, recover lost commits with reflog, find bug-introducing commits with bisect, write conventional commits, conduct constructive code reviews, and integrate AI-assisted tools into your development workflow.
 \end{microcheckpoint}
 
 \begin{cheatsheetbox}
@@ -1812,6 +1943,8 @@ Learn Git Branching & Interactive & Free & Supplementary & Visual, gamified Git 
 Oh My Git! & Desktop game & Free & Supplementary & Git learning game with visual graph & Fun practice \\
 Atlassian Git Tutorials & Web & Free & Reference & Visual workflow explanations & Strategy guides \\
 GitKraken Learn Git & Web + video & Free & Supplementary & Visual Git client with learning & GUI-based learning \\
+GitHub Copilot Docs & Docs & Free & Supplementary & Official AI code assistant guide & AI-assisted coding setup \\
+GitHub Actions Docs & Docs & Free & Supplementary & CI/CD and Dependabot automation & Workflow automation \\
 \end{longtable}
 
 \paragraph{Books}
@@ -1917,7 +2050,7 @@ Logarithmic time $O(\log n)$ typically arises from halving the search space (bin
 \item Assuming hash table operations are always $O(1)$---worst case is $O(n)$ with bad hash functions.
 \end{enumerate}
 
-\paragraph{Cross-Phase Connections} Complexity analysis is used in every subsequent phase. Phase 7 DP adds recurrence analysis. Phase 8 database query optimization uses similar cost modeling. Phase 19 system design uses Big-O for capacity estimation.
+\paragraph{Cross-Phase Connections} Complexity analysis is used in every subsequent phase. Phase 7 DP adds recurrence analysis. Phase 8 database query optimization uses similar cost modeling. Phase 19 system design uses Big-O for capacity estimation. DSA fluency is also central to Phase 25 coding interviews---LeetCode-style problems test exactly these skills, so treat every problem solved here as direct interview preparation.
 
 \paragraph{Hands-On Exercises}
 \begin{enumerate}[leftmargin=*]
@@ -2168,7 +2301,7 @@ Exercism DSA & Interactive & Free & Practice & Mentored algorithm exercises & Fe
 
 
 \begin{realworldbox}
-DSA is the foundation of every technical interview. Netflix's recommendations, Google's search indexing, and every database optimizer rely on these fundamentals.
+DSA is the foundation of every technical interview. Netflix's recommendations, Google's search indexing, and every database optimizer rely on these fundamentals. LeetCode-style problem solving is the primary format for FAANG and startup technical interviews---the patterns you build here (sliding window, two pointers, BFS/DFS, dynamic programming) are directly tested in Phase 25 (Career \& Interviews). Start a consistent LeetCode practice schedule now; spaced repetition of solved problems is more effective than grinding new ones.
 \end{realworldbox}
 
 
@@ -2693,8 +2826,34 @@ Tools: Alembic (Python), Flyway (Java), \texttt{django-migrations}. All track mi
 \item \textbf{Intermediate:} Use Redis as a cache layer with TTL; measure hit/miss ratios.
 \end{enumerate}
 
+\awareness{Vector Databases \& Analytical Engines}
+
+\paragraph{Prerequisite Concepts} Indexing concepts, embeddings concept, SQL fundamentals.
+
+\paragraph{Core Concepts \& Deep Explanation} Vector databases have become critical infrastructure for AI/RAG applications. They store high-dimensional embedding vectors and support efficient similarity search using algorithms like HNSW (Hierarchical Navigable Small World) and IVF (Inverted File Index). \textbf{Pinecone} is a managed vector database service optimized for production workloads. \textbf{Weaviate} is open-source with built-in vectorization modules. \textbf{pgvector} extends PostgreSQL with vector similarity search---enabling teams to use a single database for both relational and vector data, which simplifies architecture significantly.
+
+For analytical workloads, \textbf{DuckDB} is an in-process analytical database engine (similar to SQLite but for OLAP). It runs inside Python, R, or any application with zero configuration, supports standard SQL, and processes analytical queries on Parquet, CSV, and JSON files at remarkable speed. DuckDB is increasingly used for local data exploration, replacing the need to set up full data warehouse infrastructure for exploratory analysis.
+
+\paragraph{Advanced Trajectory} Hybrid search combining vector similarity with keyword filtering. Multi-vector retrieval (ColBERT-style late interaction). Cross-encoder re-ranking after initial vector retrieval. Quantized vectors (binary, scalar) for reduced memory footprint at scale.
+
+\paragraph{Common Pitfalls \& Debugging}
+\begin{enumerate}[leftmargin=*]
+\item Using the wrong distance metric---cosine similarity for normalized embeddings, L2 for unnormalized; mismatched metrics return nonsensical results.
+\item Ignoring embedding model choice---the embedding model matters more than the vector database; always benchmark retrieval quality with your actual data.
+\item Over-indexing with HNSW---high \texttt{ef\_construction} improves recall but dramatically increases index build time and memory usage.
+\end{enumerate}
+
+\paragraph{Cross-Phase Connections} Vector databases are essential for Phase 17 RAG pipelines and LLM applications. DuckDB is useful for Phase 13 ML data preparation and Phase 18 data engineering exploration. pgvector bridges Phase 8 relational databases with Phase 17 AI applications.
+
+\paragraph{Hands-On Exercises}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Beginner:} Install pgvector in PostgreSQL; store and query 1000 text embeddings using cosine similarity.
+\item \textbf{Intermediate:} Use DuckDB to analyze a 10M-row Parquet file with SQL; compare performance to PostgreSQL on the same query.
+\item \textbf{Advanced:} Build a semantic search prototype: embed documents with a sentence transformer, store in a vector database, and retrieve the top-5 most relevant results for a query.
+\end{enumerate}
+
 \begin{microcheckpoint}
-You can design normalized schemas, write complex SQL with window functions and CTEs, optimize queries with EXPLAIN ANALYZE, manage transactions with appropriate isolation levels, and perform zero-downtime schema migrations.
+You can design normalized schemas, write complex SQL with window functions and CTEs, optimize queries with EXPLAIN ANALYZE, manage transactions with appropriate isolation levels, perform zero-downtime schema migrations, and understand when to use vector databases for AI workloads.
 \end{microcheckpoint}
 
 \begin{cheatsheetbox}
@@ -2739,6 +2898,8 @@ DataLemur & Web & Free & Practice & SQL interview problems & SQL fluency \\
 PostgreSQL Tutorial & Web & Free & Reference & Official-quality PostgreSQL guides & PostgreSQL mastery \\
 Use The Index, Luke & Web & Free & Supplementary & Definitive indexing guide & Index optimization \\
 Mode SQL Tutorial & Interactive & Free & Supplementary & Advanced SQL with real datasets & Analytics queries \\
+DuckDB Docs & Docs & Free & Supplementary & In-process analytical SQL engine & Local data analysis \\
+pgvector Tutorial & Docs + GitHub & Free & Supplementary & Vector similarity search in PostgreSQL & AI-ready database \\
 \end{longtable}
 
 \paragraph{Books}
@@ -2839,7 +3000,7 @@ IP addressing: IPv4 uses 32-bit addresses (e.g., 192.168.1.1). Subnet masks part
 \item Mixing up private (10.x, 172.16-31.x, 192.168.x) and public IP ranges.
 \end{enumerate}
 
-\paragraph{Cross-Phase Connections} Networking underpins Phase 10 web development, Phase 15 container networking, Phase 16 microservice communication, and Phase 19 system design (load balancing, CDNs).
+\paragraph{Cross-Phase Connections} Networking underpins Phase 10 web development, Phase 15 container networking (Docker bridge/overlay networks and Kubernetes pod networking rely directly on TCP/IP, DNS, and subnetting concepts from this phase), Phase 16 microservice communication, and Phase 19 system design (load balancing, CDNs).
 
 \paragraph{Hands-On Exercises}
 \begin{enumerate}[leftmargin=*]
@@ -2922,7 +3083,7 @@ Bash scripting: variables, loops, conditionals, functions, exit codes, \texttt{s
 
 \paragraph{Core Concepts \& Deep Explanation} Docker creates virtual networks for container communication. Bridge networks (default) allow containers on the same host to communicate. Overlay networks span multiple hosts for Swarm/Kubernetes. Port mapping (\texttt{-p 8080:80}) exposes container ports to the host. DNS-based service discovery resolves container names to IPs within Docker networks.
 
-\paragraph{Cross-Phase Connections} Directly prepares for Phase 15 Docker deep dive and Kubernetes networking.
+\paragraph{Cross-Phase Connections} Directly prepares for Phase 15 Docker deep dive and Kubernetes networking. Understanding bridge networks, overlay networks, and DNS-based service discovery here makes the transition to Kubernetes pod networking, Services, and Ingress (Phase 15) significantly smoother. Container networking is the bridge between traditional networking concepts and modern cloud-native infrastructure.
 
 \paragraph{Hands-On Exercises}
 \begin{enumerate}[leftmargin=*]
@@ -3172,6 +3333,36 @@ Trade-offs vs.\ REST: GraphQL reduces network round-trips but adds complexity (N
 \item \textbf{Intermediate:} Compare GraphQL vs.\ REST for a multi-entity dashboard query.
 \end{enumerate}
 
+\awareness{Modern Frameworks \& Runtimes}
+
+\paragraph{Prerequisite Concepts} HTML/CSS/JS fundamentals, React basics, Node.js concept.
+
+\paragraph{Core Concepts \& Deep Explanation} The JavaScript ecosystem continues to evolve rapidly with alternatives that address specific pain points of traditional SPAs.
+
+\textbf{htmx} is a lightweight library (14KB) that extends HTML with attributes like \texttt{hx-get}, \texttt{hx-post}, and \texttt{hx-swap} to make server requests and update the DOM without writing JavaScript. It returns HTML fragments from the server instead of JSON, enabling server-rendered interactivity. htmx is ideal for applications where a full SPA framework is overkill---admin dashboards, content sites, and CRUD applications.
+
+\textbf{Bun} is a JavaScript runtime (written in Zig) that serves as a drop-in Node.js replacement with significantly faster startup times, a built-in bundler, test runner, and package manager. It implements Node.js APIs for compatibility while adding performance optimizations.
+
+\textbf{Next.js 15} introduced a stable App Router with React Server Components, enabling hybrid static and server rendering, streaming, and parallel data fetching. \textbf{Astro} takes a content-first approach with zero-JS-by-default islands architecture---only interactive components ship JavaScript to the browser, resulting in extremely fast page loads.
+
+\paragraph{Advanced Trajectory} Edge rendering with Next.js middleware. Incremental Static Regeneration (ISR) for hybrid static/dynamic content. Server Actions in Next.js 15 for mutation handling without client-side state management.
+
+\paragraph{Common Pitfalls \& Debugging}
+\begin{enumerate}[leftmargin=*]
+\item Choosing htmx for highly interactive UIs---htmx excels at server-driven CRUD but struggles with complex client-side state like drag-and-drop or real-time collaboration.
+\item Assuming Bun is a 100\% drop-in replacement---some Node.js APIs and npm packages have edge-case incompatibilities; always run your test suite before migrating.
+\item Mixing client and server components incorrectly in Next.js 15---server components cannot use hooks or browser APIs; use the \texttt{``use client''} directive deliberately.
+\end{enumerate}
+
+\paragraph{Cross-Phase Connections} htmx connects to Phase 10 REST APIs (returns HTML instead of JSON). Bun relates to Phase 9 server environments. Next.js and Astro build on Phase 10 React knowledge. These choices are architectural decisions discussed in Phase 16.
+
+\paragraph{Hands-On Exercises}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Beginner:} Build an interactive todo list using htmx with a FastAPI backend returning HTML fragments.
+\item \textbf{Intermediate:} Port a Node.js project to Bun; benchmark startup time and request throughput differences.
+\item \textbf{Advanced:} Build a blog with Astro using islands architecture; compare Lighthouse scores to a React SPA version.
+\end{enumerate}
+
 \mustmaster{Authentication \& Caching}
 
 \paragraph{Prerequisite Concepts} HTTP, REST APIs.
@@ -3232,6 +3423,8 @@ Scrimba React & Interactive & Free/Paid & Primary & Interactive React course & R
 Traversy Media (YouTube) & Video & Free & Supplementary & Practical web tutorials & Quick start \\
 Kevin Powell CSS (YouTube) & Video & Free & Supplementary & CSS mastery & Layout skills \\
 Full Stack Open (Helsinki) & Interactive & Free & Supplementary & React + Node.js full course & Full-stack skills \\
+htmx Docs + Essays & Docs & Free & Supplementary & Lightweight HTML-driven interactivity & Server-side rendering \\
+Astro Docs \& Tutorial & Docs & Free & Supplementary & Content-first zero-JS framework & Static site mastery \\
 \end{longtable}
 
 \paragraph{Books}
@@ -3313,7 +3506,7 @@ Unit tests mock external dependencies using \texttt{unittest.mock} (Python) or M
 
 Test doubles: \emph{Stubs} return canned responses. \emph{Mocks} verify interactions (assert that a method was called). \emph{Fakes} are working implementations with shortcuts (in-memory database). \emph{Spies} record calls for later assertion.
 
-\paragraph{Advanced Trajectory} Mutation testing (PIT for Java, mutmut for Python). Chaos testing. A/B testing infrastructure. Feature flag testing.
+\paragraph{Advanced Trajectory} Mutation testing (PIT for Java, mutmut for Python). Chaos testing. A/B testing infrastructure. Feature flag testing. AI-assisted testing tools are rapidly maturing: LLM-powered test generation (e.g., Codium/Qodo, Diffblue Cover for Java) can automatically generate meaningful unit tests from source code, while AI-driven visual regression testing tools detect UI changes that traditional pixel-diff approaches miss. These tools augment---but do not replace---thoughtful test design.
 
 
 \paragraph{Foundational Research} Software testing theory is grounded in Dijkstra's observation that ``testing shows the presence, not the absence of bugs'' (1970). The testing pyramid concept was introduced by Cohn (2009), \emph{Succeeding with Agile} (Addison-Wesley). Test-driven development (TDD) was empirically evaluated by Rafique \& Mi\v{s}i\'c (2013), ``The Effects of Test-Driven Development on External Quality and Productivity: A Meta-Analysis,'' \emph{IEEE Transactions on Software Engineering}, finding moderate quality improvements. Mutation testing as a measure of test suite quality was introduced by DeMillo et al.\ (1978), ``Hints on Test Data Selection.'' The definitive academic testing textbook is Ammann \& Offutt, \emph{Introduction to Software Testing} (2nd Ed., Cambridge UP, 2016).
@@ -3406,6 +3599,8 @@ Test types: \emph{load test} (expected traffic), \emph{stress test} (beyond capa
 \paragraph{Prerequisite Concepts} Linting (Phase 3 ruff), CI/CD.
 
 \paragraph{Core Concepts \& Deep Explanation} Automate quality gates: linters (ruff, ESLint), formatters (ruff format, Prettier), type checkers (mypy, TypeScript), security scanners (Bandit, Dependabot), and coverage thresholds. Pre-commit hooks catch issues before pushing. SonarQube provides comprehensive code quality dashboards.
+
+\textbf{AI-Assisted Testing} is an emerging practice: tools like GitHub Copilot, Codium AI, and Diffblue Cover can generate unit tests from code, suggest edge cases, and auto-create regression tests for pull requests. While AI-generated tests should always be reviewed for correctness and meaningful assertions, they significantly accelerate test writing---especially for boilerplate-heavy integration tests.
 
 \paragraph{Hands-On Exercises}
 \begin{enumerate}[leftmargin=*]
@@ -3552,7 +3747,7 @@ Eigenvalues and eigenvectors decompose a matrix into its fundamental directions 
 
 Key operations: transpose ($A^T$), inverse ($A^{-1}$), determinant ($\det(A)$), trace ($\text{tr}(A)$). Singular Value Decomposition (SVD): $A = U\Sigma V^T$ decomposes any matrix into rotation, scaling, and rotation---used in recommendation systems and data compression. Norms measure vector magnitude: $L_1$ (Manhattan), $L_2$ (Euclidean), $L_\infty$ (max).
 
-\paragraph{Advanced Trajectory} Tensor algebra for deep learning. Sparse matrix representations. Randomized linear algebra for large-scale data. Matrix calculus (Jacobians, Hessians).
+\paragraph{Advanced Trajectory} Tensor algebra for deep learning. Sparse matrix representations. Randomized linear algebra for large-scale data. Matrix calculus (Jacobians, Hessians). Understanding how linear algebra powers modern LLM architectures: the attention mechanism computes $\text{softmax}(QK^T/\sqrt{d_k})V$ where $Q$, $K$, $V$ are learned linear projections of the input; positional encodings use sinusoidal functions or rotary embeddings (RoPE) to inject sequence-order information into the vector space; and layer normalization (RMSNorm in modern LLMs) stabilizes training by normalizing across feature dimensions.
 
 
 \paragraph{Foundational Research} The mathematical foundations of machine learning are comprehensively treated in Deisenroth, Faisal \& Ong, \emph{Mathematics for Machine Learning} (Cambridge UP, 2020, freely available online)---the definitive text bridging linear algebra, calculus, and probability to ML applications. For linear algebra specifically, Strang's \emph{Introduction to Linear Algebra} (6th Ed., Wellesley-Cambridge, 2023) and the accompanying MIT 18.06 lectures remain the gold standard. Bishop (2006), \emph{Pattern Recognition and Machine Learning} (Springer), provides the Bayesian perspective on mathematical foundations. Research by Bressoud et al.\ (2015), ``Insights from the MAA National Study of College Calculus,'' found that students who connect calculus to applications (as this phase does with gradient descent) show significantly higher retention and motivation.
@@ -3653,7 +3848,7 @@ Maximum Likelihood Estimation (MLE) finds parameters that maximize the probabili
 
 \paragraph{Advanced Trajectory} Mutual information. Rate-distortion theory. Information bottleneck method in deep learning.
 
-\paragraph{Cross-Phase Connections} Cross-entropy loss is the primary classification loss in Phase 13 and 14. KL divergence appears in Phase 14 VAEs. Decision tree splitting criteria (information gain) use entropy.
+\paragraph{Cross-Phase Connections} Cross-entropy loss is the primary classification loss in Phase 13 and 14. KL divergence appears in Phase 14 VAEs and in RLHF/RLVR reward modeling for LLMs (Phase 17). Decision tree splitting criteria (information gain) use entropy. The softmax function in attention mechanisms is directly connected to information-theoretic concepts---it converts raw attention scores (logits) into a probability distribution over sequence positions, and the temperature parameter controls the entropy of this distribution.
 
 \paragraph{Hands-On Exercises}
 \begin{enumerate}[leftmargin=*]
@@ -3724,6 +3919,7 @@ StatQuest (YouTube) & Video & Free & Primary & Statistics made simple & Probabil
 Professor Leonard & YouTube & Free & Supplementary & Full university calculus lectures & Calculus deep dive \\
 Brilliant.org & Interactive & \$10/mo & Supplementary & Visual interactive math courses & Active practice \\
 PatrickJMT & YouTube & Free & Supplementary & Problem-focused math walkthroughs & Calculus problems \\
+The Illustrated Transformer (Jay Alammar) & Blog & Free & Supplementary & Visual guide to attention math & Transformer intuition \\
 \end{longtable}
 
 \paragraph{Books}
@@ -3795,6 +3991,35 @@ Every ML algorithm is a mathematical function optimized by calculus. Understandi
 
 \textbf{Estimated Hours:} $\sim$132 hours (22 hrs/week $\times$ 6 weeks)
 \end{prereqbox}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+  node distance=0.9cm,
+  stage/.style={
+    rectangle, rounded corners=4pt, minimum width=1.7cm, minimum height=0.9cm,
+    draw=#1!60, fill=#1!10, font=\scriptsize\bfseries, text=#1!80!black, align=center
+  },
+  arr/.style={-{Stealth[length=2.5mm]}, thick, gray!60!black}
+]
+\node[stage=teal] (collect) {Data\\Collection};
+\node[stage=cyan, right=of collect] (preprocess) {Data\\Preprocessing};
+\node[stage=blue, right=of preprocess] (feature) {Feature\\Engineering};
+\node[stage=violet, right=of feature] (train) {Model\\Training};
+\node[stage=purple, right=of train] (eval) {Evaluation};
+\node[stage=red!70!black, right=of eval] (deploy) {Deployment};
+\node[stage=orange, right=of deploy] (monitor) {Monitoring};
+
+\draw[arr] (collect) -- (preprocess);
+\draw[arr] (preprocess) -- (feature);
+\draw[arr] (feature) -- (train);
+\draw[arr] (train) -- (eval);
+\draw[arr] (eval) -- (deploy);
+\draw[arr] (deploy) -- (monitor);
+\draw[arr, dashed, bend left=30] (monitor) to node[font=\scriptsize, above, midway, text=gray!70!black] {retrain} (train);
+\end{tikzpicture}
+\caption{ML Pipeline: the end-to-end machine learning workflow from data collection through deployment and monitoring, with a feedback loop for model retraining.}
+\end{figure}
 
 \subsection*{Topics}
 
@@ -4047,6 +4272,45 @@ ML transforms every industry. scikit-learn is used at Spotify, Airbnb, and thous
 \textbf{Estimated Hours:} $\sim$154 hours (22 hrs/week $\times$ 7 weeks)
 \end{prereqbox}
 
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+  neuron/.style={circle, draw=black!70, fill=#1!20, minimum size=0.7cm, inner sep=0pt},
+  conn/.style={-, gray!50, thin},
+  lbl/.style={font=\small\bfseries, text=gray!70!black}
+]
+% Input layer
+\foreach \i in {1,2,3} {
+  \node[neuron=teal] (I\i) at (0, -\i*1.2 + 2.4) {};
+}
+% Hidden layer
+\foreach \j in {1,2,3,4} {
+  \node[neuron=blue] (H\j) at (2.8, -\j*1.2 + 3.0) {};
+}
+% Output layer
+\foreach \k in {1,2} {
+  \node[neuron=red!70!black] (O\k) at (5.6, -\k*1.2 + 1.8) {};
+}
+% Connections: Input to Hidden
+\foreach \i in {1,2,3} {
+  \foreach \j in {1,2,3,4} {
+    \draw[conn] (I\i) -- (H\j);
+  }
+}
+% Connections: Hidden to Output
+\foreach \j in {1,2,3,4} {
+  \foreach \k in {1,2} {
+    \draw[conn] (H\j) -- (O\k);
+  }
+}
+% Labels
+\node[lbl, above=0.3cm of I1] {Input Layer};
+\node[lbl, above=0.3cm of H1] {Hidden Layer};
+\node[lbl, above=0.3cm of O1] {Output Layer};
+\end{tikzpicture}
+\caption{Feedforward Neural Network: input features propagate through weighted connections to hidden layers (with nonlinear activations) and produce output predictions.}
+\end{figure}
+
 \subsection*{Topics}
 
 \mustmaster{Neural Network Fundamentals}
@@ -4057,9 +4321,9 @@ ML transforms every industry. scikit-learn is used at Spotify, Airbnb, and thous
 
 Activation functions: ReLU ($\max(0,x)$) is the default for hidden layers (fast, avoids vanishing gradients). Sigmoid/softmax for output layers (binary/multi-class classification). Batch normalization normalizes layer inputs to stabilize training. Dropout randomly zeros neurons during training as regularization.
 
-PyTorch: define models with \texttt{nn.Module}, write custom forward passes, use \texttt{autograd} for automatic differentiation. The training loop: forward pass \arrow{} compute loss \arrow{} backward pass (\texttt{loss.backward()}) \arrow{} optimizer step (\texttt{optimizer.step()}) \arrow{} zero gradients (\texttt{optimizer.zero\_grad()}).
+PyTorch: define models with \texttt{nn.Module}, write custom forward passes, use \texttt{autograd} for automatic differentiation. The training loop: forward pass \arrow{} compute loss \arrow{} backward pass (\texttt{loss.backward()}) \arrow{} optimizer step (\texttt{optimizer.step()}) \arrow{} zero gradients (\texttt{optimizer.zero\_grad()}). PyTorch 2.x introduced \texttt{torch.compile()}, which JIT-compiles models for 1.5--3$\times$ speedup with a single line of code, and native support for FlashAttention---a memory-efficient attention algorithm that reduces the $O(n^2)$ memory cost of self-attention to $O(n)$ while also improving wall-clock speed.
 
-\paragraph{Advanced Trajectory} Weight initialization strategies (Xavier, He). Gradient clipping. Learning rate warmup and cosine annealing. Mixed-precision training (FP16/BF16).
+\paragraph{Advanced Trajectory} Weight initialization strategies (Xavier, He). Gradient clipping. Learning rate warmup and cosine annealing. Mixed-precision training (FP16/BF16). PyTorch 2.x features: \texttt{torch.compile} graph capture, FlashAttention integration, and \texttt{torch.distributed} FSDP for multi-GPU training.
 
 
 \paragraph{Foundational Research} The backpropagation algorithm was popularized by Rumelhart, Hinton \& Williams (1986), ``Learning Representations by Back-propagating Errors,'' \emph{Nature}---the paper that launched the modern neural network era. Convolutional Neural Networks were formalized by LeCun et al.\ (1998), ``Gradient-Based Learning Applied to Document Recognition,'' \emph{Proceedings of the IEEE}. Residual networks (He et al., 2016, ``Deep Residual Learning for Image Recognition,'' \emph{CVPR}) solved the vanishing gradient problem for very deep networks and won the ImageNet 2015 challenge. Batch Normalization (Ioffe \& Szegedy, 2015, ``Batch Normalization: Accelerating Deep Network Training,'' \emph{ICML}) enabled training of deeper networks by normalizing layer inputs. The Transformer architecture (Vaswani et al., 2017, ``Attention Is All You Need,'' \emph{NeurIPS}) replaced recurrence with self-attention and is the foundation for GPT, BERT, and all modern LLMs. The definitive academic textbook is Goodfellow, Bengio \& Courville, \emph{Deep Learning} (MIT Press, 2016), freely available online.
@@ -4160,8 +4424,36 @@ Key architectures: BERT (bidirectional encoder, for classification/NER), GPT (au
 \item \textbf{Intermediate:} Fine-tune a diffusion model on a custom image dataset using LoRA.
 \end{enumerate}
 
+\awareness{State-Space Models \& Mixture of Experts}
+
+\paragraph{Prerequisite Concepts} Transformer architecture, sequence modeling, model scaling.
+
+\paragraph{Core Concepts \& Deep Explanation} \textbf{State-Space Models (SSMs)} offer an alternative to Transformers for sequence modeling. \textbf{Mamba} (Gu \& Dao, 2023) introduced selective state spaces that dynamically filter information based on input content, achieving linear-time complexity ($O(n)$) compared to Transformers' quadratic attention ($O(n^2)$). This makes SSMs particularly efficient for very long sequences. Hybrid architectures combining Transformer attention layers with Mamba SSM layers are emerging as a promising direction, combining the strengths of both approaches.
+
+\textbf{Mixture of Experts (MoE)} architectures activate only a subset of model parameters for each input, enabling models with very large total parameter counts while keeping inference cost manageable. A gating network routes each input token to the top-$k$ experts (typically 2 out of 8--64 total). DeepSeek-V3 and Mixtral demonstrate that MoE models can match or exceed dense models at a fraction of the compute cost. MoE is a key technique behind the scaling of frontier LLMs.
+
+\textbf{Vision-Language Models (VLMs)} like GPT-4V and LLaVA process both images and text, enabling tasks like visual question answering, image captioning, and document understanding. These models typically combine a vision encoder (e.g., CLIP ViT) with a language model through cross-attention or projection layers.
+
+\paragraph{Advanced Trajectory} Hybrid Mamba-Transformer architectures (Jamba, Zamba). Hardware-aware SSM kernels for GPU optimization. Expert parallelism strategies for distributed MoE training. Sparse upcycling---converting dense models into MoE models.
+
+\paragraph{Common Pitfalls \& Debugging}
+\begin{enumerate}[leftmargin=*]
+\item Assuming SSMs replace Transformers entirely---current evidence suggests hybrid architectures outperform pure approaches; SSMs handle long-range dependencies while attention excels at precise retrieval.
+\item Load balancing in MoE---without auxiliary loss terms, the gating network collapses to routing all tokens to the same few experts, wasting capacity.
+\item VLM hallucination on spatial reasoning---VLMs often confabulate object positions and counts; always validate with structured evaluation benchmarks.
+\end{enumerate}
+
+\paragraph{Cross-Phase Connections} SSMs and MoE are advancing Phase 17 LLM architectures. VLMs connect Phase 14 CNNs with Phase 17 multimodal AI. Understanding these architectures is essential for Phase 22 MLOps model serving decisions.
+
+\paragraph{Hands-On Exercises}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Beginner:} Compare inference speed of a Mamba model vs.\ a Transformer model on long sequences ($>$4096 tokens).
+\item \textbf{Intermediate:} Use a VLM (LLaVA or similar) to build an image-to-text pipeline; evaluate on visual QA benchmarks.
+\item \textbf{Advanced:} Implement a simplified MoE layer in PyTorch with top-2 gating and load balancing loss.
+\end{enumerate}
+
 \begin{microcheckpoint}
-You can now build, train, and deploy CNNs, Transformers, and generative models in PyTorch. You understand transfer learning, model compression, and can fine-tune pre-trained models for custom tasks.
+You can now build, train, and deploy CNNs, Transformers, generative models, and understand emerging architectures (SSMs, MoE, VLMs) in PyTorch. You understand transfer learning, model compression, and can fine-tune pre-trained models for custom tasks.
 \end{microcheckpoint}
 
 \begin{cheatsheetbox}
@@ -4207,6 +4499,8 @@ d2l.ai & Interactive book & Free & Primary & Comprehensive DL with code & Refere
 Andrej Karpathy (YouTube) & Video & Free & Supplementary & Build GPT from scratch & Transformer internals \\
 Two Minute Papers & YouTube & Free & Supplementary & Stay current with DL research & Research awareness \\
 Hugging Face Course & Interactive & Free & Practice & Transformers library mastery & NLP/CV models \\
+PyTorch 2.x Tutorial & Docs & Free & Supplementary & torch.compile and FlashAttention & Modern PyTorch skills \\
+Mamba \& SSM Papers & Papers & Free & Supplementary & State-space model architecture & Emerging architectures \\
 \end{longtable}
 
 \paragraph{Books}
@@ -4286,6 +4580,32 @@ Deep learning powers ChatGPT, autonomous vehicles, medical diagnosis, and protei
 
 \subsection*{Topics}
 
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+  node distance=1.8cm,
+  stage/.style={
+    rectangle, rounded corners=4pt, minimum width=2cm, minimum height=1cm,
+    draw=blue!60, fill=blue!10, font=\small\bfseries, text=blue!80!black, align=center
+  },
+  arr/.style={-{Stealth[length=3mm]}, thick, blue!50!black},
+  lbl/.style={font=\scriptsize, text=gray!70!black, above, midway}
+]
+\node[stage] (code) {Code};
+\node[stage, right=of code] (build) {Build};
+\node[stage, right=of build] (test) {Test};
+\node[stage, right=of test] (deploy) {Deploy};
+\node[stage, right=of deploy] (monitor) {Monitor};
+
+\draw[arr] (code) -- node[lbl] {commit} (build);
+\draw[arr] (build) -- node[lbl] {artifacts} (test);
+\draw[arr] (test) -- node[lbl] {pass} (deploy);
+\draw[arr] (deploy) -- node[lbl] {release} (monitor);
+\draw[arr, dashed, bend left=35] (monitor) to node[lbl, above] {feedback} (code);
+\end{tikzpicture}
+\caption{CI/CD Pipeline: code changes trigger automated build, test, deployment, and monitoring---with feedback loops for continuous improvement.}
+\end{figure}
+
 \mustmaster{Docker Deep Dive}
 
 \paragraph{Prerequisite Concepts} Linux file system, process management, networking basics.
@@ -4337,7 +4657,7 @@ The control plane: API server (all communication), etcd (distributed state store
 
 Horizontal Pod Autoscaler (HPA) scales pods based on CPU/memory metrics. Resource requests and limits prevent noisy neighbors.
 
-\paragraph{Advanced Trajectory} Custom Resource Definitions (CRDs). Operators pattern. StatefulSets for databases. DaemonSets for node-level agents.
+\paragraph{Advanced Trajectory} Custom Resource Definitions (CRDs). Operators pattern. StatefulSets for databases. DaemonSets for node-level agents. As of Kubernetes v1.35 (December 2025): \textbf{sidecar containers} are now stable (v1.33+), providing native lifecycle management for auxiliary containers (logging agents, proxies) without workaround init containers. \textbf{User namespaces} (beta) enable running containers as root inside the namespace while mapping to non-root on the host---improving security. \textbf{Pod certificates} for mTLS simplify workload identity without external certificate managers. \textbf{Edge Kubernetes} (K3s, KubeEdge) is a growing trend for deploying AI inference workloads at the edge, closer to data sources.
 
 \paragraph{Common Pitfalls \& Debugging}
 \begin{enumerate}[leftmargin=*]
@@ -4380,7 +4700,7 @@ Core workflow: \texttt{terraform init} (install providers) \arrow{} \texttt{terr
 
 Key concepts: \emph{Providers} connect to cloud APIs (AWS, GCP, Azure, Kubernetes). \emph{Resources} define infrastructure components (VMs, databases, networks). \emph{Modules} are reusable, composable infrastructure packages. \emph{Variables} and \emph{outputs} parameterize configurations. \emph{Data sources} query existing infrastructure.
 
-Terraform vs.\ alternatives: Pulumi (general-purpose languages instead of HCL), CloudFormation (AWS-only), Ansible (procedural, configuration management), CDK (generates CloudFormation from TypeScript/Python). Terraform's strength is multi-cloud support and the largest provider ecosystem.
+Terraform vs.\ alternatives: Pulumi (general-purpose languages instead of HCL), CloudFormation (AWS-only), Ansible (procedural, configuration management), CDK (generates CloudFormation from TypeScript/Python). \textbf{OpenTofu} is an open-source fork of Terraform (Linux Foundation) created after HashiCorp's BSL license change---it maintains full compatibility with Terraform providers and state files while remaining truly open-source, and is gaining significant adoption in 2025--2026. Terraform's strength is multi-cloud support and the largest provider ecosystem; OpenTofu is the recommended choice for organizations wanting license certainty.
 
 \paragraph{Advanced Trajectory} Terraform Cloud/Enterprise for team workflows. Policy as Code with Sentinel/OPA. Terragrunt for DRY configurations. Custom providers. Import existing infrastructure with \texttt{terraform import}. Terraform CDK (CDKTF) for using TypeScript/Python instead of HCL.
 
@@ -4492,13 +4812,17 @@ KodeKloud K8s & Interactive & Paid & Primary & Hands-on K8s with built-in labs &
 Docker Official Docs & Docs & Free & Reference & Authoritative Docker reference & Best practices \\
 Kubernetes Official Tutorials & Interactive & Free & Reference & Official K8s walkthrough & Core concepts \\
 HashiCorp Learn & Web & Free & Supplementary & Terraform/Vault/Consul tutorials & IaC skills \\
+OpenTofu Docs & Docs & Free & Reference & Open-source Terraform fork documentation & OpenTofu migration \\
+Killer Shell (CKA/CKAD) & Interactive & Paid & Supplementary & Realistic K8s certification exam simulators & Certification readiness \\
+Learnk8s & Web & Free/Paid & Supplementary & Production K8s best practices and scaling guides & Production K8s skills \\
 \end{longtable}
 
 \paragraph{Books}
 \begin{itemize}[leftmargin=*]
 \item \emph{Docker Deep Dive} --- Nigel Poulton (practical Docker mastery)
-\item \emph{Kubernetes in Action} --- Marko Luk\v{s}a (definitive K8s book)
+\item \emph{Kubernetes in Action} --- Marko Luk\v{s}a, 2nd Ed (definitive K8s book, updated for modern K8s)
 \item \emph{The DevOps Handbook} --- Kim et al.\ (DevOps culture and practices)
+\item \emph{Terraform: Up \& Running} --- Yevgeniy Brikman, 3rd Ed (practical IaC with Terraform/OpenTofu)
 \end{itemize}
 
 
@@ -4837,13 +5161,19 @@ Software architecture determines scalability. Netflix's microservices handle 250
 
 \paragraph{Prerequisite Concepts} Transformer architecture (Phase 14), tokenization.
 
-\paragraph{Core Concepts \& Deep Explanation} Large Language Models are autoregressive Transformers trained on massive text corpora to predict the next token. GPT-4, Claude, Gemini, and LLaMA represent the current state of the art. Key concepts: tokenization (BPE, SentencePiece), context window (how much text the model can process at once), temperature (controls randomness), top-p/top-k sampling.
+\paragraph{Core Concepts \& Deep Explanation} Large Language Models are autoregressive Transformers trained on massive text corpora to predict the next token. The 2025--2026 frontier models include Claude 4 Sonnet/Opus, GPT-5, Gemini 2.5, DeepSeek R1/V3, Qwen3, and LLaMA 3.x. Key concepts: tokenization (BPE, SentencePiece), context window (how much text the model can process at once), temperature (controls randomness), top-p/top-k sampling.
+
+\textbf{DeepSeek R1} (January 2025) was a major breakthrough: it achieved strong reasoning performance using \textbf{RLVR} (Reinforcement Learning with Verifiable Rewards) and the GRPO algorithm---training the model to reason via reinforcement learning with automatically verifiable outputs rather than relying solely on human feedback. This approach dramatically reduced training costs and demonstrated that open-weight models can compete with proprietary ones.
+
+\textbf{Inference-time scaling} has emerged as a dominant technique: instead of only scaling model parameters (training-time compute), models like DeepSeek R1 and Claude 4 use more computation at inference time to improve reasoning quality. Extended thinking, chain-of-thought at test time, and search-augmented generation are all forms of inference-time scaling.
+
+\textbf{Hybrid architectures} are beginning to replace pure Transformers. Mamba and other state-space models (SSMs) offer linear scaling with sequence length instead of quadratic. Mixture-of-Experts (MoE) architectures, as used in DeepSeek V3 and Mixtral, activate only a subset of parameters per token, achieving larger effective model sizes at lower inference cost. Expect production models to combine Transformer attention with SSM layers and MoE routing.
 
 \textbf{Prompt engineering} is the art of crafting inputs to elicit optimal outputs. Techniques: \emph{zero-shot} (no examples), \emph{few-shot} (provide examples in the prompt), \emph{Chain-of-Thought} (ask the model to reason step-by-step), \emph{Role prompting} (assign a persona), \emph{Structured output} (request JSON/YAML format with schema).
 
 System prompts define model behavior and constraints. Prompt templates with variables enable reusable, parameterized prompts. Output parsers extract structured data from model responses.
 
-\paragraph{Advanced Trajectory} Tree-of-Thought prompting. Self-consistency (sample multiple reasoning paths). ReAct (Reasoning + Acting). Prompt optimization with DSPy.
+\paragraph{Advanced Trajectory} Tree-of-Thought prompting. Self-consistency (sample multiple reasoning paths). ReAct (Reasoning + Acting). Prompt optimization with DSPy. Inference-time compute scaling. RLVR for domain-specific reasoning. Hybrid Transformer-SSM architectures.
 
 
 \paragraph{Foundational Research} The Transformer architecture (Vaswani et al., 2017, ``Attention Is All You Need,'' \emph{NeurIPS}) is the foundation of all modern LLMs. Scaling laws were established by Kaplan et al.\ (2020), ``Scaling Laws for Neural Language Models,'' \emph{arXiv}, showing that model performance improves predictably as a power law of compute, data, and parameters---later refined by Hoffmann et al.\ (2022), ``Training Compute-Optimal Large Language Models'' (Chinchilla). Few-shot learning was demonstrated by Brown et al.\ (2020), ``Language Models are Few-Shot Learners,'' \emph{NeurIPS} (GPT-3). RLHF was introduced by Christiano et al.\ (2017), ``Deep Reinforcement Learning from Human Preferences,'' \emph{NeurIPS}, and applied to language models by Ouyang et al.\ (2022), ``Training Language Models to Follow Instructions with Human Feedback'' (InstructGPT). Chain-of-thought prompting was formalized by Wei et al.\ (2022), ``Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,'' \emph{NeurIPS}. For safety and alignment, see Bai et al.\ (2022), ``Constitutional AI: Harmlessness from AI Feedback.''
@@ -4876,6 +5206,10 @@ System prompts define model behavior and constraints. Prompt templates with vari
 System prompts set the model's role, constraints, and output format. Temperature controls randomness (0 = deterministic, 1 = creative). Top-p (nucleus sampling) controls diversity. Structured output (JSON mode) ensures parseable responses.
 
 Advanced patterns: \emph{Tree of Thought} (explore multiple reasoning branches), \emph{Generated Knowledge} (ask the model to generate relevant facts before answering), \emph{Prompt chaining} (decompose complex tasks into sequential prompts), \emph{Meta-prompting} (ask the model to improve its own prompt).
+
+\textbf{MCP (Model Context Protocol)}, released by Anthropic and now part of the Linux Foundation, has become the standard protocol for connecting LLMs to external tools and data sources. MCP provides a unified interface for LLMs to access databases, APIs, file systems, and other tools---replacing ad-hoc function calling implementations with a standardized client-server protocol. Major agent frameworks now support MCP natively.
+
+\textbf{Agent frameworks} have matured significantly in 2025: \emph{LangGraph} (graph-based agent orchestration with explicit state management), \emph{CrewAI} (multi-agent role-based collaboration), \emph{AutoGen} (Microsoft's multi-agent conversation framework), and \emph{DSPy} (programming---not prompting---language models with automatic prompt optimization). Choose LangGraph for complex workflows requiring explicit control flow, CrewAI for multi-agent scenarios, and DSPy when you want to optimize prompts programmatically.
 
 \paragraph{Common Pitfalls \& Debugging}
 \begin{enumerate}[leftmargin=*]
@@ -4925,7 +5259,7 @@ Advanced RAG: re-ranking retrieved chunks with a cross-encoder. Query transforma
 
 \paragraph{Core Concepts \& Deep Explanation} Fine-tuning adapts a pre-trained LLM to a specific domain or task. \textbf{LoRA} (Low-Rank Adaptation) adds small trainable matrices to frozen model weights---trains only 0.1--1\% of parameters, dramatically reducing GPU requirements. QLoRA quantizes the base model to 4-bit and applies LoRA on top, enabling fine-tuning of 70B models on a single GPU.
 
-\textbf{AI Agents} are LLMs that can use tools and take actions. Frameworks: LangChain, LlamaIndex, CrewAI. The ReAct pattern: the model reasons about what to do, calls a tool, observes the result, and reasons again. Tool-use involves defining function schemas that the LLM can invoke (function calling, tool use).
+\textbf{AI Agents} are LLMs that can use tools and take actions. Frameworks: LangGraph, LlamaIndex, CrewAI, AutoGen, DSPy. The ReAct pattern: the model reasons about what to do, calls a tool, observes the result, and reasons again. Tool-use involves defining function schemas that the LLM can invoke (function calling, tool use). The \textbf{Model Context Protocol (MCP)} standardizes how agents connect to external tools and data sources, replacing custom integrations with a universal protocol.
 
 \paragraph{Common Pitfalls \& Debugging}
 \begin{enumerate}[leftmargin=*]
@@ -4946,7 +5280,7 @@ Advanced RAG: re-ranking retrieved chunks with a cross-encoder. Query transforma
 
 \paragraph{Prerequisite Concepts} CNNs (vision), Transformers (language).
 
-\paragraph{Core Concepts \& Deep Explanation} Multimodal models process multiple data types: text + images (GPT-4V, LLaVA), text + audio (Whisper + LLM), text + video. Vision-Language Models (VLMs) use a vision encoder (CLIP, SigLIP) to convert images to embeddings that are fed alongside text embeddings to a language model.
+\paragraph{Core Concepts \& Deep Explanation} Multimodal models process multiple data types: text + images (GPT-5, Claude 4, Gemini 2.5, LLaVA), text + audio (Whisper + LLM), text + video. Vision-Language Models (VLMs) use a vision encoder (CLIP, SigLIP) to convert images to embeddings that are fed alongside text embeddings to a language model.
 
 Applications: image captioning, visual question answering, document understanding (OCR + LLM), video analysis, and autonomous agents that interact with GUIs.
 
@@ -4957,6 +5291,40 @@ Applications: image captioning, visual question answering, document understandin
 \item \textbf{Beginner:} Use GPT-4V or LLaVA to analyze and describe images programmatically.
 \item \textbf{Intermediate:} Build a document QA system that processes scanned PDFs (OCR + LLM).
 \end{enumerate}
+
+\awareness{AI Agents \& Agentic Workflows}
+
+\paragraph{Prerequisite Concepts} LLMs, prompt engineering, tool use / function calling.
+
+\paragraph{Core Concepts \& Deep Explanation} 2025 became the ``Year of Agents''---LLMs that autonomously plan, reason, and act over multiple steps. An \textbf{agentic workflow} decomposes a complex goal into subtasks, executes each using tools (code execution, web search, database queries, API calls), evaluates intermediate results, and iterates until the goal is met.
+
+Key concepts: \emph{multi-step reasoning} (the agent plans a sequence of actions rather than responding in one shot), \emph{tool use} (the agent invokes external functions---search, code interpreter, file I/O---and incorporates results), \emph{reflection} (the agent critiques its own output and retries), and \emph{memory} (short-term context window plus long-term retrieval from vector stores).
+
+\textbf{MCP (Model Context Protocol)} provides the standard plumbing: a client-server protocol that lets any LLM connect to any tool or data source through a uniform interface. Think of MCP as USB-C for AI---one protocol, many tools.
+
+\textbf{Agent frameworks}: LangGraph (graph-based orchestration with explicit state machines), CrewAI (role-based multi-agent teams), AutoGen (conversational multi-agent patterns), Anthropic's Claude Agent SDK, and OpenAI's Agents SDK each offer different abstractions. Multi-agent systems assign specialised roles (researcher, coder, reviewer) that collaborate through structured message passing.
+
+\textbf{Agentic design patterns}: (1)~Planner--Executor (one agent plans, another executes), (2)~Reflection (agent reviews and improves its own output), (3)~Tool-augmented generation (agent decides when to call tools mid-generation), (4)~Human-in-the-loop (agent pauses for approval on high-stakes actions).
+
+\paragraph{Advanced Trajectory} Self-improving agents that optimize their own prompts via DSPy. Multi-modal agents that process images, audio, and code. Agent benchmarks (SWE-bench, WebArena) for measuring real-world task completion. Production agent infrastructure: persistent memory, authentication delegation, and approval workflows.
+
+\paragraph{Common Pitfalls \& Debugging}
+\begin{enumerate}[leftmargin=*]
+\item Agent infinite loops---always set a maximum iteration count and a token budget.
+\item Over-reliance on a single framework---evaluate LangGraph, CrewAI, and DSPy against your use case before committing.
+\item Ignoring cost---agentic workflows make many LLM calls; implement caching, model routing, and early termination.
+\item Security: agents that execute code or access databases need sandboxing and permission boundaries.
+\end{enumerate}
+
+\paragraph{Cross-Phase Connections} Agentic workflows connect to Phase 16 architecture patterns (orchestration, state machines), Phase 15 DevOps (CI/CD agents), Phase 20 security (sandboxing, prompt injection defense), and Phase 22 LLMOps (monitoring agent pipelines).
+
+\paragraph{Hands-On Exercises}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Beginner:} Build a ReAct agent that answers questions by searching the web and summarising results.
+\item \textbf{Intermediate:} Implement a coding agent using MCP: the agent reads files, writes code, runs tests, and iterates until tests pass.
+\item \textbf{Advanced:} Design a multi-agent system (planner + coder + reviewer) that collaborates to complete a software task end-to-end.
+\end{enumerate}
+
 
 \mustmaster{LLM Evaluation (HELM)}
 
@@ -5013,7 +5381,8 @@ You can now build production LLM applications with RAG, agents, fine-tuning, saf
 \begin{itemize}[leftmargin=*]
 \item \textbf{Prompt structure:} System message (role) $\to$ User message (task + context) $\to$ Few-shot examples
 \item \textbf{RAG pipeline:} Chunk docs $\to$ Embed $\to$ Vector DB $\to$ Retrieve $\to$ Augment prompt $\to$ Generate
-\item \textbf{Token limits:} GPT-4o $\sim$128K, Claude 3.5 $\sim$200K, Gemini $\sim$1M context window
+\item \textbf{Token limits:} GPT-5 $\sim$256K, Claude 4 $\sim$200K, Gemini 2.5 $\sim$1M, DeepSeek R1 $\sim$128K context window
+\item \textbf{2025--2026 models:} Claude 4 Sonnet/Opus, GPT-5, Gemini 2.5, DeepSeek R1/V3, Qwen3, LLaMA 3.x
 \item \textbf{Fine-tuning hierarchy:} Prompt engineering $\to$ Few-shot $\to$ RAG $\to$ LoRA $\to$ Full fine-tune
 \item \textbf{Temperature:} 0 = deterministic, 0.7 = creative, 1.0 = diverse; lower for factual tasks
 \item \textbf{Embedding models:} text-embedding-3-small (OpenAI), all-MiniLM (open-source), Cohere embed
@@ -5051,6 +5420,11 @@ Weights \& Biases Courses & Web & Free & Primary & LLM training and evaluation &
 LangChain Docs \& Tutorials & Docs & Free & Reference & Agent/RAG framework & RAG implementation \\
 Hugging Face PEFT Docs & Docs & Free & Reference & LoRA/QLoRA fine-tuning & Fine-tuning skills \\
 Andrej Karpathy (YouTube) & Video & Free & Supplementary & Build LLMs from scratch & Deep understanding \\
+\href{https://docs.anthropic.com}{Anthropic Docs} & Docs & Free & Reference & Claude API, MCP protocol, agent patterns & MCP \& agent skills \\
+\href{https://langchain-ai.github.io/langgraph/}{LangGraph Docs} & Docs & Free & Reference & Graph-based agent orchestration & Agentic workflows \\
+\href{https://github.com/deepseek-ai/DeepSeek-R1}{DeepSeek R1 Paper \& Code} & Paper & Free & Supplementary & RLVR breakthrough, open-weight reasoning & Understanding RLVR \\
+\href{https://www.deeplearning.ai/courses/}{DeepLearning.AI: Agentic AI} & Video & Free & Primary & 2025 agentic AI patterns \& MCP & Agent engineering \\
+\href{https://huggingface.co/blog}{Hugging Face Blog} & Blog & Free & Supplementary & Open-source LLM ecosystem updates & Staying current \\
 \end{longtable}
 
 \paragraph{Books}
@@ -5134,7 +5508,9 @@ LLMs are the most transformative technology since the internet. GitHub Copilot g
 
 \paragraph{Core Concepts \& Deep Explanation} Data engineering moves data from source systems to analytical destinations. \textbf{ETL} (Extract, Transform, Load) transforms data before loading---traditional approach for data warehouses. \textbf{ELT} (Extract, Load, Transform) loads raw data first, then transforms in the warehouse---modern approach leveraging cheap columnar storage and powerful warehouse compute (BigQuery, Snowflake, Redshift).
 
-Pipeline orchestration tools schedule and monitor workflows: \textbf{Apache Airflow} defines DAGs (Directed Acyclic Graphs) of tasks with dependencies, retries, and alerting. \textbf{Prefect} and \textbf{Dagster} are modern alternatives with better developer experience. Key concepts: idempotency (running a pipeline twice produces the same result), backfilling (reprocessing historical data), incremental loads (processing only new/changed data).
+Pipeline orchestration tools schedule and monitor workflows: \textbf{Apache Airflow} defines DAGs (Directed Acyclic Graphs) of tasks with dependencies, retries, and alerting. \textbf{Airflow 3.x} (2025) is a major release introducing a modernized architecture with a new task execution API, improved dynamic task mapping, and better integration with cloud-native services. \textbf{Prefect} and \textbf{Dagster} are modern alternatives with better developer experience. Key concepts: idempotency (running a pipeline twice produces the same result), backfilling (reprocessing historical data), incremental loads (processing only new/changed data).
+
+The \textbf{modern data stack} has converged around a set of best-of-breed tools: \textbf{dbt} for SQL-based transformations (covered below), \textbf{DuckDB} as an embedded analytical database that runs complex OLAP queries in-process without a server (ideal for local development and CI testing of data pipelines), \textbf{Apache Iceberg} as the emerging standard open table format for data lakehouses (replacing proprietary formats), and \textbf{Delta Lake} (Databricks) for ACID transactions on data lakes. These tools enable a workflow where engineers develop locally with DuckDB, transform with dbt, and deploy to production on Iceberg/Delta Lake tables in cloud warehouses.
 
 Data modeling for analytics: star schema (fact tables + dimension tables) enables fast aggregations. Slowly Changing Dimensions (SCD) track historical changes: Type 1 (overwrite), Type 2 (add new row with timestamps), Type 3 (add column for previous value).
 
@@ -5316,11 +5692,13 @@ Confluent Developer & Web & Free & Primary & Kafka courses and labs & Kafka prof
 DataTalksClub DE Zoomcamp & Video + labs & Free & Primary & Complete DE course & End-to-end pipeline \\
 Spark: The Definitive Guide & Book & \$40 & Reference & Comprehensive Spark reference & Spark mastery \\
 Great Expectations Docs & Docs & Free & Reference & Data quality framework & Quality pipelines \\
+DuckDB Docs & Docs & Free & Reference & Embedded OLAP database for local dev and CI & Fast local analytics \\
+Apache Iceberg Docs & Docs & Free & Reference & Open table format for lakehouse architectures & Lakehouse proficiency \\
 \end{longtable}
 
 \paragraph{Books}
 \begin{itemize}[leftmargin=*]
-\item \emph{Fundamentals of Data Engineering} --- Reis \& Housley (modern DE overview)
+\item \emph{Fundamentals of Data Engineering} --- Reis \& Housley, 2nd Ed (modern DE overview, updated for 2025 stack)
 \item \emph{Spark: The Definitive Guide} --- Chambers \& Zaharia (comprehensive Spark)
 \item \emph{Streaming Systems} --- Akidau et al.\ (stream processing theory)
 \item \emph{Designing Data-Intensive Applications} --- Kleppmann (data systems bible, revisited)
@@ -5608,7 +5986,10 @@ System design is the senior engineer's core competency. Design interviews are th
 
 Secure coding principles: validate all input, encode all output, use the least privilege principle, fail securely (errors should not reveal system internals), defense in depth (multiple layers of security).
 
-\paragraph{Advanced Trajectory} Server-Side Request Forgery (SSRF). Insecure deserialization. XML External Entity (XXE) attacks. Security for GraphQL APIs.
+\paragraph{Advanced Trajectory} Server-Side Request Forgery (SSRF). Insecure deserialization. XML External Entity (XXE) attacks. Security for GraphQL APIs. \textbf{Passkeys and WebAuthn} are replacing passwords as the modern authentication standard---built on public-key cryptography, phishing-resistant by design, and supported by all major browsers and operating systems since 2023. Apple, Google, and Microsoft have adopted passkeys as the default sign-in method, making password-only authentication increasingly obsolete.
+
+\paragraph{AI-Specific Security}
+AI systems introduce novel attack surfaces that traditional security frameworks do not cover. \textbf{Prompt injection} manipulates LLM inputs to override system instructions or exfiltrate data---direct injection embeds malicious instructions in user input, while indirect injection hides them in retrieved documents. \textbf{Model poisoning} corrupts training data to introduce backdoors or degrade model performance. \textbf{Adversarial ML} crafts inputs that cause models to make incorrect predictions (e.g., imperceptible image perturbations that fool classifiers). \textbf{Data poisoning} targets training datasets at scale to shift model behavior. \textbf{Model inversion} and \textbf{membership inference} attacks extract private training data from model outputs. Defense strategies: input sanitization, output filtering, guardrail frameworks (NeMo Guardrails, Guardrails AI), red-teaming, and adversarial training. The OWASP Top 10 for LLM Applications (2025) provides a structured taxonomy of LLM-specific vulnerabilities.
 
 
 \paragraph{Foundational Research} Modern cryptography is founded on Diffie \& Hellman (1976), ``New Directions in Cryptography,'' \emph{IEEE Transactions on Information Theory}, which introduced public-key cryptography, and Rivest, Shamir \& Adleman (1978), ``A Method for Obtaining Digital Signatures and Public-Key Cryptosystems,'' \emph{Communications of the ACM} (RSA). The OWASP Top 10 is a community-driven, data-informed vulnerability classification maintained by the Open Web Application Security Project. The definitive academic security textbook is Anderson, \emph{Security Engineering} (3rd Ed., Wiley, 2020)---a comprehensive Wiley publication covering threat modeling, cryptographic protocols, and system security. For application security specifically, Janca, \emph{Alice and Bob Learn Application Security} (Wiley, 2020) provides a practitioner-oriented introduction grounded in OWASP methodology. Formal methods in security are surveyed in Basin et al.\ (2011), ``Model-Driven Security,'' \emph{ACM Computing Surveys}. The (ISC)\textsuperscript{2} Cybersecurity Workforce Study (2023) identifies the global cybersecurity workforce gap at 4 million professionals, underscoring the career importance of this phase.
@@ -5685,9 +6066,9 @@ Integrate both into CI/CD: SAST runs on every pull request (fast feedback); DAST
 
 \paragraph{Core Concepts \& Deep Explanation} Software supply chain attacks exploit vulnerabilities in dependencies rather than your own code. The SolarWinds and Log4Shell incidents demonstrated the devastating impact. A \textbf{Software Bill of Materials} (SBOM) lists all components in your software---like a nutrition label for code.
 
-Tools: Syft (generates SBOMs), Grype (scans SBOMs for vulnerabilities), Dependabot/Renovate (automated dependency updates). SLSA (Supply-chain Levels for Software Artifacts) framework defines security levels for build integrity.
+Tools: Syft (generates SBOMs), Grype (scans SBOMs for vulnerabilities), Dependabot/Renovate (automated dependency updates). The \textbf{SLSA} (Supply-chain Levels for Software Artifacts) framework defines four ascending security levels for build integrity---from basic provenance (Level 1) to hermetic, reproducible builds (Level 4). SLSA is now widely adopted in 2025--2026 as organizations respond to high-profile supply chain attacks (SolarWinds, Log4Shell, xz Utils).
 
-Pin dependency versions, verify package checksums, use lock files, and sign build artifacts.
+Pin dependency versions, verify package checksums, use lock files, sign build artifacts with Sigstore/cosign, and generate SBOMs for every release. The U.S.\ Executive Order on Cybersecurity (2021) now requires SBOMs for all software sold to the federal government.
 
 \paragraph{Cross-Phase Connections} Supply chain security connects to Phase 15 Trivy scanning and Phase 11 CI/CD security gates.
 
@@ -5755,6 +6136,9 @@ HackTheBox Academy & Web & Free/Paid & Primary & Hands-on security labs & Practi
 PortSwigger Web Security & Web & Free & Primary & Web security labs & OWASP mastery \\
 CryptoHack & Interactive & Free & Supplementary & Cryptography challenges & Crypto fundamentals \\
 OWASP Cheat Sheet Series & Web & Free & Reference & Security best practices & Secure coding \\
+OWASP Top 10 for LLMs & Web & Free & Reference & AI/LLM-specific vulnerability taxonomy (2025) & AI security awareness \\
+Sigstore/cosign Docs & Docs & Free & Supplementary & Keyless code and artifact signing & Supply chain security \\
+Passkeys.dev & Web & Free & Reference & WebAuthn/passkey implementation guides & Passwordless auth \\
 \end{longtable}
 
 \paragraph{Books}
@@ -5762,6 +6146,7 @@ OWASP Cheat Sheet Series & Web & Free & Reference & Security best practices & Se
 \item \emph{The Web Application Hacker's Handbook} --- Stuttard \& Pinto (web security bible)
 \item \emph{Serious Cryptography} --- Aumasson (practical cryptography)
 \item \emph{Security Engineering} --- Ross Anderson (free online; comprehensive)
+\item \emph{Not with a Bug, But with a Sticker} --- Kurakin et al.\ (adversarial ML attacks and defenses)
 \end{itemize}
 
 
@@ -6099,6 +6484,8 @@ The final tier consolidates everything: MLOps for production AI, modern language
 
 \paragraph{Core Concepts \& Deep Explanation} Model serving exposes trained models as APIs. Options: \textbf{FastAPI/Flask} (simple, custom), \textbf{TorchServe/TF Serving} (framework-specific, optimized), \textbf{Triton Inference Server} (NVIDIA, multi-framework, GPU optimized), \textbf{BentoML} (end-to-end serving framework with batching and optimization).
 
+For LLM serving specifically, \textbf{vLLM} has become the dominant open-source inference engine (2024--2026), using PagedAttention to achieve 2--4$\times$ higher throughput than na\"ive serving by efficiently managing GPU memory for KV-cache. \textbf{TGI} (Text Generation Inference, Hugging Face) provides production-ready LLM serving with continuous batching, quantization support, and streaming. \textbf{Inference optimization techniques} include: quantization (GPTQ, AWQ, GGUF for reducing model precision from FP16 to INT4/INT8), speculative decoding (using a small draft model to predict tokens verified by the large model), KV-cache optimization, and tensor parallelism for multi-GPU serving.
+
 \textbf{Model monitoring} tracks two categories: \emph{operational metrics} (latency, throughput, error rate---same as Phase 21) and \emph{ML-specific metrics} (prediction distribution, feature distribution, data drift, concept drift). \textbf{Data drift}: input features change distribution (detected with KS test, PSI). \textbf{Concept drift}: the relationship between inputs and outputs changes (detected by monitoring prediction performance against delayed ground truth).
 
 \paragraph{Common Pitfalls \& Debugging}
@@ -6125,7 +6512,18 @@ LLMOps stack: \textbf{prompt management} (version and A/B test prompts), \textbf
 
 Tools: LangSmith (LangChain's observability platform), Weights \& Biases Prompts, Helicone (LLM proxy for logging and caching), Phoenix (Arize, LLM tracing).
 
-\paragraph{Advanced Trajectory} LLM gateway patterns (route between providers). Fallback chains (if primary LLM fails, use backup). Fine-tuning pipelines with automated evaluation.
+\textbf{Model evaluation frameworks} are critical for LLMOps: \textbf{LMSYS Chatbot Arena} provides crowdsourced human preference rankings using Elo ratings---the most widely trusted leaderboard for comparing LLM quality. \textbf{LM Evaluation Harness} (EleutherAI) runs standardized benchmarks (MMLU, HumanEval, GSM8K) for reproducible model comparisons. \textbf{Braintrust}, \textbf{Promptfoo}, and \textbf{DeepEval} enable custom evaluation pipelines with LLM-as-judge scoring, retrieval quality metrics (for RAG), and regression testing for prompt changes.
+
+\paragraph{Advanced Trajectory} LLM gateway patterns (route between providers). Fallback chains (if primary LLM fails, use backup). Fine-tuning pipelines with automated evaluation. Multi-modal model serving (vision + language). Mixture-of-Experts (MoE) serving with expert routing optimization.
+
+\paragraph{Common Pitfalls \& Debugging}
+\begin{enumerate}[leftmargin=*]
+\item Evaluating LLMs only with automated metrics---LLM-as-judge correlates with human preference but has blind spots; always include a human evaluation sample.
+\item Not versioning prompts alongside code---prompt changes can break downstream behavior; treat prompts as first-class artifacts with version control and rollback.
+\item Ignoring cost until production---LLM API costs scale non-linearly with usage; implement token budgets, caching, and model routing from the start.
+\end{enumerate}
+
+\paragraph{Cross-Phase Connections} LLMOps builds directly on Phase 17 LLM applications, Phase 21 observability (tracing, alerting), and Phase 22 MLOps (experiment tracking, model serving). Prompt management connects to Phase 5 version control practices. Cost optimization relates to Phase 19 system design capacity planning.
 
 \paragraph{Hands-On Exercises}
 \begin{enumerate}[leftmargin=*]
@@ -6232,6 +6630,8 @@ Made With ML (MLOps) & Web & Free & Primary & End-to-end MLOps course & Complete
 Neptune.ai Blog & Web & Free & Primary & In-depth MLOps articles & Best practices \\
 MLflow Docs & Docs & Free & Reference & Experiment tracking reference & MLflow proficiency \\
 Chip Huyen ML Systems & Book & \$40 & Reference & Production ML system design & Architecture skills \\
+vLLM Docs & Docs & Free & Reference & High-throughput LLM serving with PagedAttention & LLM inference optimization \\
+LMSYS Chatbot Arena & Web & Free & Reference & Crowdsourced LLM evaluation leaderboard & Model comparison skills \\
 \end{longtable}
 
 \paragraph{Books}
@@ -6239,6 +6639,7 @@ Chip Huyen ML Systems & Book & \$40 & Reference & Production ML system design & 
 \item \emph{Designing Machine Learning Systems} --- Chip Huyen (the MLOps bible)
 \item \emph{Introducing MLOps} --- Treveil et al.\ (practical MLOps introduction)
 \item \emph{Machine Learning Engineering} --- Andriy Burkov (ML in production)
+\item \emph{LLM Engineer's Handbook} --- Iusztin \& Labonne (practical guide to LLMOps, fine-tuning, and serving)
 \end{itemize}
 
 
@@ -6358,7 +6759,7 @@ Go's standard library is excellent: \texttt{net/http} for web servers, \texttt{e
 
 \textbf{Traits} define shared behavior (like interfaces). Generics with trait bounds enable type-safe polymorphism. \texttt{cargo} is the build system and package manager (similar to Maven but better DX).
 
-\paragraph{Advanced Trajectory} Async Rust (tokio runtime). Unsafe Rust for FFI. Macros (declarative and procedural). WebAssembly compilation. Embedded systems.
+\paragraph{Advanced Trajectory} Async Rust (tokio runtime). Unsafe Rust for FFI. Macros (declarative and procedural). WebAssembly compilation. Embedded systems. The \textbf{Rust 2025 edition} brings ergonomic improvements and the ecosystem continues rapid growth, especially in AI tooling (candle, burn), web backends (Axum), and developer tools (SWC, Biome, uv, Ruff).
 
 \paragraph{Common Pitfalls \& Debugging}
 \begin{enumerate}[leftmargin=*]
@@ -6395,7 +6796,9 @@ Go's standard library is excellent: \texttt{net/http} for web servers, \texttt{e
 
 \textbf{Interfaces} define object shapes. \textbf{Type aliases} create custom types. \textbf{Generics} enable reusable, type-safe functions and classes. \textbf{Union types} and \textbf{discriminated unions} replace many uses of class hierarchies. \textbf{Utility types}: \texttt{Partial<T>}, \texttt{Required<T>}, \texttt{Pick<T, K>}, \texttt{Omit<T, K>}, \texttt{Record<K, V>}.
 
-TypeScript is essential for modern full-stack development: React (frontend), Next.js (full-stack), Node.js (backend), Deno, and most modern frameworks require or strongly recommend TypeScript.
+\textbf{TypeScript 7.0} (announced March 2025) is a landmark release: the compiler is being rewritten in Go, delivering \textbf{10$\times$ faster compilation} and dramatically reduced editor latency. The existing JavaScript-based compiler continues as TypeScript 6.x, but 7.0 represents the future. This is a rare case of a language's toolchain being rewritten in a different language for performance---and it uses Go, the language covered earlier in this phase.
+
+TypeScript is essential for modern full-stack development: React (frontend), Next.js (full-stack), Node.js (backend), Deno, \textbf{Bun} (a fast all-in-one JavaScript runtime and bundler written in Zig, now stable and competing with Node.js for backend development), and most modern frameworks require or strongly recommend TypeScript.
 
 \paragraph{Common Pitfalls \& Debugging}
 \begin{enumerate}[leftmargin=*]
@@ -6589,6 +6992,17 @@ Go powers Docker, Kubernetes, Terraform. Rust is adopted by Linux kernel, Androi
 \item Documentation: README, API docs, architecture decisions (ADRs)
 \end{itemize}
 
+\paragraph{Advanced Trajectory} Add real-time features (WebSocket streaming for AI responses). Implement A/B testing for different LLM prompts. Add multi-tenancy with data isolation. Integrate cost tracking per user/request.
+
+\paragraph{Common Pitfalls \& Debugging}
+\begin{enumerate}[leftmargin=*]
+\item Scope creep---define MVP with exactly 3 core features and resist adding more until they work end-to-end.
+\item Skipping CI/CD until the end---set up the pipeline in Week 1; deploy a hello-world endpoint first.
+\item Ignoring database migrations---use Alembic from day one; manual schema changes break reproducibility.
+\end{enumerate}
+
+\paragraph{Cross-Phase Connections} Integrates Phase 10 (web/API), Phase 13--14 (ML/DL), Phase 17 (LLMs/RAG), Phase 15 (DevOps/K8s), Phase 20 (security), and Phase 21 (observability) into a single production system.
+
 \paragraph{Hands-On Exercises}
 \begin{enumerate}[leftmargin=*]
 \item (Week 1) Requirements, architecture design, and ADRs.
@@ -6624,11 +7038,43 @@ Go powers Docker, Kubernetes, Terraform. Rust is adopted by Linux kernel, Androi
 \item Architecture documentation: C4 model diagrams, sequence diagrams, ADRs
 \end{itemize}
 
+\paragraph{Advanced Trajectory} Add CQRS with separate read/write models. Implement saga orchestration for distributed transactions. Add canary deployments with automated rollback based on SLO violations.
+
+\paragraph{Common Pitfalls \& Debugging}
+\begin{enumerate}[leftmargin=*]
+\item Building all microservices simultaneously---start with a monolith, extract services one at a time as boundaries become clear.
+\item Skipping contract testing between services---a breaking API change in one service silently breaks consumers; use Pact or similar tools.
+\item Not simulating failures early---run chaos experiments in Week 3, not Week 6; discovering fragility late forces painful rework.
+\end{enumerate}
+
+\paragraph{Cross-Phase Connections} Integrates Phase 15 (K8s), Phase 16 (microservice patterns, DDD), Phase 18 (data pipelines), Phase 19 (system design), Phase 20 (Zero Trust security), and Phase 21 (observability/SLOs) into a production distributed system.
+
+\paragraph{Hands-On Exercises}
+\begin{enumerate}[leftmargin=*]
+\item (Week 1) Domain modeling, bounded context mapping, and API contract definitions.
+\item (Weeks 2--3) Core microservices implementation with gRPC and Kafka.
+\item (Week 4) Data pipeline, observability stack, and CI/CD.
+\item (Weeks 5--6) Load testing, chaos engineering, security audit, and documentation.
+\end{enumerate}
+
 \awareness{Capstone 3 (Optional): Open-Source Contribution}
+
+\paragraph{Prerequisite Concepts} Git workflows (Phase 5), code review skills, testing practices (Phase 11).
 
 \paragraph{Core Concepts \& Deep Explanation} Contributing to established open-source projects demonstrates collaboration, code quality, and real-world engineering skills. Target projects related to your interests: LangChain, FastAPI, scikit-learn, Hugging Face Transformers, dbt, or any tool from the roadmap.
 
 Steps: (1) find a project with ``good first issue'' labels, (2) understand the codebase and contribution guidelines, (3) fix a bug or implement a small feature, (4) submit a well-documented PR, (5) respond to code review feedback.
+
+\paragraph{Advanced Trajectory} Become a regular contributor or maintainer. Propose and implement RFCs for new features. Mentor new contributors. Participate in project governance.
+
+\paragraph{Common Pitfalls \& Debugging}
+\begin{enumerate}[leftmargin=*]
+\item Starting with a too-ambitious contribution---begin with documentation fixes or small bug fixes to learn the project's workflow and norms before attempting features.
+\item Not reading \texttt{CONTRIBUTING.md}---every project has its own conventions for commit messages, testing, and review; violating them delays merging.
+\item Taking rejection personally---code review feedback on open-source PRs is direct; treat it as a learning opportunity, not criticism.
+\end{enumerate}
+
+\paragraph{Cross-Phase Connections} Open-source contribution applies Phase 5 Git workflows, Phase 11 testing practices, and Phase 16 architecture understanding. It also builds the professional network discussed in Phase 25.
 
 \paragraph{Hands-On Exercises}
 \begin{enumerate}[leftmargin=*]
@@ -6640,6 +7086,38 @@ Steps: (1) find a project with ``good first issue'' labels, (2) understand the c
 \begin{microcheckpoint}
 You have built 2--3 portfolio-grade projects demonstrating mastery across the full stack. Each project includes proper testing, CI/CD, security, observability, and documentation.
 \end{microcheckpoint}
+
+
+\subsection*{Resources}
+
+\setlength{\LTpre}{6pt}
+\setlength{\LTpost}{6pt}
+\startalternating
+\begin{longtable}{L{0.15\textwidth} L{0.10\textwidth} L{0.07\textwidth} L{0.10\textwidth} L{0.30\textwidth} L{0.15\textwidth}}
+\toprule
+\textbf{Resource} & \textbf{Format} & \textbf{Cost} & \textbf{Role} & \textbf{Why Best} & \textbf{Produce With It} \\
+\midrule
+\endhead
+Full Stack Open & Course & Free & Primary & Helsinki's project-based full-stack curriculum with React, Node, GraphQL & End-to-end app architecture \\
+\hline
+Build Your Own X & Repo & Free & Supplement & Curated tutorials for building databases, compilers, web servers from scratch & Deep systems understanding \\
+\hline
+The Twelve-Factor App & Guide & Free & Reference & Heroku's methodology for building production SaaS applications & Production deployment checklist \\
+\hline
+GitHub README Templates & Repo & Free & Reference & Collection of exemplary README files for portfolio projects & Professional documentation \\
+\hline
+System Design Primer & Repo & Free & Supplement & Comprehensive system design reference with diagrams and trade-offs & Architecture design for capstones \\
+\bottomrule
+\end{longtable}
+\stopalternating
+
+\paragraph{Books}
+\begin{itemize}[leftmargin=*]
+\item \emph{Designing Data-Intensive Applications} by Martin Kleppmann --- essential reference for distributed system design decisions in Capstone 2.
+\item \emph{Building Microservices} (2nd ed.) by Sam Newman --- patterns for decomposing monoliths and designing microservice boundaries.
+\item \emph{The Pragmatic Programmer} (20th Anniversary ed.) by Hunt \& Thomas --- timeless advice on software craftsmanship applicable to all capstone work.
+\item \emph{Clean Architecture} by Robert C.\ Martin --- principles for structuring code that scales; directly applicable to both capstone projects.
+\end{itemize}
 
 
 \begin{cheatsheetbox}
@@ -6819,6 +7297,15 @@ Framework: express enthusiasm \arrow{} state that the offer is below expectation
 
 Build a T-shaped skill profile: broad knowledge across many areas (the top of the T) with deep expertise in 2--3 areas (the stem). This roadmap has built the broad top; your career will deepen the stem.
 
+\paragraph{2026 Hiring Landscape \& AI-Era Career Strategy}
+The software engineering job market in 2026 has fundamentally shifted. \textbf{AI skills are now essential, not optional}---employers expect proficiency with AI-assisted development tools (Claude Code, Cursor, GitHub Copilot) as standard practice, similar to how Git proficiency was expected a decade ago. Developers who leverage AI tools effectively ship 2--3$\times$ faster, and companies actively screen for this capability.
+
+\textbf{Remote work has normalized:} the majority of engineering roles offer remote or hybrid options, expanding the talent pool globally but also increasing competition. Standout candidates demonstrate async communication skills, self-direction, and documented output (PRs, design docs, blog posts).
+
+\textbf{AI-assisted interview preparation} is now common and expected---use AI to generate practice problems, simulate mock interviews, review your code solutions, and prepare system design answers. However, interviewers increasingly test for genuine understanding beyond what AI can produce, emphasizing reasoning, trade-off analysis, and real-time collaboration.
+
+\textbf{Portfolio projects with AI components are highly valued:} building a RAG application, fine-tuning a model, integrating LLM APIs, or creating an AI-powered feature demonstrates both traditional engineering skills and AI fluency. Include AI tool usage in your workflow documentation---showing how you use Claude Code or Copilot in your development process signals modern engineering maturity.
+
 \begin{microcheckpoint}
 You are interview-ready with a strong portfolio, practiced coding and system design skills, a professional network, and a continuous learning framework for lifelong growth.
 \end{microcheckpoint}
@@ -6863,14 +7350,17 @@ interviewing.io & Platform & Free & Primary & Mock interviews with real engineer
 levels.fyi & Web & Free & Reference & Salary/compensation data & Market research \\
 Grokking System Design & Course & Paid & Supplementary & System design interview course & Design skills \\
 Tech Interview Handbook & Web & Free & Supplementary & Complete interview guide & Interview strategy \\
+GreatFrontEnd & Web & Free/Paid & Supplementary & Frontend-focused interview prep for 2025+ & Frontend interview skills \\
+Final Round AI & Web & Paid & Supplementary & AI-powered mock interview practice & AI-assisted prep \\
 \end{longtable}
 
 \paragraph{Books}
 \begin{itemize}[leftmargin=*]
 \item \emph{Cracking the Coding Interview} --- Gayle McDowell (the interview classic)
-\item \emph{System Design Interview} --- Alex Xu (canonical system design prep)
+\item \emph{System Design Interview} --- Alex Xu, Vol.\ 1 \& 2 (canonical system design prep)
 \item \emph{Never Split the Difference} --- Chris Voss (negotiation masterclass)
-\item \emph{The Pragmatic Programmer} --- Hunt \& Thomas (career-long engineering wisdom)
+\item \emph{The Pragmatic Programmer} --- Hunt \& Thomas, 20th Anniversary Ed (career-long engineering wisdom)
+\item \emph{The Staff Engineer's Path} --- Tanya Reilly (career growth beyond senior engineer)
 \end{itemize}
 
 
@@ -6928,7 +7418,7 @@ The job search is an engineering problem. Referrals account for 30--50\% of hire
 \clearpage
 \chapter[AI Collaboration Guide]{Appendix A: AI Collaboration Master Guide}
 
-This appendix teaches you how to communicate effectively with AI assistants (ChatGPT, Claude, Gemini, Copilot, Perplexity) to maximize your productivity as a developer. In the AI era, \textbf{prompt engineering is a core engineering skill}---the ability to extract precise, high-quality output from AI tools directly multiplies your effectiveness.
+This appendix teaches you how to communicate effectively with AI assistants (GPT-5, Claude 4, Gemini 2.5, Copilot, Perplexity) to maximize your productivity as a developer. In the AI era, \textbf{prompt engineering is a core engineering skill}---the ability to extract precise, high-quality output from AI tools directly multiplies your effectiveness. As of 2026, AI tools have evolved beyond simple chat interfaces into \textbf{agentic workflows} where AI autonomously plans, executes, and iterates on multi-step tasks. The \textbf{Model Context Protocol (MCP)} has emerged as the standard for connecting LLMs to external tools, databases, and APIs---enabling AI agents to read files, query databases, call APIs, and execute code within structured, permission-controlled workflows.
 
 \section[CRAFT Framework]{The CRAFT Framework for Developer Prompts}
 
@@ -7004,6 +7494,17 @@ Use the \textbf{CRAFT} framework for every non-trivial AI interaction:
 \item \textbf{Document} with AI: generate docstrings, README sections, and API documentation from code.
 \end{enumerate}
 
+\subsubsection{Agent-Based Workflows (2026)}
+
+AI agents go beyond chat---they autonomously execute multi-step tasks:
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Code Agents} (Claude Code, Cursor Agent, Devin): Read your codebase, write code, run tests, and iterate on failures autonomously. Use them for well-defined tasks with clear acceptance criteria.
+\item \textbf{MCP Integration:} The Model Context Protocol connects AI agents to your tools (databases, APIs, file systems) through a standardized interface. Configure MCP servers to give agents controlled access to project resources.
+\item \textbf{Multi-Agent Orchestration:} Frameworks like LangGraph and CrewAI coordinate multiple specialized agents (researcher, coder, reviewer) working on different aspects of a task.
+\item \textbf{Human-in-the-Loop:} Even with autonomous agents, maintain human oversight. Review agent-generated PRs, approve destructive operations, and validate architectural decisions. The best workflow is AI proposes, human disposes.
+\end{enumerate}
+
 \subsubsection{Critical Rules for AI-Assisted Development}
 
 \begin{enumerate}[leftmargin=*]
@@ -7027,10 +7528,11 @@ Use the \textbf{CRAFT} framework for every non-trivial AI interaction:
 \bottomrule
 \endlastfoot
 GitHub Copilot & Inline code completion & Write descriptive comment before function & Limited context window \\
-ChatGPT / Claude & Complex reasoning, architecture & Use system prompts for persistent role & May hallucinate APIs \\
-Cursor IDE & Codebase-aware assistance & Use @codebase to reference project files & Paid; context limited \\
+GPT-5 / Claude 4 & Complex reasoning, architecture & Use system prompts for persistent role; supports MCP tool use & May hallucinate APIs \\
+Cursor / Windsurf & Codebase-aware AI IDE & Use @codebase to reference project files & Paid; context limited \\
+Claude Code & Terminal-based AI agent & Autonomous coding with file access and execution & Requires permission grants \\
 Perplexity AI & Research with citations & Ask for ``sources'' for verifiable refs & Less suited for codegen \\
-Gemini & Multimodal (code + images) & Upload architecture diagrams for analysis & Feature availability varies \\
+Gemini 2.5 & Multimodal reasoning & Upload architecture diagrams for analysis & Feature availability varies \\
 \end{longtable}
 
 \section[Prompt Patterns]{Prompt Patterns for Common Tasks}
@@ -7088,7 +7590,7 @@ Git GUI & GitHub Desktop & All & \url{https://desktop.github.com/} \\
 \bottomrule
 \endlastfoot
 C & GCC & \texttt{sudo apt install build-essential} (Linux/WSL); \texttt{xcode-select --install} (macOS) \\
-Python & Python 3.12 + uv & \texttt{curl -LsSf \url{https://astral.sh/uv/install.sh} | sh} --- uv replaces pip/venv/pyenv \\
+Python & Python 3.14 + uv & \texttt{curl -LsSf \url{https://astral.sh/uv/install.sh} | sh} --- uv replaces pip/venv/pyenv \\
 Java & JDK 21 (Temurin) & \url{https://adoptium.net/}; verify: \texttt{java --version} \\
 Java Build & Maven & \texttt{sudo apt install maven} / \texttt{brew install maven} \\
 Go & Go 1.22+ & \url{https://go.dev/dl/}; add to PATH \\
@@ -7234,6 +7736,7 @@ Pursue certifications after completing the relevant phases, not before. Certific
 \bottomrule
 \endlastfoot
 ACID & 8 & Atomicity, Consistency, Isolation, Durability --- database transaction guarantees \\
+Agentic AI & 17 & AI systems that autonomously plan and execute multi-step tasks using tools and reasoning \\
 API & 10 & Application Programming Interface --- contract for software communication \\
 Attention Mechanism & 14 & Neural network component weighing importance of different input parts \\
 Backpropagation & 14 & Algorithm computing gradients in neural networks using the chain rule \\
@@ -7250,6 +7753,7 @@ Data Drift & 22 & Change in input feature distributions between training and pro
 dbt & 18 & Data build tool --- SQL transformation framework for analytics \\
 DDD & 16 & Domain-Driven Design --- aligning software with business domain boundaries \\
 DevOps & 15 & Culture and practices unifying development and operations \\
+DuckDB & 8 & In-process analytical database engine for OLAP workloads on local files \\
 Docker Compose & 15 & Tool for defining multi-container applications in YAML \\
 Dropout & 14 & Regularization randomly zeroing neurons during training \\
 ELT & 18 & Extract, Load, Transform --- modern data pipeline pattern \\
@@ -7268,6 +7772,7 @@ gRPC & 16 & High-performance RPC using Protocol Buffers over HTTP/2 \\
 Guardrails & 17 & Safety mechanisms ensuring LLM outputs are safe and within bounds \\
 Helm & 15 & Kubernetes package manager using templated charts \\
 Idempotent & 18 & Operation producing same result regardless of execution count \\
+Inference-Time Scaling & 17 & Allocating more compute at inference time to improve model reasoning quality \\
 JWT & 10 & JSON Web Token --- self-contained stateless authentication token \\
 K8s & 15 & Kubernetes --- container orchestration platform \\
 Kafka & 18 & Distributed event streaming platform \\
@@ -7275,15 +7780,18 @@ KL Divergence & 12 & Measure of how one probability distribution differs from an
 LoRA & 17 & Low-Rank Adaptation --- parameter-efficient fine-tuning for LLMs \\
 LSTM & 14 & Long Short-Term Memory --- RNN variant for long-range dependencies \\
 Microservice & 16 & Architecture decomposing apps into small independent services \\
+Mixture of Experts (MoE) & 14 & Architecture where different subnetworks specialize in different inputs; gating selects top-$k$ experts per token \\
 MLflow & 22 & Open-source ML experiment tracking platform \\
 MLOps & 22 & Practices for deploying/maintaining ML models in production \\
 mTLS & 20 & Mutual TLS --- both client and server authenticate via certificates \\
 OAuth 2.0 & 10 & Authorization framework for delegated resource access \\
 OOP & 4 & Object-Oriented Programming --- encapsulation, inheritance, polymorphism \\
 OpenTelemetry & 21 & Vendor-neutral observability framework (metrics, logs, traces) \\
+OpenTofu & 15 & Open-source Terraform alternative maintained by the Linux Foundation \\
 ORM & 10 & Object-Relational Mapping --- database abstraction layer \\
 Overfitting & 13 & Model memorizes training data, poor generalization \\
 Ownership (Rust) & 23 & Rust memory model: each value has exactly one owner \\
+Passkeys & 20 & Passwordless authentication using WebAuthn/FIDO2 standards with biometric or device-based verification \\
 PCA & 12 & Principal Component Analysis --- dimensionality reduction \\
 Pod & 15 & Smallest deployable Kubernetes unit \\
 Prometheus & 21 & Open-source monitoring system for time-series metrics \\
@@ -7293,29 +7801,33 @@ RAG & 17 & Retrieval-Augmented Generation --- grounding LLMs in external knowled
 RBAC & 20 & Role-Based Access Control \\
 ReLU & 14 & Rectified Linear Unit: $\max(0,x)$ --- default hidden layer activation \\
 REST & 10 & Representational State Transfer --- web API architectural style \\
+RLVR & 17 & Reinforcement Learning with Verifiable Rewards --- training LLMs to reason using verifiable outcomes \\
 SBOM & 20 & Software Bill of Materials --- inventory of software components \\
 Sharding & 19 & Distributing database data across multiple servers \\
 SHAP & 13 & SHapley Additive exPlanations --- feature attribution method \\
 SLI / SLO / SLA & 19 & Service Level Indicator / Objective / Agreement \\
+State-Space Models & 14 & Alternative to Transformers (e.g., Mamba) for efficient sequence modeling with linear complexity \\
 SOLID & 16 & Five OOP design principles \\
 SQL Injection & 20 & Attack inserting malicious SQL via unvalidated input \\
 SVD & 12 & Singular Value Decomposition: $A = U\Sigma V^T$ \\
 TCP/IP & 9 & Reliable network communication protocol \\
 TDD & 11 & Test-Driven Development --- write tests before implementation \\
 Terraform & 15 & Infrastructure as Code tool \\
+t-strings & 2 & Python 3.14 template strings for safe, structured string interpolation \\
 Feature Store & 22 & Centralized system for computing, storing, and serving ML features \\
 Data Drift & 22 & Change in input feature distributions between training and production \\
 gRPC & 16 & High-performance RPC framework using Protocol Buffers \\
 Circuit Breaker & 16 & Pattern preventing cascading failures in distributed systems \\
 Saga Pattern & 16 & Distributed transaction pattern for microservices \\
 CQRS & 16 & Command Query Responsibility Segregation---separate read/write models \\
-MCP & 17 & Model Context Protocol---standard for LLM tool integration \\
+MCP (Model Context Protocol) & 17 & Standard protocol for LLM tool and data access; joined the Linux Foundation in 2025 \\
 Token (LLM) & 17 & Subword unit processed by language models \\
 Transformer & 14 & Architecture using self-attention for sequence processing \\
 Trivy & 15 & Container image vulnerability scanner \\
 TypeScript & 23 & Typed superset of JavaScript \\
 VAE & 14 & Variational Autoencoder --- generative model \\
-Vector Database & 17 & Database optimized for high-dimensional vector queries \\
+Vector Database & 8/17 & Database optimized for storing and querying high-dimensional embeddings (Pinecone, Weaviate, pgvector) \\
+vLLM & 22 & High-throughput LLM serving engine with PagedAttention for efficient memory management \\
 WebSocket & 10 & Protocol for persistent bidirectional client-server communication \\
 XSS & 20 & Cross-Site Scripting --- injecting scripts into web pages \\
 Zero Trust & 20 & Security model: never trust, always verify \\
@@ -7392,12 +7904,14 @@ Technology evolves continuously. These areas represent the frontier of software 
 \section[AI/ML Frontier]{AI \& Machine Learning Frontier}
 
 \begin{enumerate}[leftmargin=*]
-\item \textbf{AI Agents:} Multi-agent orchestration (CrewAI, AutoGen, LangGraph) enabling autonomous workflows.
-\item \textbf{Small Language Models:} Efficient on-device models (Phi-3, Gemma, Mistral) for privacy-preserving edge AI.
-\item \textbf{Multimodal Foundation Models:} Natively processing text, images, audio, video, and code together.
-\item \textbf{Reasoning Models:} Chain-of-thought models (o1, DeepSeek-R1) allocating more compute to harder problems.
-\item \textbf{AI for Code:} AI-powered IDEs (Cursor, Windsurf, Devin) understanding entire codebases.
-\item \textbf{Synthetic Data:} AI-generated training data augmenting or replacing human-labeled datasets.
+\item \textbf{Agentic AI (Mainstream):} 2025 was the ``year of agents.'' Multi-agent orchestration (LangGraph, CrewAI, AutoGen) enables autonomous workflows where AI plans, executes, and self-corrects. MCP has become the standard protocol for agent-tool integration, now governed by the Linux Foundation. Expect agentic AI to become embedded in every developer tool by 2027.
+\item \textbf{RLVR \& Reasoning Expansion:} Reinforcement Learning with Verifiable Rewards (pioneered by DeepSeek-R1) is expanding beyond math and code to scientific reasoning, legal analysis, and general problem-solving. Inference-time scaling---allocating more compute to harder problems at runtime---is becoming the dominant paradigm, shifting AI spend from training to inference.
+\item \textbf{Hybrid Architectures:} Pure Transformers are being augmented with state-space models (Mamba), mixture-of-experts routing, and other efficiency innovations. Hybrid SSM-Transformer architectures offer better long-context handling with lower compute costs.
+\item \textbf{World Models vs.\ LLMs:} The debate between text-based LLMs and sensorimotor world models (championed by researchers like Yann LeCun) is driving new research directions in AI that can understand physical reality, not just language patterns.
+\item \textbf{Small Language Models:} Efficient on-device models (Phi-3, Gemma 2, Mistral, Qwen3) for privacy-preserving edge AI. Quantization and distillation make 1--7B parameter models practical on consumer hardware.
+\item \textbf{Multimodal Foundation Models:} Natively processing text, images, audio, video, and code together. Vision-language models (GPT-4V, Claude 4 vision) are enabling new application categories.
+\item \textbf{AI for Code:} AI-powered IDEs (Cursor, Windsurf) and autonomous coding agents (Claude Code, Devin) are reshaping software development, understanding entire codebases and executing multi-file changes.
+\item \textbf{Synthetic Data:} AI-generated training data augmenting or replacing human-labeled datasets, particularly for domain-specific fine-tuning.
 \end{enumerate}
 
 \section[Systems]{Systems \& Infrastructure}
@@ -7419,13 +7933,14 @@ Technology evolves continuously. These areas represent the frontier of software 
 \item \textbf{Elixir/Phoenix:} Mature BEAM ecosystem for real-time systems (Discord uses Elixir at scale).
 \end{enumerate}
 
-\section[Career Trends]{Career \& Industry Trends}
+\section[Career Trends]{Career \& Industry Trends (2026)}
 
 \begin{enumerate}[leftmargin=*]
-\item \textbf{AI-Augmented Engineering:} Engineers using AI tools are 2--5$\times$ more productive. The skill ceiling rises.
-\item \textbf{Full-Stack AI Engineering:} New role combining software engineering, ML, and product thinking.
-\item \textbf{Security-First Development:} Supply chain attacks and regulations (EU AI Act) make security first-class.
-\item \textbf{Remote \& Global:} Build skills in async communication, documentation, cross-timezone collaboration.
+\item \textbf{AI-Augmented Engineering is Non-Negotiable:} Engineers using AI tools are 2--5$\times$ more productive. Companies expect AI tool proficiency in interviews. The skill ceiling rises---AI amplifies strong engineers more than weak ones.
+\item \textbf{Full-Stack AI Engineering:} The hottest role of 2026 combines software engineering, ML/LLM knowledge, and product thinking. Building AI-powered features (RAG, agents, fine-tuned models) is becoming a standard engineering responsibility, not a specialist role.
+\item \textbf{AI Agents Reshape Workflows:} Junior engineering tasks (boilerplate code, test writing, documentation) are increasingly handled by AI agents. The premium shifts to architectural thinking, system design, debugging complex issues, and human judgment that AI cannot replicate.
+\item \textbf{Security-First Development:} Supply chain attacks, AI-specific threats (prompt injection, model poisoning), and regulations (EU AI Act, US executive orders) make security literacy a must-have for all engineers, not just security specialists.
+\item \textbf{Remote \& Global:} Async communication, documentation-first culture, and cross-timezone collaboration remain essential. AI tools help bridge language and timezone gaps.
 \end{enumerate}
 
 \section[Staying Current]{Staying Current}
